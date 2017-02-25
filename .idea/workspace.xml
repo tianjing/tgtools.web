@@ -4,7 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/src/tgtools/web/util/WebRestClient.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="" />
+    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tgtools.web.iml" afterPath="$PROJECT_DIR$/tgtools.web.iml" />
+    </list>
     <ignored path="tgtools.web.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -32,7 +36,40 @@
     <favorites_list name="tgtools.web" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="StringHttpMessageConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tgtools/web/util/StringHttpMessageConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PluginManageRest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tgtools/web/rests/plugin/PluginManageRest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionDataAccess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tgtools/web/db/TransactionDataAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -89,9 +126,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+    <option name="x" value="272" />
+    <option name="y" value="18" />
     <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="height" value="979" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -167,7 +205,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -186,23 +223,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tgtools.web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tgtools.web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -211,10 +235,10 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../GitHub/tgtools.core" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="SearchEverywhereHistoryKey" value="uncheck&#9;PSI&#9;JAVA://com.sun.tools.javac.util.Warner#unchecked&#10;setIsDegug&#9;PSI&#9;JAVA://tgtools.util.LogHelper#setIsDegug" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="169" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
@@ -724,6 +748,7 @@
       <workItem from="1487914390869" duration="5082000" />
       <workItem from="1488000371361" duration="1328000" />
       <workItem from="1488002575189" duration="627000" />
+      <workItem from="1488004112547" duration="493000" />
     </task>
     <task id="LOCAL-00001" summary="修改 服务 停止后 重启 平台也能 启动">
       <created>1466561976223</created>
@@ -939,14 +964,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94375000" />
+    <option name="totallyTimeSpent" value="94868000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="1" />
+    <frame x="272" y="18" width="974" height="979" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32572877" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -955,11 +981,11 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46792036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25221238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34292036" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63053095" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -969,7 +995,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39722863" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32603687" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24942264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1021,85 +1046,13 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-    <buildFile url="file://$PROJECT_DIR$/build.xml">
-      <targetFilters>
-        <filter targetName="main" isVisible="false" />
-        <filter targetName="buildVersion" isVisible="false" />
-        <filter targetName="compile" isVisible="false" />
-        <filter targetName="compress" isVisible="false" />
-        <filter targetName="optimize" isVisible="false" />
-        <filter targetName="doccompile" isVisible="false" />
-        <filter targetName="doccompress" isVisible="false" />
-        <filter targetName="copyout" isVisible="false" />
-      </targetFilters>
-      <treeView value="false" />
-      <expanded value="false" />
-    </buildFile>
-    <buildFile url="file://$PROJECT_DIR$/build.xml">
-      <targetFilters>
-        <filter targetName="main" isVisible="false" />
-        <filter targetName="buildVersion" isVisible="false" />
-        <filter targetName="compile" isVisible="false" />
-        <filter targetName="compress" isVisible="false" />
-        <filter targetName="optimize" isVisible="false" />
-        <filter targetName="doccompile" isVisible="false" />
-        <filter targetName="doccompress" isVisible="false" />
-        <filter targetName="copyout" isVisible="false" />
-      </targetFilters>
-      <treeView value="false" />
-      <expanded value="false" />
-    </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/config/BeanDefinition.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1419">
-          <caret line="592" column="51" selection-start-line="592" selection-start-column="51" selection-end-line="592" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/BeanDefinitionDefaults.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/SimpleBeanDefinitionRegistry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/GenericBeanDefinition.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/config/AutowireCapableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-context-4.1.5.RELEASE.jar!/org/springframework/context/ApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/BeanDefinitionDefaults.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/SimpleBeanDefinitionRegistry.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/GenericBeanDefinition.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/config/AutowireCapableBeanFactory.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-context-4.1.5.RELEASE.jar!/org/springframework/context/ApplicationContext.class" />
     <entry file="jar://F:/Java/jdk1.6.0_43/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1174">
@@ -1128,13 +1081,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/AbstractBeanDefinition.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="269" column="25" selection-start-line="269" selection-start-column="16" selection-end-line="269" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/AbstractBeanDefinition.class" />
     <entry file="jar://F:/eclipse/Tomcat7/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1755">
@@ -1149,20 +1096,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/BeanDefinitionBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar!/org/springframework/web/context/support/AbstractRefreshableWebApplicationContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="27" column="62" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/BeanDefinitionBuilder.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar!/org/springframework/web/context/support/AbstractRefreshableWebApplicationContext.class" />
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/rests/services/ServiesTableRest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-418">
@@ -1177,13 +1112,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/db/DataBaseFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53">
-          <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/db/DataBaseFactory.class" />
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/BeanDefineConfigue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1826">
@@ -1198,20 +1127,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/tasks/Task.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/service/BaseService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/tasks/Task.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/service/BaseService.class" />
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/services/TableServiceTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
@@ -1240,20 +1157,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/net/WebClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/util/ZipStringUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="54" column="46" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/net/WebClient.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/util/ZipStringUtil.class" />
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/util/WebRestClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -1262,28 +1167,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="84" column="54" selection-start-line="84" selection-start-column="54" selection-end-line="84" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/db/DMDataAccess.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/db/IDataAccess.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/db/DMDataAccess.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/db/IDataAccess.class" />
     <entry file="jar://F:/Java/jdk1.6.0_43/src.zip!/java/io/Serializable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -1291,27 +1177,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/support/rowset/SqlRowSet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/RowMapperResultSetExtractor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/ResultSetExtractor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/support/rowset/SqlRowSet.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/RowMapperResultSetExtractor.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/ResultSetExtractor.class" />
     <entry file="jar://F:/Java/jdk1.6.0_43/jre/lib/rt.jar!/com/sun/rowset/CachedRowSetImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-642">
@@ -1319,20 +1187,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/data/DataTable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/support/JdbcAccessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/tgtools.core.optimize.jar!/tgtools/data/DataTable.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/support/JdbcAccessor.class" />
     <entry file="jar://F:/Java/jdk1.6.0_43/src.zip!/java/lang/RuntimeException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1340,20 +1196,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar!/org/springframework/core/NestedRuntimeException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-tx-4.1.5.RELEASE.jar!/org/springframework/dao/DataAccessException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar!/org/springframework/core/NestedRuntimeException.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-tx-4.1.5.RELEASE.jar!/org/springframework/dao/DataAccessException.class" />
     <entry file="jar://F:/Java/jdk1.6.0_43/src.zip!/javax/sql/DataSource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1368,34 +1212,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="740" column="52" selection-start-line="740" selection-start-column="52" selection-end-line="740" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/BatchPreparedStatementSetter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/PreparedStatementCreator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/JdbcOperations.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/BatchPreparedStatementSetter.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/PreparedStatementCreator.class" />
+    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/JdbcOperations.class" />
     <entry file="jar://F:/Java/jdk1.6.0_43/src.zip!/java/sql/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -1404,10 +1224,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/util/StringHttpMessageConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/db/TransactionDataAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="174" column="17" selection-start-line="174" selection-start-column="17" selection-end-line="174" selection-end-column="17" />
+        <state relative-caret-position="242">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/rests/plugin/PluginManageRest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
