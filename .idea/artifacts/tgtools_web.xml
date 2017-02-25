@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="tgtools.web">
+    <output-path>$PROJECT_DIR$/bin/artifacts/tgtools_web</output-path>
+    <root id="archive" name="tgtools.web.jar">
+      <element id="module-output" name="tgtools.web" />
+    </root>
+  </artifact>
+</component>
