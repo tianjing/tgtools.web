@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="main" basedir=".">
+	<!--定义变量-->
+	<property name="lib.dir" value="${basedir}/tgtools.web/lib/" />
+	<property name="copyout" value="${outproject}/EmptyProject/WebContent/WEB-INF/lib/" />
+
+
+	<property name="project" value="${basedir}/tgtools.web/" />
+	<property name="indir" value="${project}/src/" />
+	<property name="outfile" value="${project}bin/code/" />
+	<property name="outdoc" value="${project}bin/doc/" />
+	<property name="outdir" value="${project}/build/" />
+	<property name="outjar" value="${outdir}/tgtools.web.jar" />
+	<property name="outdocjar" value="${outdir}/tgtools.web.javadoc.jar" />
+	<property name="optjar" value="${outdir}tgtools.web.optimize.jar" />
+
+	<property name="proguard.classpath" value="F:/eclipse-jee-indigo_64/proguard5.2.1/lib/proguard.jar" />
+
+
+	<path id="build.classpath">
+		<fileset dir="F:/eclipse/Tomcat6/lib/" >
+					<include name="*.jar" />
+				</fileset>
+		
+		<fileset dir="${basedir}/tgtools.web/lib/">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<!--总任务 描述要执行多少任务-->
+	<target name="main" depends="buildVersion,compile ,compress,doccompile, doccompress,optimize,copyout"><!--optimize-->
+	</target>
+
+	<target name="buildVersion" >
+		   <taskdef  name="buildVersion" classname="build.MyBuildVersion" classpath="${outdir}">
+		   	<classpath><pathelement path="${lib.dir}bulidversion.jar"/></classpath>
+		   </taskdef>
+	 <buildVersion>
+
+		</buildVersion>	
+	</target>
+	
+	
+	
+	<!--编译-->
+	<target name="compile">
+		<delete dir="${outfile}" />
+		<delete dir="${outdoc}" />
+		<mkdir dir="${outfile}" />
+		<mkdir dir="${outdoc}" />
+		<copy  todir="${outfile}" >
+		<fileset dir="${indir}">
+		<exclude name="tgtools/**"/>
+		</fileset>
+		</copy>
+		<javac srcdir="${indir}" destdir="${outfile}" includeantruntime="on" encoding="UTF-8">
+			<classpath refid="build.classpath" />
+			<compilerarg value="-Xlint:unchecked" />
+			<compilerarg value="-XDignore.symbol.file" />
+			<!--忽略该符号表ct.sym 使用jre的rt.jar -->
+		</javac>
+	</target>
+
+	<!--压缩-->
+	<target name="compress">
+		<jar jarfile="${outjar}" basedir="${outfile}" />
+	</target>
+	<!--混淆-->
+	<target name="optimize">
+		<java jar="${proguard.classpath}" fork="true" failonerror="true">
+			<jvmarg value="-Dmaximum.inlined.code.length=32" />
+			<arg value="-injars ${outjar}" />
+			<arg value="-outjars ${optjar}" />
+			<arg value="-libraryjars F:\Java\jdk1.6.0_43\jre\lib" />
+			<arg value="-libraryjars ${lib.dir}" />
+			<arg value="-dontwarn  tgtools.web.services.**" />
+			<arg value="-dontpreverify" />
+			<arg value="-dontoptimize" />
+			<!--<arg value="-dontusemixedcaseclassnames" />-->
+			<arg value="-repackageclasses ''" />
+			<!--<arg value="-allowaccessmodification" />-->
+			<arg value="-keep public class * {public protected *;}" />
+			<arg value="-keepattributes *Annotation*" />
+			<arg value="-keepattributes Signature" />
+			<arg value="-keepattributes Exceptions" />
+			<arg value="-dontwarn  tgtools.interfaces.**" />
+			<arg value="-keepnames class * implements tgtools.interfaces.IDispose" />
+			<arg value="-dontwarn  tgtools.web.platform.**" />
+			<arg value="-keepnames class tgtools.web.platform.**" />
+			<arg value="-dontwarn  tgtools.web.rests.**" />
+			<arg value="-keep class tgtools.web.rests.data.**" />
+			<arg value="-keep class tgtools.web.rests.plugin.**" />
+			<arg value="-keep class tgtools.web.rests.services.**" />
+			<!--<arg value="-optimizationpasses 7" />-->
+		<!--<arg value="-verbose" />-->
+			<arg value="-keepdirectories" />
+        <arg value="-dontskipnonpubliclibraryclasses" />
+        <arg value="-dontskipnonpubliclibraryclassmembers" />
+
+    </java>
+    <!--<delete file="${outjar}" />-->
+	</target>
+
+	<!--生成javadoc-->
+	<target name="doccompile">
+		<javadoc destdir="${outdoc}" encoding="UTF-8" docencoding="UTF-8" source="1.6" sourcepath="src" splitindex="true" use="true" version="true">
+			<classpath refid="build.classpath" />
+			<packageset dir="${project}/src/">
+			</packageset>
+		</javadoc>
+	</target>
+
+	<!--压缩javadoc-->
+	<target name="doccompress">
+		<jar jarfile="${outdocjar}" basedir="${outdoc}" />
+	</target>
+
+	<!--复制到目标项目-->
+	<target name="copyout">
+		<delete file="${outjar}" />
+		<copy todir="${copyout}" overwrite="true">
+			<fileset dir="${outdir}">
+			</fileset>
+		</copy>
+	</target>
+
+</project>
