@@ -62,6 +62,7 @@ public class TransactionDataAccess implements IDataAccess {
     @Override
     public DataTable Query(String p_Sql) throws APPErrorException {
         final String sql=p_Sql;
+        LogHelper.info("",sql,"TransactionDataAccess.Query");
         return m_JdbcTemplate.query(p_Sql,new ResultSetExtractor<DataTable>(){
             @Override
             public DataTable extractData(ResultSet resultSet) throws SQLException, DataAccessException {
@@ -135,7 +136,7 @@ public class TransactionDataAccess implements IDataAccess {
     }
 
     @Override
-    public boolean executeBatchByTransaction(String[] strings, int i) throws APPErrorException {
+    public boolean executeBatchByTransaction(final String[] strings, int i) throws APPErrorException {
         final int level=i;
         final String[] sqls=strings;
        return m_JdbcTemplate.execute(new ConnectionCallback<Boolean>() {
@@ -164,7 +165,13 @@ public class TransactionDataAccess implements IDataAccess {
                     } catch (SQLException e1) {
                         LogHelper.error("","事物批量回滚失败","TransactionDataAccess.executeBatchByTransaction",e);
                     }
-                    LogHelper.error("","事物批量执行失败","TransactionDataAccess.executeBatchByTransaction",e);
+                    StringBuilder sb =new StringBuilder();
+                    for(int i=0;i<strings.length;i++)
+                    {
+                        sb.append(strings[i]);
+                        sb.append("\r\n");
+                    }
+                    LogHelper.error("","事物批量执行失败;sqls: \r\n"+sb.toString(),"TransactionDataAccess.executeBatchByTransaction",e);
                     return false;
                 } finally {
                     try{connection.close();}
