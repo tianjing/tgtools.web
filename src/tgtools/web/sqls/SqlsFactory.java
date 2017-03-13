@@ -29,9 +29,6 @@ public class SqlsFactory {
         LogHelper.info("", "dbtype:" + dbtype, "SqlsFactory.getSQLs");
         try {
             PropertiesObject properties = loadSqlFile(dbtype, p_ResUrl);
-            for (Map.Entry<Object, Object> item : properties.entrySet()) {
-                LogHelper.info("", "key:" + item.getKey() + ";value:" + item.getValue(), "SqlsFactory.getSQLs");
-            }
             return properties.convert(p_T);
         } catch (APPErrorException e) {
             LogHelper.error("", "转换BaseViewSqls失败：" + e.getMessage(), "SqlsFactory.getSQLs", e);

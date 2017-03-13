@@ -4,15 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/tgtools/web/util/WebRestClient.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/spring-sql-base.xml" afterPath="$PROJECT_DIR$/src/tgtools/web/sqls/sql-base.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/spring-sql-dm.xml" afterPath="$PROJECT_DIR$/src/tgtools/web/sqls/sql-dm6.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/spring-sql-dm6.xml" afterPath="$PROJECT_DIR$/src/tgtools/web/sqls/sql-dm.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/spring-sql-mysql.xml" afterPath="$PROJECT_DIR$/src/tgtools/web/sqls/sql-mysql.xml" />
+    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="整合SQL到配置文件">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/build.property" afterPath="$PROJECT_DIR$/src/META-INF/build.property" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tgtools/web/core/Constants.java" afterPath="$PROJECT_DIR$/src/tgtools/web/core/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tgtools/web/sqls/SqlsFactory.java" afterPath="$PROJECT_DIR$/src/tgtools/web/sqls/SqlsFactory.java" />
     </list>
     <ignored path="tgtools.web.iws" />
@@ -46,8 +40,8 @@
       <file leaf-file-name="SqlsFactory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/SqlsFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
+            <state relative-caret-position="619">
+              <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -856,7 +850,7 @@
       <workItem from="1489024825016" duration="5000" />
       <workItem from="1489327497765" duration="18000" />
       <workItem from="1489374071626" duration="3445000" />
-      <workItem from="1489383952249" duration="4440000" />
+      <workItem from="1489383952249" duration="4550000" />
     </task>
     <task id="LOCAL-00001" summary="修改 服务 停止后 重启 平台也能 启动">
       <created>1466561976223</created>
@@ -1089,11 +1083,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489377472778</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="整合SQL到配置文件">
+      <created>1489388404153</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1489388404153</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105066000" />
+    <option name="totallyTimeSpent" value="105176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
@@ -1436,8 +1437,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/SqlsFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
+        <state relative-caret-position="619">
+          <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
