@@ -52,6 +52,10 @@
 		<exclude name="tgtools/**"/>
 		</fileset>
 		</copy>
+		<copy file="${indir}spring-sql-base.xml" tofile="${outfile}spring-sql-base.xml"/>
+		<copy file="${indir}spring-sql-dm.xml" tofile="${outfile}spring-sql-dm.xml"/>
+		<copy file="${indir}spring-sql-mysql.xml" tofile="${outfile}spring-sql-mysql.xml"/>
+		<copy file="${indir}spring-sql-dm6.xml" tofile="${outfile}spring-sql-dm6.xml"/>
 		<javac srcdir="${indir}" destdir="${outfile}" includeantruntime="on" encoding="UTF-8">
 			<classpath refid="build.classpath" />
 			<compilerarg value="-Xlint:unchecked" />

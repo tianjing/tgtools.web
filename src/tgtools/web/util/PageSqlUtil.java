@@ -5,6 +5,7 @@ import tgtools.db.IDataAccess;
 import tgtools.exceptions.APPErrorException;
 import tgtools.util.LogHelper;
 import tgtools.util.StringUtil;
+import tgtools.web.core.Constants;
 import tgtools.web.entity.BSGridDataEntity;
 
 public class PageSqlUtil {
@@ -19,11 +20,9 @@ public class PageSqlUtil {
      */
     public static String getPageDataSQL(String p_SQL, String p_CurrPage,
                                         String p_PageSize) {
-        String sql = "select * from( select rownum num, * from ("
-                //mysql String sql = "select * from (select * from( "
-                + p_SQL
-                //mysql		+ " ) as u limit {currParge},{pargeSize} ) as z ";
-                + "))where num >=({currParge}-1)*{pargeSize}+1 and num<={currParge}*{pargeSize}";
+        String sql = Constants.SQLs.Page_GetPageData_SQL;
+        sql =StringUtil.replace(sql,"${sql}",p_SQL);
+
         sql = StringUtil.replace(sql, "{currParge}", "0" == p_CurrPage ? p_CurrPage : String.valueOf(Integer.valueOf(p_CurrPage)));
         sql = StringUtil.replace(sql, "{pargeSize}", p_PageSize);
         return sql;
@@ -99,7 +98,8 @@ public class PageSqlUtil {
      * @return
      */
     public static String getPageCountSQL(String p_SQL) {
-        String sql = "select convert(int,count(*)) as num from (" + p_SQL + ")";
+        String sql = Constants.SQLs.Page_GetCountData_SQL;
+        sql =StringUtil.replace(sql,"${sql}",p_SQL);
         return sql;
     }
 
