@@ -12,6 +12,7 @@ public class Constants {
 
 static{
     SQLs= SqlsFactory.getSQLs(new BaseViewSqls());
+    System.out.println("11111:"+Constants.SQLs.Page_GetCountData_SQL);
 }
 public static BaseViewSqls SQLs;
 

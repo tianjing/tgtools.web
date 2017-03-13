@@ -4,10 +4,11 @@ package tgtools.web.sqls;
 import tgtools.exceptions.APPErrorException;
 import tgtools.util.LogHelper;
 import tgtools.util.PropertiesObject;
+import tgtools.util.StringUtil;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.StringWriter;
+import java.util.Map;
 
 /**
  * 名  称：
@@ -16,13 +17,21 @@ import java.io.StringWriter;
  * 时  间：8:38
  */
 public class SqlsFactory {
+    public static <T> T getSQLs(T p_T) {
+        String name = StringUtil.replace(p_T.getClass().getName(), ".", "/");
+        name = StringUtil.replace(name, p_T.getClass().getSimpleName(), "");
+        LogHelper.info("", "name:" + name, "SqlsFactory.getSQLs");
+        return getSQLs(p_T, name);
+    }
 
-    public static <T>T getSQLs(T p_T) {
+    private static <T> T getSQLs(T p_T, String p_ResUrl) {
         String dbtype = tgtools.db.DataBaseFactory.getDefault().getDataBaseType();
         LogHelper.info("", "dbtype:" + dbtype, "SqlsFactory.getSQLs");
         try {
-            PropertiesObject properties = loadSqlFile(dbtype,p_T.getClass());
-            LogHelper.info("", "读取sql文件成功", "SqlsFactory.getSQLs");
+            PropertiesObject properties = loadSqlFile(dbtype, p_ResUrl);
+            for (Map.Entry<Object, Object> item : properties.entrySet()) {
+                LogHelper.info("", "key:" + item.getKey() + ";value:" + item.getValue(), "SqlsFactory.getSQLs");
+            }
             return properties.convert(p_T);
         } catch (APPErrorException e) {
             LogHelper.error("", "转换BaseViewSqls失败：" + e.getMessage(), "SqlsFactory.getSQLs", e);
@@ -31,23 +40,24 @@ public class SqlsFactory {
 
     }
 
-    public static PropertiesObject loadSqlFile(String p_DBType,Class p_Class) throws APPErrorException {
+    private static PropertiesObject loadSqlFile(String p_DBType, String p_ResUrl) throws APPErrorException {
         PropertiesObject properties = new PropertiesObject();
 
-        String defaultfile = "/spring-sql-base.xml";
-        String dbfile = "/spring-sql-" + p_DBType + ".xml";
-        loadFile(properties, defaultfile,p_Class);
-        loadFile(properties, dbfile,p_Class);
+        String defaultfile = "sql-base.xml";
+        String dbfile = "sql-" + p_DBType + ".xml";
+        loadFile(properties, p_ResUrl+defaultfile);
+        loadFile(properties, p_ResUrl+dbfile);
 
         return properties;
     }
 
-    private static void loadFile(PropertiesObject properties, String p_File,Class p_Class) throws APPErrorException {
+    private static void loadFile(PropertiesObject properties, String p_File) throws APPErrorException {
         try {
-            InputStream defaultStream = getResource(p_File,p_Class);
+            InputStream defaultStream = getResource(p_File);
             if (null != defaultStream) {
                 properties.loadFromXML(defaultStream);
                 defaultStream.close();
+                LogHelper.info("", "读取sql文件成功：文件：" + p_File, "SqlsFactory.getSQLs");
             } else {
                 LogHelper.info("", "读取sql文件失败：" + p_File, "SqlsFactory.getSQLs");
             }
@@ -57,11 +67,16 @@ public class SqlsFactory {
         }
     }
 
-    private static InputStream getResource(String p_Url,Class p_Class) {
-        return p_Class.getResourceAsStream(p_Url);
+    private static InputStream getResource(String p_Url) {
+
+        return SqlsFactory.class.getClassLoader().getResourceAsStream(p_Url);
+
     }
 
+    public static void main(String[] args) {
+        String name = StringUtil.replace(SqlsFactory.class.getName(), ".", "/");
+        name = StringUtil.replace(name, SqlsFactory.class.getSimpleName(), "");
+        System.out.println(name);
 
-
-
+    }
 }
