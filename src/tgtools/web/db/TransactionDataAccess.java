@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.ResultSetExtractor;
 import tgtools.data.DataTable;
 import tgtools.db.IDataAccess;
 import tgtools.exceptions.APPErrorException;
+import tgtools.util.JsonParseHelper;
 import tgtools.util.LogHelper;
 import tgtools.util.StringUtil;
 
@@ -108,7 +109,10 @@ public class TransactionDataAccess implements IDataAccess {
             }
         });
     }
-
+    @Override
+    public <T> T Query(String sql, Class<T> p_Class) throws APPErrorException {
+        return (T) JsonParseHelper.parseToObject(Query(sql),p_Class,true);
+    }
     @Override
     public int executeUpdate(String p_Sql) throws APPErrorException {
         return m_JdbcTemplate.update(p_Sql);
