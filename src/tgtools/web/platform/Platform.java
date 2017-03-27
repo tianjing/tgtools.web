@@ -104,13 +104,18 @@ public class Platform {
     }
 
     public static DefaultListableBeanFactory getBeanFactory() {
+        if(null==getApplicationContext())
+        {
+            org.springframework.context.support.GenericApplicationContext dd=new org.springframework.context.support.GenericApplicationContext();
+            m_ApplicationContext=dd;
+
+        }
         if (null == m_BeanFactory && null != getApplicationContext()) {
             if (getApplicationContext().getAutowireCapableBeanFactory() instanceof DefaultListableBeanFactory) {
                 m_BeanFactory = (DefaultListableBeanFactory) getApplicationContext().getAutowireCapableBeanFactory();
                 LogHelper.info("", "BeanFactory:" + m_BeanFactory.getClass(), "Platform.getBeanFactory");
             }
         }
-
         return m_BeanFactory;
     }
     /**
