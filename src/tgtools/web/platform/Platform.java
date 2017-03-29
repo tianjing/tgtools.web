@@ -8,14 +8,12 @@ import tgtools.db.DataBaseFactory;
 import tgtools.log.LoggerFactory;
 import tgtools.util.LogHelper;
 import tgtools.util.StringUtil;
-import tgtools.web.rests.entity.SettingsEntity;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Platform {
     private static ApplicationContext m_ApplicationContext;
-    private static SettingsEntity m_Settings;
     private static DefaultListableBeanFactory m_BeanFactory;
     private static String m_BasePath;
     private static String m_ContextPath;
@@ -82,15 +80,6 @@ public class Platform {
             tgtools.service.ServiceFactory.start();
             LoggerFactory.getDefault().info("services 初始化完毕========");
 
-            try {
-                Object objsetting = p_Context.getBean("SettingsEntity");
-                if (null != objsetting && objsetting instanceof SettingsEntity) {
-                    m_Settings = (SettingsEntity) objsetting;
-                    LogHelper.info("", "配置信息加载成功", "startup");
-                }
-            } catch (Exception e) {
-                LogHelper.info("", "配置信息加载失败，可能影响运行", "startup");
-            }
 
         } catch (Exception e) {
 
@@ -173,19 +162,7 @@ public class Platform {
         }
         getBeanFactory().registerBeanDefinition(p_Name, p_BeanDefinitionBuilder.getBeanDefinition());
     }
-    /**
-     * 获取设置
-     *
-     * @param p_Key
-     * @return
-     */
-    public static String getSetting(String p_Key) {
 
-        if (null != m_Settings && m_Settings.getConfigs().containsKey(p_Key)) {
-            return m_Settings.getConfigs().get(p_Key);
-        }
-        return StringUtil.EMPTY_STRING;
-    }
 
     /**
      * 获取服务路径
