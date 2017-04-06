@@ -144,18 +144,33 @@ public class Platform {
      * @param p_Scope 影响范围 参看 Platform。Scope_
      */
     public static void addBean(String p_Name, Class p_Class,String p_Scope) {
+        addBean(p_Name,p_Class,p_Scope,null);
+    }
+
+    /**
+     *  更新添加Bean，如果存在则替换
+     * @param p_Name bean 名称
+     * @param p_Class 类型
+     * @param p_Scope 作用范围 参照：Platform。Scope_ 的常量
+     * @param p_DestroyMethodName 销毁时方法
+     */
+    public static void addBean(String p_Name, Class p_Class,String p_Scope,String p_DestroyMethodName) {
         if (getBeanFactory().containsBean(p_Name)) {
             getBeanFactory().removeBeanDefinition(p_Name);
         }
         BeanDefinitionBuilder dataSourceBuider = BeanDefinitionBuilder.genericBeanDefinition(p_Class);
         dataSourceBuider.setScope(p_Scope);
+        if(!StringUtil.isNullOrEmpty(p_DestroyMethodName)) {
+            dataSourceBuider.setDestroyMethodName(p_DestroyMethodName);
+        }
         getBeanFactory().registerBeanDefinition(p_Name, dataSourceBuider.getBeanDefinition());
+
     }
-    /**
-     * 更新添加Bean，如果存在则替换
-     *
-     * @param p_BeanDefinitionBuilder 配置信息
-     */
+        /**
+         * 更新添加Bean，如果存在则替换
+         *
+         * @param p_BeanDefinitionBuilder 配置信息
+         */
     public static void addBean(String p_Name,BeanDefinitionBuilder p_BeanDefinitionBuilder) {
         if (getBeanFactory().containsBean(p_Name)) {
             getBeanFactory().removeBeanDefinition(p_Name);
