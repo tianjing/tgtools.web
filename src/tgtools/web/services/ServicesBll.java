@@ -3,6 +3,7 @@ package tgtools.web.services;
 import java.util.List;
 
 import tgtools.exceptions.APPErrorException;
+import tgtools.log.LoggerFactory;
 import tgtools.service.BaseService;
 
 
@@ -37,6 +38,7 @@ public class ServicesBll {
 			throws APPErrorException {
 		TableServiceTask task = new TableServiceTask(p_TaskInfo);
 		if (!task.init()) {
+			LoggerFactory.getDefault().info("表服务初始化失败:"+task.getName());
 			return null;
 		}
 		return task;
@@ -48,6 +50,7 @@ public class ServicesBll {
 	 */
 	public static void laodAllServices() throws APPErrorException {
 		List<ServicesEntity> services = ServicesDao.getAllServices();
+		LoggerFactory.getDefault().info("表配置的服务数量:"+(null==services?-1:services.size()));
 		for (int i = 0; i < services.size(); i++) {
 			TableServiceTask task = createService(services.get(i));
 			if (null != task) {
