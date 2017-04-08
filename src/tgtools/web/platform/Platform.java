@@ -80,6 +80,9 @@ public class Platform {
             tgtools.service.ServiceFactory.start();
             LoggerFactory.getDefault().info("services 初始化完毕========");
 
+            tgtools.message.MessageFactory.start();
+            LoggerFactory.getDefault().info("Message 初始化完毕========");
+
 
         } catch (Exception e) {
 
