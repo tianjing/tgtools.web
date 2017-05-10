@@ -75,7 +75,7 @@ public class Platform {
             String path = getServerPath() + "WEB-INF/Plugins/";
             LoggerFactory.getDefault().info("插件地址 ：" + path);
             tgtools.plugin.PluginFactory.startup(path);
-            LoggerFactory.getDefault().info("plugin 初始化完毕========");
+            LoggerFactory.getDefault().info("p  lugin 初始化完毕========");
 
             tgtools.service.ServiceFactory.start();
             LoggerFactory.getDefault().info("services 初始化完毕========");

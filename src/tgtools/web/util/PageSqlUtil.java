@@ -116,7 +116,7 @@ public class PageSqlUtil {
         String sql = getPageCountSQL(p_SQL);
         DataTable dt = p_DataAccess.Query(sql);
         if (DataTable.hasData(dt)) {
-            return (Integer) dt.getRow(0).getValue("num");
+            return (Integer) dt.getRow(0).getValue("NUM");
         }
         return 0;
     }
