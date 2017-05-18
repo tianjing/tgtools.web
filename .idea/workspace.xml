@@ -4,12 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/src/tgtools/web/util/WebRestClient.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="增加方法">
+    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="调整输出日志">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tgtools.core.javadoc.jar" afterPath="$PROJECT_DIR$/lib/tgtools.core.javadoc.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tgtools.core.optimize.jar" afterPath="$PROJECT_DIR$/lib/tgtools.core.optimize.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/build.property" afterPath="$PROJECT_DIR$/src/META-INF/build.property" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tgtools/web/platform/Platform.java" afterPath="$PROJECT_DIR$/src/tgtools/web/platform/Platform.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tgtools/web/services/TableServiceTask.java" afterPath="$PROJECT_DIR$/src/tgtools/web/services/TableServiceTask.java" />
     </list>
     <ignored path="tgtools.web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,24 +38,15 @@
     <favorites_list name="tgtools.web" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="BeanDefineConfigue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/BeanDefineConfigue.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="TableServiceTask.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tgtools/web/services/TableServiceTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="13" column="27" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Platform.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/Platform.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state relative-caret-position="396">
+              <caret line="100" column="14" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1764#1765#0" expanded="true" />
+                <element signature="e#1859#1860#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,7 +80,6 @@
         <option value="$PROJECT_DIR$/src/tgtools/web/util/WebRestClient.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/rests/data/DataAccessRest.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/platform/BeanDefineConfigue.java" />
-        <option value="$PROJECT_DIR$/src/tgtools/web/services/TableServiceTask.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/entity/BSGridDataEntity.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/spring-sql-base.xml" />
         <option value="$PROJECT_DIR$/src/tgtools/web/sqls/BaseViewSqls.java" />
@@ -106,6 +96,10 @@
         <option value="$PROJECT_DIR$/src/tgtools/web/util/PageSqlUtil.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/aop/Log.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/platform/Platform.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/platform/RequestContextHolder.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/platform/RequestContextListener.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/platform/PlatformCacheResolver.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/services/TableServiceTask.java" />
       </list>
     </option>
   </component>
@@ -207,9 +201,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -264,29 +257,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tgtools.web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tgtools.web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="platform" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,6 +277,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -342,6 +314,7 @@
       <recent name="C:\Works\GitHub\tgtools.web" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tgtools.web.platform" />
       <recent name="tgtools.web.sqls" />
       <recent name="tgtools.web.core" />
     </key>
@@ -923,7 +896,16 @@
       <workItem from="1494400469401" duration="90000" />
       <workItem from="1494403580349" duration="9000" />
       <workItem from="1494484183637" duration="3275000" />
-      <workItem from="1494832640246" duration="617000" />
+      <workItem from="1494832640246" duration="675000" />
+      <workItem from="1494901095052" duration="1166000" />
+      <workItem from="1494985615917" duration="2621000" />
+      <workItem from="1494990062091" duration="363000" />
+      <workItem from="1495010386465" duration="38000" />
+      <workItem from="1495011235426" duration="171000" />
+      <workItem from="1495084992820" duration="291000" />
+      <workItem from="1495091314381" duration="743000" />
+      <workItem from="1495094870935" duration="1000" />
+      <workItem from="1495094876218" duration="2425000" />
     </task>
     <task id="LOCAL-00001" summary="修改 服务 停止后 重启 平台也能 启动">
       <created>1466561976223</created>
@@ -1233,11 +1215,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494398423445</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="调整输出日志">
+      <created>1494834902446</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1494834902446</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127163000" />
+    <option name="totallyTimeSpent" value="135040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -1254,11 +1243,11 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29269603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15896885" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23847803" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14393125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1433942" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1306,7 +1295,8 @@
     <MESSAGE value="更新platform中没有spring对象工厂时就创建新的" />
     <MESSAGE value="删除不需要的类" />
     <MESSAGE value="增加方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加方法" />
+    <MESSAGE value="调整输出日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整输出日志" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1341,43 +1331,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/PreparedStatementCreator.class" />
-    <entry file="jar://$PROJECT_DIR$/../EmptyProject/WebContent/WEB-INF/lib/spring-jdbc-4.1.5.RELEASE.jar!/org/springframework/jdbc/core/JdbcOperations.class" />
-    <entry file="jar://F:/Java/jdk1.6.0_43/src.zip!/java/sql/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="260" column="9" selection-start-line="260" selection-start-column="9" selection-end-line="260" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/util/StringHttpMessageConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/rests/plugin/PluginManageRest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/sql-mysql.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="122" selection-start-line="5" selection-start-column="122" selection-end-line="5" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/sql-dm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/sql-dm6.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1500,13 +1453,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/rests/entity/SettingsEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/services/TableServiceTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/tgtools.core.optimize.jar!/tgtools/service/ServiceFactory.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-52">
@@ -1518,13 +1464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/services/ServicesBll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -1662,20 +1601,73 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/aop/Log.java" />
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/BeanDefineConfigue.java">
+    <entry file="jar://$PROJECT_DIR$/lib/spring-web-4.1.5.RELEASE.jar!/org/springframework/web/context/request/RequestContextHolder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="286">
+          <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="51" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/Platform.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="3190">
+          <caret line="159" column="74" selection-start-line="159" selection-start-column="67" selection-end-line="159" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-web-4.1.5.RELEASE.jar!/org/springframework/web/context/request/RequestContextListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/SessionContextHolder.java" />
+    <entry file="jar://F:/eclipse/Tomcat7/lib/servlet-api.jar!/javax/servlet/ServletRequestEvent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/RequestContextListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/PlatformCacheResolver.java" />
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/services/ServicesBll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/BeanDefineConfigue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/tgtools.core.optimize.jar!/tgtools/service/BaseService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="46" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/services/TableServiceTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="100" column="14" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
+          <folding>
+            <element signature="e#1764#1765#0" expanded="true" />
+            <element signature="e#1859#1860#0" expanded="true" />
           </folding>
         </state>
       </provider>

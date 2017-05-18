@@ -15,13 +15,13 @@ public class TableServiceTask extends BaseService implements IDispose {
 
 	public TableServiceTask(ServicesEntity p_Info) {
 		m_Info = p_Info;
+		//m_IsStop=true;
 	}
 
 	private String m_State;
 	private JARLoader m_JARLoader;
 	private ServicesEntity m_Info;
 	private BaseService m_Service;
-
 	/**
 	 * 服务初始化
 	 * @return
@@ -75,7 +75,7 @@ public class TableServiceTask extends BaseService implements IDispose {
 
 	@Override
 	public boolean canRun() {
-		return null == m_State||ServicesEntity.State_Start.equals(m_State);
+		return (null == m_State||ServicesEntity.State_Start.equals(m_State))&&m_Service.canRun();
 	}
 
 	@Override
@@ -89,7 +89,7 @@ public class TableServiceTask extends BaseService implements IDispose {
 	 */
 	@Override
 	public void run(TaskContext p_Context) {
-		while (true) {
+		//while (true) {
 			try {
 				if(this.m_IsStop)
 				{
@@ -98,7 +98,7 @@ public class TableServiceTask extends BaseService implements IDispose {
 				}
 				if (!ServicesEntity.State_Start.equals(this.getState())) {
 					wait1();
-					continue;
+			//		continue;
 				}
 				if(this.m_IsStop)
 				{
@@ -116,6 +116,7 @@ public class TableServiceTask extends BaseService implements IDispose {
 					ServicesBll.unlockService(m_Info.getID_());
 					m_Service.setLastTime(DateUtil.getCurrentDate());
 					ServicesBll.updateRunTime(m_Info.getID_());
+					wait1();
 				}
 				if(this.m_IsStop)
 				{
@@ -127,10 +128,10 @@ public class TableServiceTask extends BaseService implements IDispose {
 			}
 			if (!ServicesEntity.State_Start.equals(this.getState())) {
 				wait1();
-				continue;
+			//	continue;
 			}
 			
-		}
+	//	}
 	}
 
 	private void wait1() {
@@ -161,9 +162,11 @@ public class TableServiceTask extends BaseService implements IDispose {
 
 	@Override
 	public void start() {
-
+//		if(this.m_IsStop) {
+//			this.runThread(null);
+//		}
+//		m_IsStop=false;
 		super.start();
-
 	}
 
 	public String getState() {
