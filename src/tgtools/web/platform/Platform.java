@@ -1,5 +1,6 @@
 package tgtools.web.platform;
 
+import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
@@ -181,6 +182,17 @@ public class Platform {
         getBeanFactory().registerBeanDefinition(p_Name, p_BeanDefinitionBuilder.getBeanDefinition());
     }
 
+    /**
+     * 更新添加Bean，如果存在则替换
+     * @param p_Name
+     * @param p_BeanDefinition
+     */
+    public static void addBean(String p_Name,BeanDefinition p_BeanDefinition) {
+        if (getBeanFactory().containsBean(p_Name)) {
+            getBeanFactory().removeBeanDefinition(p_Name);
+        }
+        getBeanFactory().registerBeanDefinition(p_Name,p_BeanDefinition);
+    }
 
     /**
      * 获取服务路径
