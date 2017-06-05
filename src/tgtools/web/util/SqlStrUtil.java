@@ -9,7 +9,7 @@ import tgtools.util.StringUtil;
  * 功  能：验证参数，替换占位符
  * 时  间：9:59
  */
-public final class SqlStrUtilHelper {
+public final class SqlStrUtil {
 
     private static String m_SpecialStrReg = "(?:--)|(/\\*(?:.|[\\n\\r])*?\\*/)|(\\b(frame|<frame|iframe|<iframe|img|<img|JavaScript|<javascript|script|<script|alert|select|update|and|or|delete|insert|trancate|char|into|substr|ascii|declare|exec|count|master|into|drop|execute)\\b)";
 
