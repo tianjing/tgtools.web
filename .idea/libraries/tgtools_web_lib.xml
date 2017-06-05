@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="tgtools.web.lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/bulidversion.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.2.3-activiti.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.2.3-activiti.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-aop-4.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-asm-attrs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-asm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-beans-4.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-context-4.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-core-4.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-jdbc-4.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-orm-4.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-oxm-4.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-tx-4.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-web-4.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-webmvc-4.1.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tgtools.core.optimize.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/tgtools.core.javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
