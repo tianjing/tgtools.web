@@ -3,6 +3,6 @@
 <properties>
     <comment>Temporary Properties</comment>
     <entry key="Page_GetPageData_SQL"><![CDATA[select * from( select rownum num, * from ( ${sql} ))where num >=({currParge}-1)*{pargeSize}+1 and num<={currParge}*{pargeSize} ]]></entry>
-    <entry key="Page_GetCountData_SQL"><![CDATA[select convert(int,count(*)) as num from ( ${sql} ) ]]></entry>
+    <entry key="Page_GetCountData_SQL"><![CDATA[select int(count(*)) as num from ( ${sql} ) ]]></entry>
 
 </properties>
