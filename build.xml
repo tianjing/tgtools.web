@@ -56,6 +56,9 @@
 		<copy file="${indir}tgtools/web/sqls/sql-dm.xml" tofile="${outfile}tgtools/web/sqls/sql-dm.xml"/>
 		<copy file="${indir}tgtools/web/sqls/sql-mysql.xml" tofile="${outfile}tgtools/web/sqls/sql-mysql.xml"/>
 		<copy file="${indir}tgtools/web/sqls/sql-dm6.xml" tofile="${outfile}tgtools/web/sqls/sql-dm6.xml"/>
+		<copy file="${indir}tgtools/web/sqls/sql-db2.xml" tofile="${outfile}tgtools/web/sqls/sql-db2.xml"/>
+		<copy file="${indir}tgtools/web/sqls/sql-h2.xml" tofile="${outfile}tgtools/web/sqls/sql-h2.xml"/>
+
 		<javac srcdir="${indir}" destdir="${outfile}" includeantruntime="on" encoding="UTF-8">
 			<classpath refid="build.classpath" />
 			<compilerarg value="-Xlint:unchecked" />
