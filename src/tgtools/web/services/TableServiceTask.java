@@ -21,7 +21,6 @@ public class TableServiceTask extends BaseService implements IDispose {
         m_Info = p_Info;
         //m_IsStop=true;
     }
-
     /**
      * 服务初始化
      *
@@ -77,14 +76,17 @@ public class TableServiceTask extends BaseService implements IDispose {
 
     @Override
     public boolean canRun() {
-        return (null == m_State || ServicesEntity.State_Start.equals(m_State)) && m_Service.canRun();
+        return (null == m_State || ServicesEntity.State_Start.equals(m_State))&&super.canRun()&&ServiceCanRun();
     }
 
     @Override
     protected Date getEndTime() {
-        return null;
+        return DateUtil.getMaxDate();
     }
-
+    protected boolean ServiceCanRun()
+    {
+        return !m_Service.isBusy()&&(m_Service.isConcurrency() || ServicesBll.lockService(m_Info.getID_()));
+    }
     /**
      * 运行服务
      *
@@ -105,18 +107,20 @@ public class TableServiceTask extends BaseService implements IDispose {
                 doStop();
                 return;
             }
-            if (m_Service.canRun() && (this.isConcurrency() || ServicesBll.lockService(m_Info.getID_()))) {
+           // if (m_Service.canRun() && (m_Service.isConcurrency() || ServicesBll.lockService(m_Info.getID_()))) {
+                m_Service.setisBusy(true);
                 if (null == p_Context) {
                     p_Context = new TaskContext();
                 }
                 p_Context.put("info", m_Info);
                 ServicesBll.updateStartTime(m_Info.getID_());
                 m_Service.run(p_Context);
+                m_Service.setisBusy(false);
                 ServicesBll.unlockService(m_Info.getID_());
                 m_Service.setLastTime(DateUtil.getCurrentDate());
                 ServicesBll.updateRunTime(m_Info.getID_());
                 wait1();
-            }
+          //  }
             if (this.m_IsStop) {
                 doStop();
                 return;

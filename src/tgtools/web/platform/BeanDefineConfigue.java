@@ -63,6 +63,7 @@ public class BeanDefineConfigue implements ApplicationListener {
 	 */
 	protected void loadService()
 	{
+		LoggerFactory.getDefault().info("表配置的服务 初始化开始========");
 
 			tgtools.threads.ThreadPoolFactory.addTask(new Runnable() {
 				@Override
