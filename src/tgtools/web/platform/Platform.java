@@ -9,6 +9,7 @@ import tgtools.db.DataBaseFactory;
 import tgtools.log.LoggerFactory;
 import tgtools.util.LogHelper;
 import tgtools.util.StringUtil;
+import tgtools.web.log.Log4jFactory;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -36,6 +37,9 @@ public class Platform {
         }//org.springframework.web.context.support.XmlWebApplicationContext
         try {
             setServerPath(p_Context);
+
+            Log4jFactory.start();
+
             LoggerFactory.getDefault().info("DataBaseFactory load");
             String[] beannames = m_ApplicationContext.getBeanDefinitionNames();
             for (String name : beannames) {

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import tgtools.exceptions.APPErrorException;
 import tgtools.log.LoggerFactory;
 import tgtools.util.StringUtil;
+import tgtools.web.log.Log4jFactory;
 import tgtools.web.services.ServicesBll;
 
 @SuppressWarnings("rawtypes")
@@ -102,5 +103,6 @@ public class BeanDefineConfigue implements ApplicationListener {
 			e.printStackTrace();
 		}
 		LoggerFactory.getDefault().info("项目已关闭");
+		Log4jFactory.shutdown();
 	}
 }
