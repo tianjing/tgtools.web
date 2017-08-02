@@ -85,7 +85,7 @@ public class TableServiceTask extends BaseService implements IDispose {
     }
     protected boolean ServiceCanRun()
     {
-        return !m_Service.isBusy()&&(m_Service.isConcurrency() || ServicesBll.lockService(m_Info.getID_()));
+        return m_Service.canRun()&&(m_Service.isConcurrency() || ServicesBll.lockService(m_Info.getID_()));
     }
     /**
      * 运行服务

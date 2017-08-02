@@ -5,6 +5,7 @@ import java.util.List;
 import tgtools.exceptions.APPErrorException;
 import tgtools.log.LoggerFactory;
 import tgtools.service.BaseService;
+import tgtools.util.LogHelper;
 
 
 public class ServicesBll {
@@ -52,13 +53,18 @@ public class ServicesBll {
 		List<ServicesEntity> services = ServicesDao.getAllServices();
 		LoggerFactory.getDefault().info("表配置的服务数量:"+(null==services?-1:services.size()));
 		for (int i = 0; i < services.size(); i++) {
-			TableServiceTask task = createService(services.get(i));
-			if (null != task) {
-				if (ServicesEntity.State_Start
-						.equals(services.get(i).getSTATE())||ServicesEntity.State_Stop.equals(services.get(i).getSTATE())) {
-					task.setState(ServicesEntity.State_Start);
+			try {
+				TableServiceTask task = createService(services.get(i));
+				if (null != task) {
+					if (ServicesEntity.State_Start
+							.equals(services.get(i).getSTATE()) || ServicesEntity.State_Stop.equals(services.get(i).getSTATE())) {
+						task.setState(ServicesEntity.State_Start);
+					}
+					tgtools.service.ServiceFactory.register(task);
 				}
-				tgtools.service.ServiceFactory.register(task);
+			}catch (Exception ex)
+			{
+				LogHelper.error("","服务加载失败；原因："+ ex.getMessage(),"TableServiceTask.laodAllServices",ex);
 			}
 		}
 
