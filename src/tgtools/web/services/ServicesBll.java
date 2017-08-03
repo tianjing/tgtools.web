@@ -77,11 +77,7 @@ public class ServicesBll {
 	 */
 	public static void run(String p_ID) throws APPErrorException {
 		TableServiceTask task = getTask(p_ID);
-//		try {
-//			ServicesDao.updateState(p_ID, ServicesEntity.State_Start);
-//		} catch (Exception e) {
-//			LogHelper.error("", "更新服务状态出错", "ServicesBll.run", e);
-//		}
+
 		task.setState(ServicesEntity.State_Start);
 	}
 
@@ -93,11 +89,7 @@ public class ServicesBll {
  */
 	public static void stop(String p_ID) throws APPErrorException {
 		TableServiceTask task = getTask(p_ID);
-//		try {
-//			ServicesBll.changeState(p_ID, ServicesEntity.State_Stop);
-//		} catch (Exception e) {
-//			LogHelper.error("", "修改服务状态出错", "TableServiceTask", e);
-//		}
+
 		task.setState(ServicesEntity.State_Pause);
 	}
 
