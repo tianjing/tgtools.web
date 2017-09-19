@@ -15,114 +15,142 @@ import java.io.OutputStream;
 import java.util.List;
 
 /**
- * web.xml 增加过滤器
- *<filter>
- *<filter-name>myFilter</filter-name>
- *<filter-class>tgtools.web.http.Filter.ProxyFilter</filter-class>
- *<init-param>
- *<param-name>ipmap</param-name>
- *<param-value>{"nf":"192.168.1.245:8091"}</param-value>
- *</init-param>
- *</filter>
- *<filter-mapping>
- *<filter-name>myFilter</filter-name>
- *<url-pattern>*</url-pattern>
- *</filter-mapping>
- *
- *
- * 名  称：
+ * web.xml 增加过滤器 <br/>
+ * &lt;filter&gt; <br/>
+ * &lt;filter-name&gt;myFilter&lt;/filter-name&gt; <br/>
+ * &lt;filter-class&gt;tgtools.web.http.Filter.ProxyFilter&lt;/filter-class&gt; <br/>
+ * &lt;init-param&gt;  <br/>
+ * &lt;param-name&gt;ipmap&lt;/param-name&gt; <br/>
+ * &lt;param-value&gt;{"nf":"192.168.1.245:8091"}&lt;/param-value&gt; <br/>
+ * &lt;/init-param&gt; <br/>
+ * &lt;/filter&gt; <br/>
+ * &lt;filter-mapping&gt; <br/>
+ * &lt;filter-name&gt;myFilter&lt;/filter-name&gt; <br/>
+ * &lt;url-pattern&gt;*&lt;/url-pattern&gt; <br/>
+ * &lt;/filter-mapping&gt; <br/>
+ * <p>
+ * <p>
+ * 名  称：项目路径转发器
  * 编写者：田径
- * 功  能：
+ * 功  能：将指定的项目路径转向新服务器 如上配置意思:/nf/* 转向 192.168.1.245:8091/nf/*
  * 时  间：16:03
  */
 public class ProxyFilter implements Filter {
 
-    private JSONObject m_IpMap ;
+    protected JSONObject m_IpMap;
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         try {
-            String dd= filterConfig.getInitParameter("ipmap");
-            m_IpMap=new JSONObject(dd);
+            String dd = filterConfig.getInitParameter("ipmap");
+            m_IpMap = new JSONObject(dd);
 
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
 
         }
     }
-    private String getFirstPath(String P_Url)
-    {
-        if(!StringUtil.isNullOrEmpty(P_Url)&&P_Url.indexOf("/")==0)
-        {
-            P_Url=P_Url.substring(1);
+
+    protected String getFirstPath(String P_Url) {
+        if (!StringUtil.isNullOrEmpty(P_Url) && P_Url.indexOf("/") == 0) {
+            P_Url = P_Url.substring(1);
         }
-        if(!StringUtil.isNullOrEmpty(P_Url)&&P_Url.indexOf("/")>=0){
-            return P_Url.substring(0,P_Url.indexOf("/"));
+        if (!StringUtil.isNullOrEmpty(P_Url) && P_Url.indexOf("/") >= 0) {
+            return P_Url.substring(0, P_Url.indexOf("/"));
         }
         return P_Url;
 
 
     }
+
+
+    protected String getSourceUrl(ServletRequest p_ServletRequest)
+    {
+        return ((HttpServletRequest) p_ServletRequest).getRequestURI();
+    }
+
+
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        String url ="";
-        url=((HttpServletRequest)servletRequest).getRequestURI();
-        String method= ((HttpServletRequest) servletRequest).getMethod();
-        System.out.println("method:"+method);
-        WebClient client =new WebClient();
-        String path=getFirstPath(url);
-        System.out.println("path:"+path);
-        if(!m_IpMap.has(path))
-        {
-            filterChain.doFilter(servletRequest,servletResponse);
+        String url = "";
+        url = getSourceUrl(servletRequest);
+        String method = ((HttpServletRequest) servletRequest).getMethod();
+        System.out.println("method:" + method);
+
+        String path = getFirstPath(url);
+        System.out.println("path:" + path);
+        if (!m_IpMap.has(path)) {
+            filterChain.doFilter(servletRequest, servletResponse);
             return;
         }
         try {
-        String host=m_IpMap.getString(path);
-        client.setMethod(method);
+            String host = m_IpMap.getString(path);
 
-        client.setUrl("http://"+host+url);
+            byte[] data=doProxy(method,host,path,servletRequest,servletResponse);
+            OutputStream os = servletResponse.getOutputStream();
+            os.write(data);
+            os.close();
+        } catch (APPErrorException e) {
+            e.printStackTrace();
+        } finally {
 
-        setHeader(servletRequest,client);
-        InputStream is= servletRequest.getInputStream();
+        }
+    }
 
-            byte[] data= client.doInvokeAsByte(is);
-            if(client.getResponseHeader().containsKey("Set-Cookie")) {
+    protected byte[] doProxy(String p_Method, String p_NewHost, String p_NewPath,ServletRequest p_ServletRequest, ServletResponse p_ServletResponse) throws APPErrorException {
+        WebClient client = new WebClient();
+        String host = p_NewHost;
+        client.setMethod(p_Method);
+        String url = p_NewPath;
+        client.setUrl("http://" + host + url);
+        InputStream is =null;
+        try {
+            setHeader(p_ServletRequest, client);
+            is = p_ServletRequest.getInputStream();
+
+            byte[] data = client.doInvokeAsByte(is);
+            if (client.getResponseHeader().containsKey("Set-Cookie")) {
                 List<String> cookies = client.getResponseHeader().get("Set-Cookie");
                 if (cookies.size() > 0) {
                     for (int i = 0; i < cookies.size(); i++) {
-                        ((HttpServletResponse) servletResponse).addHeader("Set-Cookie", cookies.get(i));
+                        ((HttpServletResponse) p_ServletResponse).addHeader("Set-Cookie", cookies.get(i));
                     }
 
                 }
             }
 
-            if(client.getResponseHeader().containsKey("Content-Type")) {
+            if (client.getResponseHeader().containsKey("Content-Type")) {
                 List<String> ContentType = client.getResponseHeader().get("Content-Type");
 
                 if (ContentType.size() > 0) {
-                    servletResponse.setContentType(ContentType.get(0));
+                    p_ServletResponse.setContentType(ContentType.get(0));
 
                 }
             }
-            OutputStream os= servletResponse.getOutputStream();
-            os.write(data);
-            os.close();
-            is.close();
-        } catch (APPErrorException e) {
-            e.printStackTrace();
+
+            return data;
+        } catch (IOException ex) {
+            throw new APPErrorException("");
         }
         finally {
+            if(null!=is) {
+                try {
+                    is.close();
+                } catch (IOException e) {
 
+                }
+            }
         }
+
+
+}
+
+    protected void setHeader(ServletRequest servletRequest, IWebClient p_Client) {
+        String cookies = ((HttpServletRequest) servletRequest).getHeader("Cookie");
+        String ContentType = ((HttpServletRequest) servletRequest).getHeader("Content-Type");
+        p_Client.getHead().put("Cookie", cookies);
+        p_Client.getHead().put("Content-Type", ContentType);
     }
-    private void setHeader(ServletRequest servletRequest, IWebClient p_Client)
-    {
-        String cookies= ((HttpServletRequest)servletRequest).getHeader("Cookie");
-        String ContentType=((HttpServletRequest)servletRequest).getHeader("Content-Type");
-        p_Client.getHead().put("Cookie",cookies);
-        p_Client.getHead().put("Content-Type",ContentType);
-    }
+
     @Override
     public void destroy() {
 
