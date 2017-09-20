@@ -100,15 +100,22 @@ public class TransactionDataAccess implements IDataAccess {
 
     @Override
     public DataTable Query(String p_Sql) throws APPErrorException {
+        return Query(p_Sql,false);
+    }
+
+    @Override
+    public DataTable Query(String p_Sql,boolean p_BlobUseStream) throws APPErrorException {
         final String sql=p_Sql;
+        final boolean blobUseStream=p_BlobUseStream;
         LogHelper.info("",sql,"TransactionDataAccess.Query");
         return m_JdbcTemplate.query(p_Sql,new ResultSetExtractor<DataTable>(){
             @Override
             public DataTable extractData(ResultSet resultSet) throws SQLException, DataAccessException {
-                return new DataTable(resultSet,sql);
+                return new DataTable(resultSet,sql,blobUseStream);
             }
         });
     }
+
     @Override
     public <T> T Query(String sql, Class<T> p_Class) throws APPErrorException {
         return (T) JsonParseHelper.parseToObject(Query(sql),p_Class,true);
