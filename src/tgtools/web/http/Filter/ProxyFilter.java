@@ -65,7 +65,13 @@ public class ProxyFilter implements Filter {
 
     protected String getSourceUrl(ServletRequest p_ServletRequest)
     {
-        return ((HttpServletRequest) p_ServletRequest).getRequestURI();
+        String method=((HttpServletRequest) p_ServletRequest).getMethod();
+        if("GET".equals(method.toUpperCase())){
+            return ((HttpServletRequest) p_ServletRequest).getRequestURI()+ "?"+((HttpServletRequest) p_ServletRequest).getQueryString();
+        }
+        else {
+            return ((HttpServletRequest) p_ServletRequest).getRequestURI();
+        }
     }
 
 
