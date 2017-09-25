@@ -6,6 +6,7 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import tgtools.cache.CacheFactory;
 import tgtools.db.DataBaseFactory;
+import tgtools.exceptions.APPErrorException;
 import tgtools.log.LoggerFactory;
 import tgtools.util.LogHelper;
 import tgtools.util.StringUtil;
@@ -237,6 +238,40 @@ public class Platform {
             LogHelper.info("", m_BasePath, "Platform.getServerPath");
         }
     }
+
+    /**
+     * 动态添加 rest URL  </br>
+     * 添加的类 具有 @RequestMapping
+     * @param p_BeanName bean的名称
+     * @param p_BeanDefinition bean配置
+     * @throws APPErrorException
+     */
+    public static void addUrlMapping(String p_BeanName, BeanDefinition p_BeanDefinition) throws APPErrorException {
+        PlatformDispatcherServlet.addUrlMapping(p_BeanName,p_BeanDefinition);
+    }
+
+    /**
+     * 动态添加 rest URL  </br>
+     * 添加的类 具有 @RequestMapping
+     * @param p_BeanName bean的名称
+     * @param p_Class 类型
+     * @throws APPErrorException
+     */
+    public static void addUrlMapping(String p_BeanName, Class<?> p_Class) throws APPErrorException {
+        PlatformDispatcherServlet.addUrlMapping(p_BeanName,p_Class);
+    }
+
+    /**
+     *  移除动态添加的URL
+     * @param p_BeanName bean的名称
+     * @throws APPErrorException
+     */
+    public static void removeUrlMapping(String p_BeanName) throws APPErrorException {
+        PlatformDispatcherServlet.removeUrlMapping(p_BeanName);
+    }
+
+
+
 
     public static void main(String[] args) {
         System.out.println("1111:" + getServerPath());
