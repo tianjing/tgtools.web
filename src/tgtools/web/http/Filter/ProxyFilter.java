@@ -4,6 +4,7 @@ import tgtools.exceptions.APPErrorException;
 import tgtools.json.JSONObject;
 import tgtools.net.IWebClient;
 import tgtools.net.WebClient;
+import tgtools.util.LogHelper;
 import tgtools.util.StringUtil;
 
 import javax.servlet.*;
@@ -108,6 +109,8 @@ public class ProxyFilter implements Filter {
         client.setMethod(p_Method);
         String url = p_NewPath;
         client.setUrl("http://" + host + url);
+        LogHelper.info("", "代理开始，代理请求地址：" + "http://" + host + url, "UrlProxyFilter");
+
         InputStream is =null;
         try {
             setHeader(p_ServletRequest, client);

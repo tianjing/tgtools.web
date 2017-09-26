@@ -5,6 +5,7 @@ import tgtools.json.JSONArray;
 import tgtools.json.JSONException;
 import tgtools.json.JSONObject;
 import tgtools.util.LogHelper;
+import tgtools.util.StringUtil;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -40,7 +41,11 @@ public class UrlProxyFilter extends ProxyFilter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         try {
             String sourceurl = getSourceUrl(servletRequest);
-            String path = mathPath(sourceurl);
+            String path = mathPath(servletRequest, sourceurl);
+            if (StringUtil.isNullOrEmpty(path)) {
+                filterChain.doFilter(servletRequest, servletResponse);
+                return;
+            }
             JSONObject setting = m_IpMap.getJSONObject(path);
             if (null != setting) {
                 String method = ((HttpServletRequest) servletRequest).getMethod();
@@ -49,7 +54,7 @@ public class UrlProxyFilter extends ProxyFilter {
                 String targetUrl = setting.getString("TargetUrl");
                 String newPath = targetUrl + sourceurl.substring(path.length());
 
-                LogHelper.info("", "代理开始，请求地址：" + sourceurl + ";;;代理地址：" + newPath, "UrlProxyFilter");
+                LogHelper.info("", "代理开始，请求原始地址：" + sourceurl, "UrlProxyFilter");
 
                 byte[] data = doProxy(method, targetHost + ":" + targetPort, newPath, servletRequest, servletResponse);
                 OutputStream os = servletResponse.getOutputStream();
@@ -61,7 +66,7 @@ public class UrlProxyFilter extends ProxyFilter {
                 return;
             }
         } catch (APPErrorException e) {
-            String error="代理出错；原因：" + e.getMessage();
+            String error = "代理出错；原因：" + e.getMessage();
             LogHelper.error("", error, "UrlProxyFilter", e);
             servletResponse.getWriter().write(error);
             servletResponse.getWriter().close();
@@ -71,11 +76,17 @@ public class UrlProxyFilter extends ProxyFilter {
 
     }
 
-    protected String mathPath(String p_Url) throws JSONException {
+    protected String mathPath(ServletRequest p_ServletRequest, String p_Url) throws JSONException {
+        String host = p_ServletRequest.getLocalAddr();
+        int port = p_ServletRequest.getLocalPort();
         JSONArray names = m_IpMap.names();
         for (int i = 0; i < names.length(); i++) {
             if (p_Url.startsWith(names.getString(i))) {
-                return names.getString(i);
+                if (String.valueOf(port).equals(m_IpMap.getString("TargetPort")) && host.equals(m_IpMap.getString("TargetHost").equals(host))) {
+                    return null;
+                } else {
+                    return names.getString(i);
+                }
             }
         }
         return null;
