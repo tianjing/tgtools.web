@@ -246,8 +246,8 @@ public class Platform {
      * @param p_BeanDefinition bean配置
      * @throws APPErrorException
      */
-    public static void addUrlMapping(String p_BeanName, BeanDefinition p_BeanDefinition) throws APPErrorException {
-        PlatformDispatcherServlet.addUrlMapping(p_BeanName,p_BeanDefinition);
+    public static void addRest(String p_BeanName, BeanDefinition p_BeanDefinition) throws APPErrorException {
+        PlatformDispatcherServlet.addRest(p_BeanName,p_BeanDefinition);
     }
 
     /**
@@ -257,23 +257,21 @@ public class Platform {
      * @param p_Class 类型
      * @throws APPErrorException
      */
-    public static void addUrlMapping(String p_BeanName, Class<?> p_Class) throws APPErrorException {
-        PlatformDispatcherServlet.addUrlMapping(p_BeanName,p_Class);
+    public static void addRest(String p_BeanName, Class<?> p_Class) throws APPErrorException {
+        PlatformDispatcherServlet.addRest(p_BeanName,p_Class);
     }
 
     /**
-     *  移除动态添加的URL
+     *  移除动态添加的rest
      * @param p_BeanName bean的名称
      * @throws APPErrorException
      */
-    public static void removeUrlMapping(String p_BeanName) throws APPErrorException {
-        PlatformDispatcherServlet.removeUrlMapping(p_BeanName);
+    public static void removeRest(String p_BeanName) throws APPErrorException {
+        PlatformDispatcherServlet.removeRest(p_BeanName);
     }
 
 
 
 
-    public static void main(String[] args) {
-        System.out.println("1111:" + getServerPath());
-    }
+
 }

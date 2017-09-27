@@ -42,7 +42,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      * @param p_BeanDefinition
      * @throws APPErrorException
      */
-    public static void addUrlMapping(String p_BeanName, BeanDefinition p_BeanDefinition) throws APPErrorException {
+    public static void addRest(String p_BeanName, BeanDefinition p_BeanDefinition) throws APPErrorException {
         Valid();
         m_BeanFactory.registerBeanDefinition(p_BeanName, p_BeanDefinition);
         m_Mapper.afterPropertiesSet();
@@ -54,7 +54,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      * @param p_Class
      * @throws APPErrorException
      */
-    public static void addUrlMapping(String p_BeanName, Class<?> p_Class) throws APPErrorException {
+    public static void addRest(String p_BeanName, Class<?> p_Class) throws APPErrorException {
         Valid();
         BeanDefinitionBuilder dataSourceBuider = BeanDefinitionBuilder.genericBeanDefinition(p_Class);
         m_BeanFactory.registerBeanDefinition(p_BeanName, dataSourceBuider.getBeanDefinition());
@@ -66,7 +66,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      * @param p_BeanName
      * @throws APPErrorException
      */
-    public static void removeUrlMapping(String p_BeanName) throws APPErrorException {
+    public static void removeRest(String p_BeanName) throws APPErrorException {
         Valid();
         m_BeanFactory.removeBeanDefinition(p_BeanName);
         removeUrl(p_BeanName);
