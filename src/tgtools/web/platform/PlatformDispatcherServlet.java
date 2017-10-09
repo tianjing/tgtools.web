@@ -44,8 +44,10 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      */
     public static void addRest(String p_BeanName, BeanDefinition p_BeanDefinition) throws APPErrorException {
         Valid();
-        m_BeanFactory.registerBeanDefinition(p_BeanName, p_BeanDefinition);
-        m_Mapper.afterPropertiesSet();
+        if(null==m_BeanFactory.getBean(p_BeanName)) {
+            m_BeanFactory.registerBeanDefinition(p_BeanName, p_BeanDefinition);
+            m_Mapper.afterPropertiesSet();
+        }
     }
 
     /**
@@ -55,10 +57,11 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      * @throws APPErrorException
      */
     public static void addRest(String p_BeanName, Class<?> p_Class) throws APPErrorException {
-        Valid();
+
         BeanDefinitionBuilder dataSourceBuider = BeanDefinitionBuilder.genericBeanDefinition(p_Class);
-        m_BeanFactory.registerBeanDefinition(p_BeanName, dataSourceBuider.getBeanDefinition());
-        m_Mapper.afterPropertiesSet();
+        addRest(p_BeanName, dataSourceBuider.getBeanDefinition());
+       // m_BeanFactory.registerBeanDefinition(p_BeanName, dataSourceBuider.getBeanDefinition());
+       // m_Mapper.afterPropertiesSet();
     }
 
     /**

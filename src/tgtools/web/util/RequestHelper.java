@@ -71,7 +71,7 @@ public class RequestHelper {
      * @return
      * @throws Exception
      */
-    private static tgtools.json.JSONObject getInputParameter( HttpServletRequest p_Request)
+    private static tgtools.json.JSONObject getInputParameter(HttpServletRequest p_Request)
             throws APPErrorException {
         if (p_Request.getParameterMap().size() < 1) {
             try {
@@ -93,14 +93,15 @@ public class RequestHelper {
 
     /**
      * 将请求的参数转换程json
+     *
      * @param request
      * @return
      * @throws APPErrorException
      */
-    public static JSONObject parseRequest(HttpServletRequest request)throws APPErrorException
-    {
+    public static JSONObject parseRequest(HttpServletRequest request) throws APPErrorException {
         return getInputParameter(request);
     }
+
     /**
      * 根据请求 调用指定的方法 并返回结果 不做相应
      *
@@ -122,19 +123,19 @@ public class RequestHelper {
      * @param p_Object
      * @param request
      * @param response
+     * @param p_ResponseNeedRest Response 是否需要 reset ；true:方法内进行reset
      * @throws APPErrorException
      */
-    public static void invoke(Object p_Object, HttpServletRequest request, HttpServletResponse response) throws APPErrorException {
+    public static void invoke(Object p_Object, HttpServletRequest request, HttpServletResponse response,boolean p_ResponseNeedRest) throws APPErrorException {
         String inputtype = getInputType(request);
         String result = StringUtil.EMPTY_STRING;
         String error = StringUtil.EMPTY_STRING;
         try {
-           Object obj= invoke(p_Object,request);
-            if(null==obj)
-            {
+            Object obj = invoke(p_Object, request);
+            if (null == obj) {
                 return;
             }
-            result= obj.toString();
+            result = obj.toString();
         } catch (Exception e) {
 
             error = e.getMessage();
@@ -148,7 +149,9 @@ public class RequestHelper {
             entity.Data = result;
             entity.Error = error;
             result = tgtools.util.JsonParseHelper.parseToJson(entity, true);
-            response.reset();
+            if(p_ResponseNeedRest) {
+                response.reset();
+            }
             response.setContentType(request.getContentType());
         }
         try {
@@ -156,5 +159,16 @@ public class RequestHelper {
         } catch (Exception e) {
             throw new APPErrorException("响应出错；原因：" + e.getMessage(), e);
         }
+    }
+    /**
+     * 根据请求 调用指定的方法 并直接输出
+     *
+     * @param p_Object
+     * @param request
+     * @param response
+     * @throws APPErrorException
+     */
+    public static void invoke(Object p_Object, HttpServletRequest request, HttpServletResponse response) throws APPErrorException {
+        invoke(p_Object,request,response,true);
     }
 }
