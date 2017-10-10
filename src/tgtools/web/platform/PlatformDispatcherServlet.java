@@ -9,6 +9,8 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
 import tgtools.exceptions.APPErrorException;
+import tgtools.util.LogHelper;
+
 import java.lang.reflect.Field;
 import java.util.*;
 
@@ -35,25 +37,6 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
         }
     }
 
-    /**
-     * 添加 URL 映射
-     * @param p_BeanName
-     * @param p_BeanDefinition
-     * @throws APPErrorException
-     */
-    public void addRest(String p_BeanName, BeanDefinition p_BeanDefinition) throws APPErrorException {
-        Valid();
-       try {
-            if (!m_BeanFactory.isBeanNameInUse(p_BeanName)) {
-                m_BeanFactory.registerBeanDefinition(p_BeanName, p_BeanDefinition);
-                m_Mapper.afterPropertiesSet();
-            }
-        }
-        catch (Exception e)
-        {
-            throw new APPErrorException("获取bean失败");
-        }
-    }
 
     /**
      * 添加 URL 映射
@@ -64,12 +47,20 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
     public void addRest(String p_BeanName, Class<?> p_Class) throws APPErrorException {
         Valid();
         BeanDefinitionBuilder dataSourceBuider = BeanDefinitionBuilder.genericBeanDefinition(p_Class);
-        addRest(p_BeanName, dataSourceBuider.getBeanDefinition());
-        //LogHelper.info("","restbean:"+m_BeanFactory.getBeanDefinition(p_BeanName),"addRest");
-        //if(null==m_BeanFactory.getBeanDefinition(p_BeanName)) {
-        ///    m_BeanFactory.registerBeanDefinition(p_BeanName, dataSourceBuider.getBeanDefinition());
-        //    m_Mapper.afterPropertiesSet();
-        //}
+        //dataSourceBuider.setScope(Platform.Scope_Singleton);
+        //addRest(p_BeanName, dataSourceBuider.getBeanDefinition());
+        try {
+
+            if (!m_BeanFactory.isBeanNameInUse(p_BeanName)) {
+                LogHelper.info("",m_BeanFactory+";;;正在添加RestBean："+p_BeanName+";;class:"+p_Class.getSimpleName(),"addRest");
+                m_BeanFactory.registerSingleton(p_BeanName,p_Class.newInstance());//.registerBeanDefinition(p_BeanName, p_BeanDefinition);
+                m_Mapper.afterPropertiesSet();
+            }
+        }
+        catch (Exception e)
+        {
+            throw new APPErrorException("获取bean失败",e);
+        }
     }
 
     /**
@@ -79,7 +70,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      */
     public void removeRest(String p_BeanName) throws APPErrorException {
         Valid();
-        m_BeanFactory.removeBeanDefinition(p_BeanName);
+        m_BeanFactory.destroySingleton(p_BeanName);
         removeUrl(p_BeanName);
         //m_Mapper.afterPropertiesSet();
     }

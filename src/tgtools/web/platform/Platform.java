@@ -243,21 +243,6 @@ public class Platform {
      * 动态添加 rest URL  </br>
      * 添加的类 具有 @RequestMapping
      * @param p_BeanName bean的名称
-     * @param p_BeanDefinition bean配置
-     * @throws APPErrorException
-     */
-    public static void addRest(String p_BeanName, BeanDefinition p_BeanDefinition) throws APPErrorException {
-        if(null== PlatformDispatcherServletFactory.getDefaultDispatcher())
-        {
-            throw new APPErrorException("不存在默认的Rest容器");
-        }
-        PlatformDispatcherServletFactory.getDefaultDispatcher().addRest(p_BeanName,p_BeanDefinition);
-    }
-
-    /**
-     * 动态添加 rest URL  </br>
-     * 添加的类 具有 @RequestMapping
-     * @param p_BeanName bean的名称
      * @param p_Class 类型
      * @throws APPErrorException
      */
@@ -282,22 +267,6 @@ public class Platform {
         PlatformDispatcherServletFactory.getDefaultDispatcher().removeRest(p_BeanName);
     }
 
-
-    /**
-     * 动态添加 rest URL  </br>
-     * 添加的类 具有 @RequestMapping
-     * @param p_ServletName 容器名称（配置文件中 ServletName）
-     * @param p_BeanName bean的名称
-     * @param p_BeanDefinition bean配置
-     * @throws APPErrorException
-     */
-    public static void addRest(String p_ServletName,String p_BeanName, BeanDefinition p_BeanDefinition) throws APPErrorException {
-        if(null==  PlatformDispatcherServletFactory.getDispatcher(p_ServletName))
-        {
-            throw new APPErrorException("不存在Rest容器："+p_ServletName);
-        }
-        PlatformDispatcherServletFactory.getDispatcher(p_ServletName).addRest(p_BeanName,p_BeanDefinition);
-    }
     /**
      * 动态添加 rest URL  </br>
      * 添加的类 具有 @RequestMapping
