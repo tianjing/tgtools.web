@@ -9,7 +9,6 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
 import tgtools.exceptions.APPErrorException;
-
 import java.lang.reflect.Field;
 import java.util.*;
 
@@ -22,15 +21,15 @@ import java.util.*;
 @Controller
 public class PlatformDispatcherServlet extends DispatcherServlet {
 
-    private static org.springframework.web.context.support.XmlWebApplicationContext m_context;
-    private static org.springframework.beans.factory.support.DefaultListableBeanFactory m_BeanFactory;
-    private static org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping m_Mapper;
+    private org.springframework.web.context.support.XmlWebApplicationContext m_context;
+    private org.springframework.beans.factory.support.DefaultListableBeanFactory m_BeanFactory;
+    private org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping m_Mapper;
 
     /**
      * 验证
      * @throws APPErrorException
      */
-    private static void Valid() throws APPErrorException {
+    private void Valid() throws APPErrorException {
         if (null == m_context || null == m_BeanFactory || null == m_Mapper) {
             throw new APPErrorException("无法获取RestBeanFactory，请检查web.xml RestServlet是否配置为tgtools.web.platform.PlatformDispatcherServlet");
         }
@@ -42,11 +41,17 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      * @param p_BeanDefinition
      * @throws APPErrorException
      */
-    public static void addRest(String p_BeanName, BeanDefinition p_BeanDefinition) throws APPErrorException {
+    public void addRest(String p_BeanName, BeanDefinition p_BeanDefinition) throws APPErrorException {
         Valid();
-        if(null==m_BeanFactory.getBean(p_BeanName)) {
-            m_BeanFactory.registerBeanDefinition(p_BeanName, p_BeanDefinition);
-            m_Mapper.afterPropertiesSet();
+       try {
+            if (!m_BeanFactory.isBeanNameInUse(p_BeanName)) {
+                m_BeanFactory.registerBeanDefinition(p_BeanName, p_BeanDefinition);
+                m_Mapper.afterPropertiesSet();
+            }
+        }
+        catch (Exception e)
+        {
+            throw new APPErrorException("获取bean失败");
         }
     }
 
@@ -56,12 +61,15 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      * @param p_Class
      * @throws APPErrorException
      */
-    public static void addRest(String p_BeanName, Class<?> p_Class) throws APPErrorException {
-
+    public void addRest(String p_BeanName, Class<?> p_Class) throws APPErrorException {
+        Valid();
         BeanDefinitionBuilder dataSourceBuider = BeanDefinitionBuilder.genericBeanDefinition(p_Class);
         addRest(p_BeanName, dataSourceBuider.getBeanDefinition());
-       // m_BeanFactory.registerBeanDefinition(p_BeanName, dataSourceBuider.getBeanDefinition());
-       // m_Mapper.afterPropertiesSet();
+        //LogHelper.info("","restbean:"+m_BeanFactory.getBeanDefinition(p_BeanName),"addRest");
+        //if(null==m_BeanFactory.getBeanDefinition(p_BeanName)) {
+        ///    m_BeanFactory.registerBeanDefinition(p_BeanName, dataSourceBuider.getBeanDefinition());
+        //    m_Mapper.afterPropertiesSet();
+        //}
     }
 
     /**
@@ -69,7 +77,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      * @param p_BeanName
      * @throws APPErrorException
      */
-    public static void removeRest(String p_BeanName) throws APPErrorException {
+    public void removeRest(String p_BeanName) throws APPErrorException {
         Valid();
         m_BeanFactory.removeBeanDefinition(p_BeanName);
         removeUrl(p_BeanName);
@@ -80,7 +88,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      *
      * @return
      */
-    private static LinkedHashMap<RequestMappingInfo, HandlerMethod> getHandlerMethods() {
+    private LinkedHashMap<RequestMappingInfo, HandlerMethod> getHandlerMethods() {
         Field field = null;
         try {
             field = m_Mapper.getClass().getSuperclass().getSuperclass().getDeclaredField("handlerMethods");
@@ -97,7 +105,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      * 获取 Mapping
      * @return
      */
-    private static LinkedMultiValueMap<String, RequestMappingInfo> getUrlMap() {
+    private LinkedMultiValueMap<String, RequestMappingInfo> getUrlMap() {
         try {
             Field field1 = m_Mapper.getClass().getSuperclass().getSuperclass().getDeclaredField("urlMap");
             field1.setAccessible(true);
@@ -112,7 +120,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      *
      * @return
      */
-    private static LinkedMultiValueMap<String, HandlerMethod> getNameMap() {
+    private LinkedMultiValueMap<String, HandlerMethod> getNameMap() {
         try {
             Field field2 = m_Mapper.getClass().getSuperclass().getSuperclass().getDeclaredField("nameMap");
             field2.setAccessible(true);
@@ -127,7 +135,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      *
      * @param p_BeanName
      */
-    private static void removeUrl(String p_BeanName) {
+    private void removeUrl(String p_BeanName) {
         LinkedHashMap<RequestMappingInfo, HandlerMethod> handles=getHandlerMethods();
         LinkedMultiValueMap<String, RequestMappingInfo> urlMap =getUrlMap();
         LinkedMultiValueMap<String, HandlerMethod> nameMap=getNameMap();
@@ -155,7 +163,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      * @param p_NameMap
      * @param p_Method
      */
-    private static void removeNamelMap(LinkedMultiValueMap<String, HandlerMethod> p_NameMap,HandlerMethod p_Method)
+    private void removeNamelMap(LinkedMultiValueMap<String, HandlerMethod> p_NameMap,HandlerMethod p_Method)
     {
         ArrayList<String> list =new ArrayList<String>();
         for(Map.Entry<String, List<HandlerMethod>> item : p_NameMap.entrySet())
@@ -185,7 +193,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      * @param p_UrlMap
      * @param p_Info
      */
-    private static void removeUrlMap(LinkedMultiValueMap<String, RequestMappingInfo> p_UrlMap,RequestMappingInfo p_Info) {
+    private void removeUrlMap(LinkedMultiValueMap<String, RequestMappingInfo> p_UrlMap,RequestMappingInfo p_Info) {
         ArrayList<String> list =new ArrayList<String>();
         for(Map.Entry<String, List<RequestMappingInfo>> item : p_UrlMap.entrySet())
         {
@@ -223,6 +231,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
         m_BeanFactory = (org.springframework.beans.factory.support.DefaultListableBeanFactory) m_context.getBeanFactory();
         m_Mapper = (org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping) m_BeanFactory.getBean("org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0");
         super.initStrategies(context);
+        PlatformDispatcherServletFactory.addDispatchers(this.getServletName(),this);
     }
 
 
