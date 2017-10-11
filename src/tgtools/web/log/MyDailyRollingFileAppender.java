@@ -1,13 +1,9 @@
 package tgtools.web.log;
 
 import org.apache.log4j.DailyRollingFileAppender;
-import org.apache.log4j.helpers.LogLog;
-import org.apache.log4j.spi.LoggingEvent;
 import tgtools.util.LogHelper;
 import tgtools.util.StringUtil;
 import tgtools.web.platform.Platform;
-
-import java.io.IOException;
 
 /**
  * 名  称：

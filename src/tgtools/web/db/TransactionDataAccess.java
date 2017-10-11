@@ -4,7 +4,6 @@ import com.sun.rowset.CachedRowSetImpl;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ConnectionCallback;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import tgtools.data.DataTable;
 import tgtools.db.IDataAccess;
@@ -15,7 +14,10 @@ import tgtools.util.StringUtil;
 
 import javax.sql.DataSource;
 import java.lang.reflect.Method;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * 名  称：

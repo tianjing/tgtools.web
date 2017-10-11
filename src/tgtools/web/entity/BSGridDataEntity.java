@@ -1,6 +1,5 @@
 package tgtools.web.entity;
 
-import tgtools.data.DataTable;
 /**
  * bsgrid实体类
  * @author marjuce

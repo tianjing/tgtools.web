@@ -1,7 +1,5 @@
 package tgtools.web.platform;
 
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.LinkedMultiValueMap;
@@ -12,7 +10,11 @@ import tgtools.exceptions.APPErrorException;
 import tgtools.util.LogHelper;
 
 import java.lang.reflect.Field;
-import java.util.*;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 名  称：
@@ -46,15 +48,14 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      */
     public void addRest(String p_BeanName, Class<?> p_Class) throws APPErrorException {
         Valid();
-        BeanDefinitionBuilder dataSourceBuider = BeanDefinitionBuilder.genericBeanDefinition(p_Class);
-        //dataSourceBuider.setScope(Platform.Scope_Singleton);
-        //addRest(p_BeanName, dataSourceBuider.getBeanDefinition());
         try {
 
-            if (!m_BeanFactory.isBeanNameInUse(p_BeanName)) {
-                LogHelper.info("",m_BeanFactory+";;;正在添加RestBean："+p_BeanName+";;class:"+p_Class.getSimpleName(),"addRest");
+            if (!m_BeanFactory.containsSingleton(p_BeanName)) {
+                LogHelper.info("","正在添加RestBean："+p_BeanName+";;class:"+p_Class.getSimpleName(),"addRest");
                 m_BeanFactory.registerSingleton(p_BeanName,p_Class.newInstance());//.registerBeanDefinition(p_BeanName, p_BeanDefinition);
-                m_Mapper.afterPropertiesSet();
+                Method method=  this.m_Mapper.getClass().getSuperclass().getSuperclass().getDeclaredMethod("detectHandlerMethods", Object.class);
+                method.setAccessible(true);
+                method.invoke(m_Mapper,p_BeanName);
             }
         }
         catch (Exception e)
@@ -72,7 +73,6 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
         Valid();
         m_BeanFactory.destroySingleton(p_BeanName);
         removeUrl(p_BeanName);
-        //m_Mapper.afterPropertiesSet();
     }
 
     /**
