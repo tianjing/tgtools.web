@@ -198,7 +198,37 @@ public class Platform {
         }
         getBeanFactory().registerBeanDefinition(p_Name,p_BeanDefinition);
     }
+    /**
+     * 移除Bean
+     * @param p_Name
+     */
+    public static void removeBean(String p_Name) {
+        if (getBeanFactory().containsBean(p_Name)) {
+            getBeanFactory().removeBeanDefinition(p_Name);
+        }
+    }
 
+    /**
+     * 创建单例bean
+     * @param p_Name
+     * @param p_Object
+     */
+    public static void addSingletonBean(String p_Name, Object p_Object)
+    {
+        if (!getBeanFactory().containsSingleton(p_Name)) {
+             getBeanFactory().registerSingleton(p_Name,p_Object);
+        }
+    }
+
+    /**
+     * 移除单例Bean
+     * @param p_Name
+     */
+    public static void removeSingletonBean(String p_Name) {
+        if (getBeanFactory().containsBean(p_Name)) {
+            getBeanFactory().destroySingleton(p_Name);
+        }
+    }
     /**
      * 获取服务路径
      *
