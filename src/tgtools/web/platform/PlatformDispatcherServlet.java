@@ -36,6 +36,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
 
     /**
      * 验证
+     *
      * @throws APPErrorException
      */
     private void Valid() throws APPErrorException {
@@ -47,8 +48,10 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
 
     /**
      * 添加 URL 映射
+     *
      * @param p_BeanName
      * @param p_Class
+     *
      * @throws APPErrorException
      */
     public void addRest(String p_BeanName, Class<?> p_Class) throws APPErrorException {
@@ -56,22 +59,22 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
         try {
 
             if (!mBeanFactory.containsSingleton(p_BeanName)) {
-                LogHelper.info("","正在添加RestBean："+p_BeanName+";;class:"+p_Class.getSimpleName(),"addRest");
-                mBeanFactory.registerSingleton(p_BeanName,p_Class.newInstance());//.registerBeanDefinition(p_BeanName, p_BeanDefinition);
-                Method method=  this.mMapper.getClass().getSuperclass().getSuperclass().getDeclaredMethod("detectHandlerMethods", Object.class);
+                LogHelper.info("", "正在添加RestBean：" + p_BeanName + ";;class:" + p_Class.getSimpleName(), "addRest");
+                mBeanFactory.registerSingleton(p_BeanName, p_Class.newInstance());//.registerBeanDefinition(p_BeanName, p_BeanDefinition);
+                Method method = this.mMapper.getClass().getSuperclass().getSuperclass().getDeclaredMethod("detectHandlerMethods", Object.class);
                 method.setAccessible(true);
-                method.invoke(mMapper,p_BeanName);
+                method.invoke(mMapper, p_BeanName);
             }
-        }
-        catch (Exception e)
-        {
-            throw new APPErrorException("获取bean失败",e);
+        } catch (Exception e) {
+            throw new APPErrorException("获取bean失败", e);
         }
     }
 
     /**
      * 移除 URL 映射
+     *
      * @param p_BeanName
+     *
      * @throws APPErrorException
      */
     public void removeRest(String p_BeanName) throws APPErrorException {
@@ -81,7 +84,6 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
     }
 
     /**
-     *
      * @return
      */
     private LinkedHashMap<RequestMappingInfo, HandlerMethod> getHandlerMethods() {
@@ -99,6 +101,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
 
     /**
      * 获取 Mapping
+     *
      * @return
      */
     private LinkedMultiValueMap<String, RequestMappingInfo> getUrlMap() {
@@ -113,7 +116,6 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
     }
 
     /**
-     *
      * @return
      */
     private LinkedMultiValueMap<String, HandlerMethod> getNameMap() {
@@ -128,56 +130,44 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
     }
 
     /**
-     *
      * @param p_BeanName
      */
     private void removeUrl(String p_BeanName) {
-        LinkedHashMap<RequestMappingInfo, HandlerMethod> handles=getHandlerMethods();
-        LinkedMultiValueMap<String, RequestMappingInfo> urlMap =getUrlMap();
-        LinkedMultiValueMap<String, HandlerMethod> nameMap=getNameMap();
-        ArrayList<RequestMappingInfo> list =new ArrayList<RequestMappingInfo>();
-        for(Map.Entry<RequestMappingInfo, HandlerMethod> item : handles.entrySet())
-        {
-            if( item.getValue().getBean().equals(p_BeanName))
-            {
+        LinkedHashMap<RequestMappingInfo, HandlerMethod> handles = getHandlerMethods();
+        LinkedMultiValueMap<String, RequestMappingInfo> urlMap = getUrlMap();
+        LinkedMultiValueMap<String, HandlerMethod> nameMap = getNameMap();
+        ArrayList<RequestMappingInfo> list = new ArrayList<RequestMappingInfo>();
+        for (Map.Entry<RequestMappingInfo, HandlerMethod> item : handles.entrySet()) {
+            if (item.getValue().getBean().equals(p_BeanName)) {
                 list.add(item.getKey());
-                removeUrlMap(urlMap,item.getKey());
-                removeNamelMap(nameMap,item.getValue());
+                removeUrlMap(urlMap, item.getKey());
+                removeNamelMap(nameMap, item.getValue());
             }
         }
-        if(list.size()>0)
-        {
-            for(int i=0;i<list.size();i++)
-            {
+        if (list.size() > 0) {
+            for (int i = 0; i < list.size(); i++) {
                 handles.remove(list.get(i));
             }
         }
     }
 
     /**
-     *
      * @param p_NameMap
      * @param p_Method
      */
-    private void removeNamelMap(LinkedMultiValueMap<String, HandlerMethod> p_NameMap,HandlerMethod p_Method)
-    {
-        ArrayList<String> list =new ArrayList<String>();
-        for(Map.Entry<String, List<HandlerMethod>> item : p_NameMap.entrySet())
-        {
-            if(item.getValue().contains(p_Method))
-            {
+    private void removeNamelMap(LinkedMultiValueMap<String, HandlerMethod> p_NameMap, HandlerMethod p_Method) {
+        ArrayList<String> list = new ArrayList<String>();
+        for (Map.Entry<String, List<HandlerMethod>> item : p_NameMap.entrySet()) {
+            if (item.getValue().contains(p_Method)) {
                 list.add(item.getKey());
             }
         }
-        if(list.size()>0)
-        {
-            for(int i=0;i<list.size();i++)
-            {
-                List<HandlerMethod> methods= p_NameMap.get(list.get(i));
-                if(methods.size()>1)
-                {methods.remove(p_Method);}
-                else
-                {
+        if (list.size() > 0) {
+            for (int i = 0; i < list.size(); i++) {
+                List<HandlerMethod> methods = p_NameMap.get(list.get(i));
+                if (methods.size() > 1) {
+                    methods.remove(p_Method);
+                } else {
                     p_NameMap.remove(list.get(i));
                 }
             }
@@ -186,27 +176,23 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
 
     /**
      * removeUrlMap
+     *
      * @param p_UrlMap
      * @param p_Info
      */
-    private void removeUrlMap(LinkedMultiValueMap<String, RequestMappingInfo> p_UrlMap,RequestMappingInfo p_Info) {
-        ArrayList<String> list =new ArrayList<String>();
-        for(Map.Entry<String, List<RequestMappingInfo>> item : p_UrlMap.entrySet())
-        {
-            if(item.getValue().contains(p_Info))
-            {
+    private void removeUrlMap(LinkedMultiValueMap<String, RequestMappingInfo> p_UrlMap, RequestMappingInfo p_Info) {
+        ArrayList<String> list = new ArrayList<String>();
+        for (Map.Entry<String, List<RequestMappingInfo>> item : p_UrlMap.entrySet()) {
+            if (item.getValue().contains(p_Info)) {
                 list.add(item.getKey());
             }
         }
-        if(list.size()>0)
-        {
-            for(int i=0;i<list.size();i++)
-            {
-                List<RequestMappingInfo> infos= p_UrlMap.get(list.get(i));
-                if(infos.size()>1)
-                {infos.remove(p_Info);}
-                else
-                {
+        if (list.size() > 0) {
+            for (int i = 0; i < list.size(); i++) {
+                List<RequestMappingInfo> infos = p_UrlMap.get(list.get(i));
+                if (infos.size() > 1) {
+                    infos.remove(p_Info);
+                } else {
                     p_UrlMap.remove(list.get(i));
                 }
             }
@@ -215,13 +201,14 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
 
     /**
      * 添加websocket处理器
+     *
      * @param pUrlMap url
      * @param pHandle 处理器
+     *
      * @throws APPErrorException
      */
-    public void addWebsocket(String pUrlMap,WebSocketHttpRequestHandler pHandle) throws APPErrorException {
-        if(null==mSimpleUrlHandlerMapping)
-        {
+    public void addWebsocket(String pUrlMap, WebSocketHttpRequestHandler pHandle) throws APPErrorException {
+        if (null == mSimpleUrlHandlerMapping) {
             throw new APPErrorException("Spring Websocket没启用");
         }
         try {
@@ -232,73 +219,74 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
             }
             method.setAccessible(true);
             method.invoke(mSimpleUrlHandlerMapping, pUrlMap, pHandle);
-        }catch (Exception e)
-        {
-            if (e instanceof APPErrorException)
-            {
-                throw (APPErrorException)e;
+        } catch (Exception e) {
+            if (e instanceof APPErrorException) {
+                throw (APPErrorException) e;
             }
-            throw new APPErrorException("添加失败；原因："+e.getMessage(),e);
+            throw new APPErrorException("添加失败；原因：" + e.getMessage(), e);
         }
     }
 
     /**
      * 移除websocket处理器
+     *
      * @param pUrlMap url
+     *
      * @throws APPErrorException
      */
     public void removeWebsocket(String pUrlMap) throws APPErrorException {
-        if(null==mSimpleUrlHandlerMapping)
-        {
+        if (null == mSimpleUrlHandlerMapping) {
             throw new APPErrorException("Spring Websocket没启用");
         }
 
         try {
-            Field field=SimpleUrlHandlerMapping.class.getSuperclass().getDeclaredField("handlerMap");
+            Field field = SimpleUrlHandlerMapping.class.getSuperclass().getDeclaredField("handlerMap");
             if (null == field) {
                 throw new APPErrorException("SimpleUrlHandlerMapping 无效无法注销Websocket");
             }
             field.setAccessible(true);
-            Map<String, Object>  map=(Map<String, Object> )field.get(mSimpleUrlHandlerMapping);
+            Map<String, Object> map = (Map<String, Object>) field.get(mSimpleUrlHandlerMapping);
             map.remove(pUrlMap);
         } catch (Exception e) {
-            if (e instanceof APPErrorException)
-            {
-                throw (APPErrorException)e;
+            if (e instanceof APPErrorException) {
+                throw (APPErrorException) e;
             }
-            throw new APPErrorException("删除失败；原因："+e.getMessage(),e);
+            throw new APPErrorException("删除失败；原因：" + e.getMessage(), e);
         }
     }
 
-        /**
-         * 获取 BeanFactory
-         * @param context
-         */
+    /**
+     * 获取 BeanFactory
+     *
+     * @param context
+     */
     @Override
     protected void initStrategies(ApplicationContext context) {
         mContext = (org.springframework.web.context.support.XmlWebApplicationContext) context;
         mBeanFactory = (org.springframework.beans.factory.support.DefaultListableBeanFactory) mContext.getBeanFactory();
         mMapper = (org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping) mBeanFactory.getBean("org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0");
         super.initStrategies(context);
-        PlatformDispatcherServletFactory.addDispatchers(this.getServletName(),this);
-        mSimpleUrlHandlerMapping=(SimpleUrlHandlerMapping)mBeanFactory.getBean("webSocketHandlerMapping");
+        PlatformDispatcherServletFactory.addDispatchers(this.getServletName(), this);
+        if(mBeanFactory.containsBeanDefinition("webSocketHandlerMapping")) {
+            mSimpleUrlHandlerMapping = (SimpleUrlHandlerMapping) mBeanFactory.getBean("webSocketHandlerMapping");
+        }
         sendMessage();
     }
 
-    private void sendMessage()
-    {
+    private void sendMessage() {
         try {
-        JSONObject json =new JSONObject();
-        json.put("ApplicationName",mContext.getApplicationName());
-        json.put("DisplayName",mContext.getDisplayName());
-        Message message=new  Message();
-        message.setEvent("addDispatcherServlet");
-        message.setContent(json.toString());
-        message.setSender("PlatformDispatcherServlet");
+            JSONObject json = new JSONObject();
+            json.put("ApplicationName", mContext.getApplicationName());
+            json.put("DisplayName", mContext.getDisplayName());
+            json.put("ServletName", mContext.getServletConfig().getServletName());
+            Message message = new Message();
+            message.setEvent("addDispatcherServlet");
+            message.setContent(json.toString());
+            message.setSender("PlatformDispatcherServlet");
 
             tgtools.message.MessageFactory.sendMessage(message);
         } catch (APPErrorException e) {
-            LogHelper.error("系统","发送消息失败！原因："+e.getMessage(),"PlatformDispatcherServlet",e);
+            LogHelper.error("系统", "发送消息失败！原因：" + e.getMessage(), "PlatformDispatcherServlet", e);
         }
 
     }
