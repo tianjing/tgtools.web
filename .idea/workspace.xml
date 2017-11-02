@@ -4,7 +4,8 @@
     <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/build.property" afterPath="$PROJECT_DIR$/src/META-INF/build.property" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServlet.java" afterPath="$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java" afterPath="$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java" afterPath="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java" />
     </list>
     <ignored path="tgtools.web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +32,28 @@
     <favorites_list name="tgtools.web" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="UrlProxyFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProxyFilter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="71" column="134" lean-forward="false" selection-start-line="71" selection-start-column="134" selection-end-line="71" selection-end-column="134" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,8 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>init</find>
-      <find>cli</find>
       <find>useSuffixPatternMatch</find>
       <find>after</find>
       <find>handlerMethods</find>
@@ -72,6 +92,8 @@
       <find>remove</find>
       <find>registerHandler</find>
       <find>handlerMap</find>
+      <find>UrlProxyFilter</find>
+      <find>doFilter</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Works\GitHub\tgtools.web\src</dir>
@@ -120,9 +142,7 @@
         <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/NewUrlProxyFilter.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/db/TransactionDataAccess.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/platform/MyDispatcherServlet.java" />
-        <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java" />
         <option value="$PROJECT_DIR$/lib/tgtools.core.optimize.jar!/tgtools/json/JSONObject.class" />
-        <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/util/RequestHelper.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServletFactory.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/platform/BeanDefineConfigue.java" />
@@ -141,6 +161,8 @@
         <option value="$PROJECT_DIR$/lib/spring-webmvc-4.1.5.RELEASE.jar!/org/springframework/web/servlet/handler/AbstractUrlHandlerMapping.class" />
         <option value="$PROJECT_DIR$/src/tgtools/web/websocket/ApplicationConfig.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServlet.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java" />
       </list>
     </option>
   </component>
@@ -235,9 +257,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,7 +283,7 @@
               <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
+              <item name="Filter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -901,14 +923,10 @@
       <workItem from="1508721129918" duration="6035000" />
       <workItem from="1508730433282" duration="876000" />
       <workItem from="1508743862953" duration="630000" />
-      <workItem from="1508809155603" duration="1287000" />
-    </task>
-    <task id="LOCAL-00027" summary="增加数据源">
-      <created>1487086902884</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1487086902885</updated>
+      <workItem from="1508809155603" duration="1319000" />
+      <workItem from="1508922215455" duration="86000" />
+      <workItem from="1509584398210" duration="271000" />
+      <workItem from="1509600686687" duration="607000" />
     </task>
     <task id="LOCAL-00028" summary="修改并发判断">
       <created>1487225333871</created>
@@ -1246,11 +1264,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508729869948</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="增加 spring websocket">
+      <created>1508826294348</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1508826294349</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279826000" />
+    <option name="totallyTimeSpent" value="280822000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1263,6 +1288,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946634" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1270,18 +1296,18 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22906977" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20813954" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22906977" sideWeight="0.49785408" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20813954" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946634" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17328326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17757511" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23927039" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19903433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29582366" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29582366" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Jindent" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1416,13 +1442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2442">
-          <caret line="111" column="66" lean-forward="false" selection-start-line="111" selection-start-column="66" selection-end-line="111" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/entity/BSGridDataEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1539,13 +1558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-22">
           <caret line="69" column="26" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="24" column="107" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="107" />
         </state>
       </provider>
     </entry>
@@ -1722,7 +1734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="1931" column="36" lean-forward="false" selection-start-line="1931" selection-start-column="15" selection-end-line="1931" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1751,6 +1762,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="271" column="9" lean-forward="false" selection-start-line="271" selection-start-column="9" selection-end-line="271" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="71" column="134" lean-forward="false" selection-start-line="71" selection-start-column="134" selection-end-line="71" selection-end-column="134" />
           <folding />
         </state>
       </provider>

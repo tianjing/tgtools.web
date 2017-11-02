@@ -39,8 +39,8 @@ public class UrlProxyFilter extends ProxyFilter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        String sourceurl = getSourceUrl(servletRequest);
         try {
-            String sourceurl = getSourceUrl(servletRequest);
             String path = mathPath(servletRequest, sourceurl);
             if (StringUtil.isNullOrEmpty(path)) {
                 filterChain.doFilter(servletRequest, servletResponse);
@@ -66,7 +66,7 @@ public class UrlProxyFilter extends ProxyFilter {
                 return;
             }
         } catch (APPErrorException e) {
-            String error = "代理出错；原因：" + e.getMessage();
+            String error = "代理出错；代理原地址："+sourceurl+"原因：" + e.getMessage();
             LogHelper.error("", error, "UrlProxyFilter", e);
             servletResponse.getWriter().write(error);
             servletResponse.getWriter().close();
@@ -82,7 +82,7 @@ public class UrlProxyFilter extends ProxyFilter {
         JSONArray names = m_IpMap.names();
         for (int i = 0; i < names.length(); i++) {
             if (p_Url.startsWith(names.getString(i))) {
-                if (String.valueOf(port).equals(m_IpMap.getString("TargetPort")) && host.equals(m_IpMap.getString("TargetHost").equals(host))) {
+                if (String.valueOf(port).equals(m_IpMap.getJSONObject(names.getString(i)).getString("TargetPort")) && host.equals(m_IpMap.getJSONObject(names.getString(i)).getString("TargetHost").equals(host))) {
                     return null;
                 } else {
                     return names.getString(i);
