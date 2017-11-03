@@ -138,8 +138,8 @@ public class ProxyFilter implements Filter {
             }
 
             return data;
-        } catch (IOException ex) {
-            throw new APPErrorException("");
+        } catch (Exception ex) {
+            throw new APPErrorException("代理数据出错；Url:"+client.getUrl()+";;原因："+ex.getMessage(),ex);
         }
         finally {
             if(null!=is) {
