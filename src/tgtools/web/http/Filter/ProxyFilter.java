@@ -124,7 +124,6 @@ public class ProxyFilter implements Filter {
                     for (int i = 0; i < cookies.size(); i++) {
                         ((HttpServletResponse) p_ServletResponse).addHeader("Set-Cookie", cookies.get(i));
                     }
-
                 }
             }
 
