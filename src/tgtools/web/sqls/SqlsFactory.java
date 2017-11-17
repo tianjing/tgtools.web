@@ -1,6 +1,8 @@
 package tgtools.web.sqls;
 
 
+import tgtools.db.DataBaseFactory;
+import tgtools.db.IDataAccess;
 import tgtools.exceptions.APPErrorException;
 import tgtools.util.LogHelper;
 import tgtools.util.PropertiesObject;
@@ -8,7 +10,6 @@ import tgtools.util.StringUtil;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Map;
 
 /**
  * 名  称：
@@ -17,18 +18,24 @@ import java.util.Map;
  * 时  间：8:38
  */
 public class SqlsFactory {
+
     public static <T> T getSQLs(T p_T) {
         String name = StringUtil.replace(p_T.getClass().getName(), ".", "/");
         name = StringUtil.replace(name, p_T.getClass().getSimpleName(), "");
         LogHelper.info("", "name:" + name, "SqlsFactory.getSQLs");
-        return getSQLs(p_T, name);
+        return getSQLs(tgtools.db.DataBaseFactory.getDefault().getDataBaseType(),p_T, name);
+    }
+    public static <T> T getSQLs(IDataAccess p_DataAccess, T p_T) {
+        String name = StringUtil.replace(p_T.getClass().getName(), ".", "/");
+        name = StringUtil.replace(name, p_T.getClass().getSimpleName(), "");
+        LogHelper.info("", "name:" + name, "SqlsFactory.getSQLs");
+        return getSQLs(p_DataAccess.getDataBaseType(),p_T, name);
     }
 
-    private static <T> T getSQLs(T p_T, String p_ResUrl) {
-        String dbtype = tgtools.db.DataBaseFactory.getDefault().getDataBaseType();
-        LogHelper.info("", "dbtype:" + dbtype, "SqlsFactory.getSQLs");
+    private static <T> T getSQLs(String p_DBType, T p_T, String p_ResUrl) {
+        LogHelper.info("", "dbtype:" + p_DBType, "SqlsFactory.getSQLs");
         try {
-            PropertiesObject properties = loadSqlFile(dbtype, p_ResUrl);
+            PropertiesObject properties = loadSqlFile(p_DBType, p_ResUrl);
             return properties.convert(p_T);
         } catch (APPErrorException e) {
             LogHelper.error("", "转换BaseViewSqls失败：" + e.getMessage(), "SqlsFactory.getSQLs", e);
@@ -42,8 +49,8 @@ public class SqlsFactory {
 
         String defaultfile = "sql-base.xml";
         String dbfile = "sql-" + p_DBType + ".xml";
-        loadFile(properties, p_ResUrl+defaultfile);
-        loadFile(properties, p_ResUrl+dbfile);
+        loadFile(properties, p_ResUrl + defaultfile);
+        loadFile(properties, p_ResUrl + dbfile);
 
         return properties;
     }
