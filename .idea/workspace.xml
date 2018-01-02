@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="修复 log 路径问题">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyStreamFilter.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/lib/tgtools.core.javadoc.jar" afterPath="$PROJECT_DIR$/lib/tgtools.core.javadoc.jar" />
       <change beforePath="$PROJECT_DIR$/lib/tgtools.core.optimize.jar" afterPath="$PROJECT_DIR$/lib/tgtools.core.optimize.jar" />
       <change beforePath="$PROJECT_DIR$/src/META-INF/build.property" afterPath="$PROJECT_DIR$/src/META-INF/build.property" />
-      <change beforePath="$PROJECT_DIR$/src/tgtools/web/log/MyDailyRollingFileAppender.java" afterPath="$PROJECT_DIR$/src/tgtools/web/log/MyDailyRollingFileAppender.java" />
+      <change beforePath="$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java" afterPath="$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java" />
+      <change beforePath="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java" afterPath="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java" />
     </list>
     <ignored path="tgtools.web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,10 +46,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>singletonObjects</find>
-      <find>removeSingleton</find>
-      <find>registerSingleton</find>
-      <find>allBeanNamesByType</find>
       <find>addSingleton</find>
       <find>handlerMethodsInitialized</find>
       <find>st</find>
@@ -75,6 +72,10 @@
       <find>设置日志地址</find>
       <find>setFile</find>
       <find>fileName</find>
+      <find>doProxy</find>
+      <find>doProxyByStream</find>
+      <find>Systm</find>
+      <find>mathPath</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Works\GitHub\tgtools.web\src</dir>
@@ -93,7 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tgtools/web/entity/BSGridDataEntity.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/spring-sql-base.xml" />
         <option value="$PROJECT_DIR$/src/tgtools/web/sqls/BaseViewSqls.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/spring-sql-mysql.xml" />
@@ -137,13 +137,14 @@
         <option value="$PROJECT_DIR$/lib/spring-webmvc-4.1.5.RELEASE.jar!/org/springframework/web/servlet/handler/AbstractUrlHandlerMapping.class" />
         <option value="$PROJECT_DIR$/src/tgtools/web/websocket/ApplicationConfig.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServlet.java" />
-        <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java" />
         <option value="$PROJECT_DIR$/lib/tgtools.core.optimize.jar!/tgtools/net/WebClient.class" />
-        <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/sqls/SqlsFactory.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/util/PageSqlUtil.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServletFactory.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/log/MyDailyRollingFileAppender.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyStreamFilter.java" />
       </list>
     </option>
   </component>
@@ -166,10 +167,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="44" />
-    <option name="y" value="19" />
+    <option name="x" value="250" />
+    <option name="y" value="8" />
     <option name="width" value="1936" />
-    <option name="height" value="992" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -238,8 +239,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,31 +253,11 @@
               <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,21 +287,21 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web\sqls" />
-      <recent name="C:\Works\GitHub\tgtools.web\src" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="tgtools.web.platform" />
-      <recent name="tgtools.web.http.Filter" />
-      <recent name="tgtools.web.sqls" />
-      <recent name="tgtools.web.core" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Works\GitHub\tgtools.web\lib" />
       <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web\sqls" />
       <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web" />
       <recent name="C:\Works\GitHub\tgtools.web" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tgtools.web.http.Filter" />
+      <recent name="tgtools.web.platform" />
+      <recent name="tgtools.web.sqls" />
+      <recent name="tgtools.web.core" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web\sqls" />
+      <recent name="C:\Works\GitHub\tgtools.web\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -925,14 +906,10 @@
       <workItem from="1511956663188" duration="52000" />
       <workItem from="1512352499762" duration="970000" />
       <workItem from="1512530536358" duration="184000" />
-      <workItem from="1512880724829" duration="2633000" />
-    </task>
-    <task id="LOCAL-00032" summary="修改DataAess">
-      <created>1489024755493</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1489024755493</updated>
+      <workItem from="1512880724829" duration="2823000" />
+      <workItem from="1513584773304" duration="109000" />
+      <workItem from="1514183492612" duration="858000" />
+      <workItem from="1514859773123" duration="6407000" />
     </task>
     <task id="LOCAL-00033" summary="整合SQL到配置文件">
       <created>1489377472778</created>
@@ -1270,11 +1247,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510907939122</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="修复 log 路径问题">
+      <created>1512883404329</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1512883404329</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290899000" />
+    <option name="totallyTimeSpent" value="298463000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1298,7 +1282,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20813954" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946634" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17274678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17918456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23927039" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1375,7 +1359,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="优化服务运行 减少 cpu占用" />
     <MESSAGE value="删除注释的代码" />
     <MESSAGE value="增加addbean 方法" />
     <MESSAGE value="增加 日志文件自动补充地址" />
@@ -1400,7 +1383,8 @@
     <MESSAGE value="增加 spring websocket" />
     <MESSAGE value="修复过滤器BUG" />
     <MESSAGE value="修复分页sql 不能判断数据源的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复分页sql 不能判断数据源的问题" />
+    <MESSAGE value="修复 log 路径问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复 log 路径问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1426,34 +1410,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/ListableBeanFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/AbstractBeanDefinition.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="25" column="108" lean-forward="false" selection-start-line="25" selection-start-column="94" selection-end-line="25" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/spring-beans-4.1.5.RELEASE.jar!/org/springframework/beans/factory/support/BeanDefinitionBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="71" column="25" lean-forward="true" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/spring/CustemFileSystemXmlApplicationContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="69" column="26" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/BeanDefineConfigue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1276">
@@ -1465,13 +1421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="125" column="23" lean-forward="false" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/services/ServicesBll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="62" column="53" lean-forward="false" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1616,31 +1565,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/tgtools.core.optimize.jar!/tgtools/net/WebClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="294" column="28" lean-forward="false" selection-start-line="294" selection-start-column="28" selection-end-line="294" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/websocket/ApplicationConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2134">
-          <caret line="125" column="21" lean-forward="false" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1718,7 +1646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1726,7 +1653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1734,7 +1660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="726">
           <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1750,37 +1675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-66">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <marker date="1483419699519" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1483419699519" expanded="false" signature="140:416" ph="..." />
-            <marker date="1483419699519" expanded="false" signature="600:611" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="638:644" ph=" }" />
-            <marker date="1483419699519" expanded="false" signature="703:714" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="765:771" ph=" }" />
-            <marker date="1483419699519" expanded="true" signature="829:935" ph="{...}" />
-            <marker date="1483419699519" expanded="false" signature="985:996" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="1024:1030" ph=" }" />
-            <marker date="1483419699519" expanded="false" signature="1070:1081" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="1108:1114" ph=" }" />
-            <marker date="1483419699519" expanded="true" signature="1150:1157" ph="{}" />
-            <marker date="1483419699519" expanded="true" signature="1202:1297" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="1344:1876" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="1915:2052" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="2087:2308" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="2373:2865" ph="{...}" />
-            <marker date="1483419699519" expanded="false" signature="2898:2909" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="2930:2936" ph=" }" />
-            <marker date="1483419699519" expanded="false" signature="2979:2990" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="3012:3018" ph=" }" />
-            <marker date="1483419699519" expanded="true" signature="3082:3346" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="3402:3522" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="3573:4055" ph="{...}" />
-            <marker date="1483419699519" expanded="false" signature="4092:4103" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="4115:4121" ph=" }" />
-            <marker date="1483419699519" expanded="true" signature="4150:4209" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="4244:4476" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="4511:4710" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1788,7 +1682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1276">
           <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1796,34 +1689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="51" column="16" lean-forward="false" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-          <folding>
-            <marker date="1483419699519" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1483419699519" expanded="false" signature="140:391" ph="..." />
-            <marker date="1483419699519" expanded="true" signature="600:734" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="863:1092" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="1185:1414" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="1491:1536" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="1575:1645" ph="{...}" />
-            <marker date="1483419699519" expanded="false" signature="1677:1688" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="1711:1717" ph=" }" />
-            <marker date="1483419699519" expanded="false" signature="1746:1757" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="1778:1784" ph=" }" />
-            <marker date="1483419699519" expanded="true" signature="1820:2349" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="2382:2606" ph="{...}" />
-            <marker date="1483419699519" expanded="false" signature="2642:2653" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="2676:2682" ph=" }" />
-            <marker date="1483419699519" expanded="false" signature="2714:2725" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="2748:2754" ph=" }" />
-            <marker date="1483419699519" expanded="false" signature="2795:2806" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="2829:2835" ph=" }" />
-            <marker date="1483419699519" expanded="true" signature="2887:3011" ph="{...}" />
-            <marker date="1483419699519" expanded="false" signature="3058:3069" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="3098:3104" ph=" }" />
-            <marker date="1483419699519" expanded="true" signature="3231:4474" ph="{...}" />
-            <marker date="1483419699519" expanded="false" signature="4523:4534" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="4589:4595" ph=" }" />
-            <marker date="1483419699519" expanded="true" signature="4624:4710" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1831,21 +1696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-          <folding>
-            <marker date="1483419699519" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1483419699519" expanded="false" signature="140:373" ph="..." />
-            <marker date="1483419699519" expanded="true" signature="1090:1097" ph="{}" />
-            <marker date="1483419699519" expanded="true" signature="1206:1324" ph="{...}" />
-            <marker date="1483419699519" expanded="false" signature="1372:1383" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="1410:1416" ph=" }" />
-            <marker date="1483419699519" expanded="false" signature="1452:1463" ph=" { " />
-            <marker date="1483419699519" expanded="false" signature="1487:1493" ph=" }" />
-            <marker date="1483419699519" expanded="true" signature="1529:2173" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="2211:3110" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="3141:3910" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="3951:5179" ph="{...}" />
-            <marker date="1483419699519" expanded="true" signature="5230:5625" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1853,6 +1703,120 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/services/ServicesEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/services/ServicesBll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="60" column="56" lean-forward="false" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/spring/CustemFileSystemXmlApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/Java/jdk1.6.0_43/src.zip!/java/io/PipedInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-516">
+          <caret line="119" column="11" lean-forward="false" selection-start-line="119" selection-start-column="11" selection-end-line="119" selection-end-column="11" />
+          <folding>
+            <element signature="e#4131#4132#0" expanded="false" />
+            <element signature="e#4167#4168#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/tgtools.core.optimize.jar!/tgtools/net/WebClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding>
+            <marker date="1514867930347" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1514867930347" expanded="false" signature="135:718" ph="..." />
+            <marker date="1514867930347" expanded="true" signature="1037:1299" ph="{...}" />
+            <marker date="1514867930347" expanded="false" signature="1357:1368" ph=" { " />
+            <marker date="1514867930347" expanded="false" signature="1382:1388" ph=" }" />
+            <marker date="1514867930347" expanded="true" signature="1455:1466" ph=" { " />
+            <marker date="1514867930347" expanded="true" signature="1480:1486" ph=" }" />
+            <marker date="1514867930347" expanded="false" signature="1523:1534" ph=" { " />
+            <marker date="1514867930347" expanded="false" signature="1548:1554" ph=" }" />
+            <marker date="1514867930347" expanded="false" signature="1582:1593" ph=" { " />
+            <marker date="1514867930347" expanded="false" signature="1607:1613" ph=" }" />
+            <marker date="1514867930347" expanded="false" signature="1655:1666" ph=" { " />
+            <marker date="1514867930347" expanded="false" signature="1680:1686" ph=" }" />
+            <marker date="1514867930347" expanded="false" signature="1719:1730" ph=" { " />
+            <marker date="1514867930347" expanded="false" signature="1744:1750" ph=" }" />
+            <marker date="1514867930347" expanded="false" signature="1790:1801" ph=" { " />
+            <marker date="1514867930347" expanded="false" signature="1815:1821" ph=" }" />
+            <marker date="1514867930347" expanded="false" signature="1852:1863" ph=" { " />
+            <marker date="1514867930347" expanded="false" signature="1877:1883" ph=" }" />
+            <marker date="1514867930347" expanded="false" signature="1922:1933" ph=" { " />
+            <marker date="1514867930347" expanded="false" signature="1947:1953" ph=" }" />
+            <marker date="1514867930347" expanded="false" signature="1983:1994" ph=" { " />
+            <marker date="1514867930347" expanded="false" signature="2008:2014" ph=" }" />
+            <marker date="1514867930347" expanded="false" signature="2065:2076" ph=" { " />
+            <marker date="1514867930347" expanded="false" signature="2099:2105" ph=" }" />
+            <marker date="1514867930347" expanded="false" signature="2147:2158" ph=" { " />
+            <marker date="1514867930347" expanded="false" signature="2172:2178" ph=" }" />
+            <marker date="1514867930347" expanded="true" signature="2224:2343" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="2423:2607" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="2700:2773" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="2848:3284" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="3372:3445" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="3518:3718" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="3803:3987" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="4065:4165" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="4251:4322" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="4417:5069" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="5160:6011" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="6087:6836" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="6901:7309" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="7365:8013" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="8088:8700" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="8763:8923" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="9000:9336" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="9418:10557" ph="{...}" />
+            <marker date="1514867930347" expanded="true" signature="10982:10988" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyStreamFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1283">
+          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="127" column="67" lean-forward="false" selection-start-line="127" selection-start-column="56" selection-end-line="127" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="78" column="29" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="29" />
           <folding />
         </state>
       </provider>

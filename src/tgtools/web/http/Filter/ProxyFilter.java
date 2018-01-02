@@ -64,14 +64,12 @@ public class ProxyFilter implements Filter {
     }
 
 
-    protected String getSourceUrl(ServletRequest p_ServletRequest)
-    {
-        String method=((HttpServletRequest) p_ServletRequest).getMethod();
-        if("GET".equals(method.toUpperCase())){
-            String queryString =((HttpServletRequest) p_ServletRequest).getQueryString();
-            return ((HttpServletRequest) p_ServletRequest).getRequestURI()+ (StringUtil.isNullOrEmpty(queryString)?"":"?"+queryString);
-        }
-        else {
+    protected String getSourceUrl(ServletRequest p_ServletRequest) {
+        String method = ((HttpServletRequest) p_ServletRequest).getMethod();
+        if ("GET".equals(method.toUpperCase())) {
+            String queryString = ((HttpServletRequest) p_ServletRequest).getQueryString();
+            return ((HttpServletRequest) p_ServletRequest).getRequestURI() + (StringUtil.isNullOrEmpty(queryString) ? "" : "?" + queryString);
+        } else {
             return ((HttpServletRequest) p_ServletRequest).getRequestURI();
         }
     }
@@ -93,7 +91,7 @@ public class ProxyFilter implements Filter {
         try {
             String host = m_IpMap.getString(path);
 
-            byte[] data=doProxy(method,host,path,servletRequest,servletResponse);
+            byte[] data = doProxy(method, host, path, servletRequest, servletResponse);
             OutputStream os = servletResponse.getOutputStream();
             os.write(data);
             os.close();
@@ -104,7 +102,7 @@ public class ProxyFilter implements Filter {
         }
     }
 
-    protected byte[] doProxy(String p_Method, String p_NewHost, String p_NewPath,ServletRequest p_ServletRequest, ServletResponse p_ServletResponse) throws APPErrorException {
+    protected byte[] doProxy(String p_Method, String p_NewHost, String p_NewPath, ServletRequest p_ServletRequest, ServletResponse p_ServletResponse) throws APPErrorException {
         WebClient client = new WebClient();
         String host = p_NewHost;
         client.setMethod(p_Method);
@@ -112,7 +110,7 @@ public class ProxyFilter implements Filter {
         client.setUrl("http://" + host + url);
         LogHelper.info("", "代理开始，代理请求地址：" + "http://" + host + url, "UrlProxyFilter");
 
-        InputStream is =null;
+        InputStream is = null;
         try {
             setHeader(p_ServletRequest, client);
             is = p_ServletRequest.getInputStream();
@@ -138,10 +136,9 @@ public class ProxyFilter implements Filter {
 
             return data;
         } catch (Exception ex) {
-            throw new APPErrorException("代理数据出错；Url:"+client.getUrl()+";;原因："+ex.getMessage(),ex);
-        }
-        finally {
-            if(null!=is) {
+            throw new APPErrorException("代理数据出错；Url:" + client.getUrl() + ";;原因：" + ex.getMessage(), ex);
+        } finally {
+            if (null != is) {
                 try {
                     is.close();
                 } catch (IOException e) {
@@ -151,7 +148,7 @@ public class ProxyFilter implements Filter {
         }
 
 
-}
+    }
 
     protected void setHeader(ServletRequest servletRequest, IWebClient p_Client) {
         String cookies = ((HttpServletRequest) servletRequest).getHeader("Cookie");

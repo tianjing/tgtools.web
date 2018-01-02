@@ -19,7 +19,7 @@ import java.io.OutputStream;
  * web.xml 增加过滤器 <br/>
  * &lt;filter&gt; <br/>
  * &lt;filter-name&gt;myFilter&lt;/filter-name&gt; <br/>
- * &lt;filter-class&gt;tgtools.web.http.Filter.ProxyFilter&lt;/filter-class&gt; <br/>
+ * &lt;filter-class&gt;tgtools.web.http.Filter.UrlProxyFilter&lt;/filter-class&gt; <br/>
  * &lt;init-param&gt;  <br/>
  * &lt;param-name&gt;ipmap&lt;/param-name&gt; <br/>
  * &lt;param-value&gt;{"/":{"TargetHost":"192.168.1.245","TargetPort":"8091","TargetUrl":"/nf/im/client/"}}&lt;/param-value&gt; <br/>
