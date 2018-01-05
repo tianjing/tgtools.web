@@ -68,6 +68,7 @@ public class UrlProxyFilter extends ProxyFilter {
         } catch (APPErrorException e) {
             String error = "代理出错；代理原地址："+sourceurl+"原因：" + e.getMessage();
             LogHelper.error("", error, "UrlProxyFilter", e);
+            servletResponse.setCharacterEncoding("UTF-8");
             servletResponse.getWriter().write(error);
             servletResponse.getWriter().close();
             return;

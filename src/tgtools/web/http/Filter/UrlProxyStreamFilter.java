@@ -67,6 +67,7 @@ public class UrlProxyStreamFilter extends UrlProxyFilter {
         } catch (APPErrorException e) {
             String error = "代理出错；代理原地址："+sourceurl+"原因：" + e.getMessage();
             LogHelper.error("", error, "UrlProxyFilter", e);
+            servletResponse.setCharacterEncoding("UTF-8");
             servletResponse.getWriter().write(error);
             servletResponse.getWriter().close();
             return;
@@ -81,6 +82,7 @@ public class UrlProxyStreamFilter extends UrlProxyFilter {
         String url = p_NewPath;
         client.setUrl("http://" + host + url);
         LogHelper.info("", "代理开始，代理请求地址：" + "http://" + host + url, "UrlProxyFilter");
+        HttpServletResponse hsr=(HttpServletResponse) p_ServletResponse;
         InputStream is = null;
         try {
             setHeader(p_ServletRequest, client);
@@ -91,7 +93,7 @@ public class UrlProxyStreamFilter extends UrlProxyFilter {
                 List<String> cookies = client.getResponseHeader().get("Set-Cookie");
                 if (cookies.size() > 0) {
                     for (int i = 0; i < cookies.size(); i++) {
-                        ((HttpServletResponse) p_ServletResponse).addHeader("Set-Cookie", cookies.get(i));
+                        hsr.addHeader("Set-Cookie", cookies.get(i));
                     }
                 }
             }
@@ -100,7 +102,7 @@ public class UrlProxyStreamFilter extends UrlProxyFilter {
                 List<String> ContentType = client.getResponseHeader().get("Content-Type");
 
                 if (ContentType.size() > 0) {
-                    p_ServletResponse.setContentType(ContentType.get(0));
+                    hsr.setContentType(ContentType.get(0));
 
                 }
             }
@@ -109,10 +111,11 @@ public class UrlProxyStreamFilter extends UrlProxyFilter {
                 List<String> lengths = client.getResponseHeader().get("Content-Length");
 
                 if (lengths.size() > 0) {
-                    p_ServletResponse.setContentLength(Integer.parseInt(lengths.get(0)));
+                    hsr.setContentLength(Integer.parseInt(lengths.get(0)));
 
                 }
             }
+            hsr.setStatus(client.getResponseCode());
 
             copyStream(resis,p_ServletResponse.getOutputStream());
         } catch (Exception ex) {
@@ -151,6 +154,18 @@ public class UrlProxyStreamFilter extends UrlProxyFilter {
             } catch (IOException e) {
 
             }
+        }
+    }
+    public static void main(String[] args)
+    {
+        WebClient client =new WebClient();
+        client.setMethod("GET");
+        client.setUrl("http://172.17.3.1/dfd/dd.htm");
+        try {
+           String ss= client.doInvokeAsString("");
+           System.out.println(ss);
+        } catch (APPErrorException e) {
+            e.printStackTrace();
         }
     }
 }
