@@ -3,6 +3,7 @@
 	<!--定义变量-->
 	<property name="lib.dir" value="${basedir}/tgtools.web/lib/" />
 	<property name="copyout" value="${outproject}/EmptyProject/WebContent/WEB-INF/lib/" />
+	<property name="copyout1" value="${outproject}/EmptyWeb/WebContent/WEB-INF/lib/" />
 
 
 	<property name="project" value="${basedir}/tgtools.web/" />
@@ -125,6 +126,10 @@
 	<target name="copyout">
 		<delete file="${outjar}" />
 		<copy todir="${copyout}" overwrite="true">
+			<fileset dir="${outdir}">
+			</fileset>
+		</copy>
+		<copy todir="${copyout1}" overwrite="true">
 			<fileset dir="${outdir}">
 			</fileset>
 		</copy>
