@@ -50,7 +50,14 @@ public class ServicesBll {
 	 * @throws APPErrorException
 	 */
 	public static void laodAllServices() throws APPErrorException {
-		List<ServicesEntity> services = ServicesDao.getAllServices();
+		List<ServicesEntity> services =null;
+		try {
+			services =ServicesDao.getAllServices();
+		}catch (Exception e)
+		{
+			LogHelper.infoForce("","表服务获取数据失败;功能取消；","TableServiceTask.laodAllServices");
+		}
+		if(null==services){return;}
 		LoggerFactory.getDefault().info("表配置的服务数量:"+(null==services?-1:services.size()));
 		for (int i = 0; i < services.size(); i++) {
 			try {
