@@ -24,7 +24,7 @@ import java.io.UnsupportedEncodingException;
  */
 @Controller
 @RequestMapping("/maptiles")
-public class MapTile {
+public class MapTiles {
     FileTile mFileTile=new FileTile();
     DataBaseTile mDataBaseTile =new DataBaseTile();
     @SuppressWarnings("rawtypes")
