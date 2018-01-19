@@ -115,6 +115,7 @@ public class UrlProxyStreamFilter extends UrlProxyFilter {
 
                 }
             }
+
             hsr.setStatus(client.getResponseCode());
 
             copyStream(resis,p_ServletResponse.getOutputStream());
