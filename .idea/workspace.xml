@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="">
+    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="修复WEBCLIENT 获取 状态码的bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/tgtools.core.javadoc.jar" afterPath="$PROJECT_DIR$/lib/tgtools.core.javadoc.jar" />
-      <change beforePath="$PROJECT_DIR$/lib/tgtools.core.optimize.jar" afterPath="$PROJECT_DIR$/lib/tgtools.core.optimize.jar" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/build.property" afterPath="$PROJECT_DIR$/src/META-INF/build.property" />
       <change beforePath="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyStreamFilter.java" afterPath="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyStreamFilter.java" />
     </list>
     <ignored path="tgtools.web.iws" />
@@ -44,12 +43,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>UrlProxyFilter</find>
-      <find>doFilter</find>
-      <find>bquserid</find>
-      <find>p_DataAccess</find>
-      <find>type</find>
-      <find>Constants.SQLs</find>
       <find>Page_Get</find>
       <find>getDefaultDispatcher</find>
       <find>addRest</find>
@@ -74,6 +67,12 @@
       <find>RequestMethod</find>
       <find>getResponseCode</find>
       <find>doInvokeAsStream</find>
+      <find>getResponseStream</find>
+      <find>resis</find>
+      <find>Base</find>
+      <find>getSQLs</find>
+      <find>addDispatcherServlet</find>
+      <find>RequestUpgradeStrategy</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Works\GitHub\tgtools.web\src</dir>
@@ -112,7 +111,6 @@
         <option value="$PROJECT_DIR$/src/tgtools/web/util/WebRestClient.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/spring/ApplicationContext.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/spring/CustemFileSystemXmlApplicationContext.java" />
-        <option value="$PROJECT_DIR$/src/tgtools/web/platform/Platform.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/services/TableServiceTask.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/websocket/WebsocketFactory.java" />
         <option value="$PROJECT_DIR$/lib/spring-context-4.1.5.RELEASE.jar!/org/springframework/context/annotation/Configuration.class" />
@@ -122,8 +120,6 @@
         <option value="$PROJECT_DIR$/src/tgtools/web/rests/data/DataAccessRest.java" />
         <option value="$PROJECT_DIR$/lib/spring-webmvc-4.1.5.RELEASE.jar!/org/springframework/web/servlet/handler/SimpleUrlHandlerMapping.class" />
         <option value="$PROJECT_DIR$/lib/spring-webmvc-4.1.5.RELEASE.jar!/org/springframework/web/servlet/handler/AbstractUrlHandlerMapping.class" />
-        <option value="$PROJECT_DIR$/src/tgtools/web/websocket/ApplicationConfig.java" />
-        <option value="$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServlet.java" />
         <option value="$PROJECT_DIR$/lib/tgtools.core.optimize.jar!/tgtools/net/WebClient.class" />
         <option value="$PROJECT_DIR$/src/tgtools/web/sqls/SqlsFactory.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/util/PageSqlUtil.java" />
@@ -143,6 +139,9 @@
         <option value="$PROJECT_DIR$/src/tgtools/web/rests/map/tiles/DataBaseTile.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/services/ServicesBll.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/rests/map/MapTile.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/platform/Platform.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/websocket/ApplicationConfig.java" />
+        <option value="$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServlet.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyStreamFilter.java" />
       </list>
     </option>
@@ -166,8 +165,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="17" />
-    <option name="y" value="80" />
+    <option name="x" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -238,13 +236,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
               <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="tgtools_web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
@@ -264,19 +279,13 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="Filter" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="platform" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -942,14 +951,14 @@
       <workItem from="1516073140187" duration="226000" />
       <workItem from="1516177595224" duration="846000" />
       <workItem from="1516179663600" duration="632000" />
-      <workItem from="1516328101015" duration="501000" />
-    </task>
-    <task id="LOCAL-00038" summary="更新platform中没有spring对象工厂时就创建新的">
-      <created>1490593633386</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1490593633386</updated>
+      <workItem from="1516328101015" duration="658000" />
+      <workItem from="1516328844292" duration="144000" />
+      <workItem from="1516353544511" duration="3042000" />
+      <workItem from="1516685954850" duration="2199000" />
+      <workItem from="1516694960493" duration="2411000" />
+      <workItem from="1516708026736" duration="941000" />
+      <workItem from="1516775404173" duration="1477000" />
+      <workItem from="1516779150746" duration="1604000" />
     </task>
     <task id="LOCAL-00039" summary="删除不需要的类">
       <created>1490750327341</created>
@@ -1287,11 +1296,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516073349611</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="修复WEBCLIENT 获取 状态码的bug">
+      <created>1516328635429</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1516328635429</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314494000" />
+    <option name="totallyTimeSpent" value="326469000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1307,21 +1323,22 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946634" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25261933" sideWeight="0.49570817" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22906977" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22906977" sideWeight="0.49785408" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2072177" sideWeight="0.49785408" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22906977" sideWeight="0.49785408" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946634" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20654507" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2027897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23927039" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11856223" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32363212" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Jindent" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1331,13 +1348,12 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16647264" sideWeight="0.49570817" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24330617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24330617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1392,7 +1408,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="增加验证类" />
     <MESSAGE value="删除验证类" />
     <MESSAGE value="增加db2分页支持" />
     <MESSAGE value="优化服务机制" />
@@ -1417,24 +1432,11 @@
     <MESSAGE value="增加 map rest" />
     <MESSAGE value="修复表服务没有表时的报错" />
     <MESSAGE value="类名调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="类名调整" />
+    <MESSAGE value="修复WEBCLIENT 获取 状态码的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复WEBCLIENT 获取 状态码的bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyStreamFilter.java</url>
-          <line>165</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyStreamFilter.java</url>
-          <line>168</line>
-          <properties />
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
@@ -1471,97 +1473,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/websocket/ApplicationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="272" column="17" lean-forward="false" selection-start-line="272" selection-start-column="17" selection-end-line="272" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/services/TableServiceTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="61" column="9" lean-forward="false" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/SqlsFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="25" column="81" lean-forward="false" selection-start-line="25" selection-start-column="81" selection-end-line="25" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/core/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/util/PageSqlUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="137" column="26" lean-forward="false" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/sql-h2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/sql-dm6.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/sql-dm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/sql-db2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/sql-base.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/util/StringHttpMessageConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/util/RequestHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServletFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="726">
@@ -1681,13 +1592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="58" column="34" lean-forward="false" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/util/ValidateHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1700,14 +1604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="131" column="31" lean-forward="false" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1788,19 +1684,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/Platform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="254" column="20" lean-forward="false" selection-start-line="254" selection-start-column="20" selection-end-line="254" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://F:/Java/jdk1.6.0_43/src.zip!/java/net/HttpURLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="363" column="30" lean-forward="false" selection-start-line="363" selection-start-column="15" selection-end-line="363" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1808,75 +1695,133 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2310">
           <caret line="70" column="54" lean-forward="true" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/Java/jdk1.6.0_43/src.zip!/java/net/URLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="777" column="23" lean-forward="false" selection-start-line="777" selection-start-column="23" selection-end-line="777" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="59" column="42" lean-forward="true" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2706">
+          <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/BaseViewSqls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/core/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/sqls/SqlsFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/websocket/ApplicationConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/tgtools.core.optimize.jar!/tgtools/plugin/PluginFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="161" column="36" lean-forward="false" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/Platform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3014">
+          <caret line="151" column="10" lean-forward="false" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-websocket-4.1.5.RELEASE.jar!/org/springframework/web/socket/server/standard/WebLogicRequestUpgradeStrategy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-websocket-4.1.5.RELEASE.jar!/org/springframework/web/socket/server/standard/TomcatRequestUpgradeStrategy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="22" column="57" lean-forward="false" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-websocket-4.1.5.RELEASE.jar!/org/springframework/web/socket/server/standard/AbstractStandardUpgradeStrategy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="37" column="87" lean-forward="false" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5544">
+          <caret line="270" column="47" lean-forward="false" selection-start-line="270" selection-start-column="47" selection-end-line="270" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-webmvc-4.1.5.RELEASE.jar!/org/springframework/web/servlet/handler/AbstractHandlerMapping.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-webmvc-4.1.5.RELEASE.jar!/org/springframework/web/servlet/handler/AbstractUrlHandlerMapping.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="22" column="59" lean-forward="false" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-webmvc-4.1.5.RELEASE.jar!/org/springframework/web/servlet/handler/SimpleUrlHandlerMapping.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/tgtools.core.optimize.jar!/tgtools/net/WebClient.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="377" column="49" lean-forward="false" selection-start-line="377" selection-start-column="49" selection-end-line="377" selection-end-column="49" />
-          <folding>
-            <marker date="1516328424967" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1516328424967" expanded="false" signature="135:770" ph="..." />
-            <marker date="1516328424967" expanded="true" signature="1124:1386" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="1431:1763" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="1797:1808" ph=" { " />
-            <marker date="1516328424967" expanded="true" signature="1822:1828" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="1871:1882" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="1896:1902" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="1960:1971" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="1985:1991" ph=" }" />
-            <marker date="1516328424967" expanded="true" signature="2059:2119" ph="{...}" />
-            <marker date="1516328424967" expanded="false" signature="2158:2169" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="2184:2190" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="2218:2229" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="2243:2249" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="2286:2297" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="2311:2317" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="2350:2361" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="2375:2381" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="2423:2434" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="2448:2454" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="2485:2496" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="2510:2516" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="2556:2567" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="2581:2587" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="2617:2628" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="2642:2648" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="2687:2698" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="2712:2718" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="2769:2780" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="2803:2809" ph=" }" />
-            <marker date="1516328424967" expanded="false" signature="2851:2862" ph=" { " />
-            <marker date="1516328424967" expanded="false" signature="2876:2882" ph=" }" />
-            <marker date="1516328424967" expanded="true" signature="2928:3047" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="3127:3318" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="3411:3484" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="3559:4009" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="4097:4170" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="4243:4450" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="4535:4932" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="5017:5247" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="5325:5425" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="5511:5582" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="5677:6329" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="6420:7271" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="7347:8096" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="8161:8569" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="8625:9304" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="9379:9991" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="10054:10214" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="10291:10627" ph="{...}" />
-            <marker date="1516328424967" expanded="true" signature="10709:12152" ph="{...}" />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyStreamFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="90" column="55" lean-forward="false" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="55" />
+        <state relative-caret-position="143">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding />
         </state>
       </provider>
