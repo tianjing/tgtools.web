@@ -2,6 +2,7 @@ package tgtools.web.platform;
 
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.ContextStartedEvent;
@@ -12,7 +13,6 @@ import tgtools.log.LoggerFactory;
 import tgtools.util.StringUtil;
 import tgtools.web.log.Log4jFactory;
 import tgtools.web.services.ServicesBll;
-
 @SuppressWarnings("rawtypes")
 @Component("BeanDefineConfigue")
 public class BeanDefineConfigue implements ApplicationListener {

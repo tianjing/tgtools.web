@@ -5,7 +5,6 @@ import tgtools.db.IDataAccess;
 import tgtools.exceptions.APPErrorException;
 import tgtools.util.LogHelper;
 import tgtools.util.StringUtil;
-import tgtools.web.core.Constants;
 import tgtools.web.entity.BSGridDataEntity;
 import tgtools.web.sqls.BaseViewSqls;
 import tgtools.web.sqls.SqlsFactory;

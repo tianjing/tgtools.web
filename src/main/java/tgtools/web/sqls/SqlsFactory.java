@@ -1,7 +1,6 @@
 package tgtools.web.sqls;
 
 
-import tgtools.db.DataBaseFactory;
 import tgtools.db.IDataAccess;
 import tgtools.exceptions.APPErrorException;
 import tgtools.util.LogHelper;
