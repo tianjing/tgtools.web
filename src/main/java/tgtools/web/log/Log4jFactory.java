@@ -13,24 +13,29 @@ import java.io.FileNotFoundException;
  * 时  间：13:09
  */
 public class Log4jFactory {
-    public static void start()
-    {
-        String location= Platform.getServerPath();
-        if(!StringUtil.isNullOrEmpty(location)) {
+
+    public static void start(String pPath) {
+        if (!StringUtil.isNullOrEmpty(pPath)) {
             try {
-                location+="WEB-INF/log4j.xml";
-                Log4jConfigurer.initLogging(location);
+                Log4jConfigurer.initLogging(pPath);
             } catch (FileNotFoundException e) {
-                System.out.println("日志启动失败；原因："+e.getMessage());
+                System.out.println("日志启动失败；原因：" + e.getMessage());
             }
         }
-
     }
 
-    public static void shutdown(){
+    public static void start() {
+        String location = Platform.getServerPath();
+        if (!StringUtil.isNullOrEmpty(location)) {
+            location += "WEB-INF/log4j.xml";
+            start(location);
+        }
+    }
+
+    public static void shutdown() {
         try {
             Log4jConfigurer.shutdownLogging();
-        }catch (Exception ex)
-        {}
+        } catch (Exception ex) {
+        }
     }
 }
