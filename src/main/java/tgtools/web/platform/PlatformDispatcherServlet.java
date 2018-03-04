@@ -3,6 +3,7 @@ package tgtools.web.platform;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.web.context.support.AbstractRefreshableWebApplicationContext;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.handler.SimpleUrlHandlerMapping;
@@ -29,7 +30,7 @@ import java.util.Map;
 @Controller
 public class PlatformDispatcherServlet extends DispatcherServlet {
 
-    private org.springframework.web.context.support.XmlWebApplicationContext mContext;
+    private AbstractRefreshableWebApplicationContext mContext;
     private org.springframework.beans.factory.support.DefaultListableBeanFactory mBeanFactory;
     private org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping mMapper;
     private SimpleUrlHandlerMapping mSimpleUrlHandlerMapping;
@@ -262,13 +263,17 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
      */
     @Override
     protected void initStrategies(ApplicationContext context) {
-        mContext = (org.springframework.web.context.support.XmlWebApplicationContext) context;
+        mContext = (AbstractRefreshableWebApplicationContext) context;
         mBeanFactory = (org.springframework.beans.factory.support.DefaultListableBeanFactory) mContext.getBeanFactory();
-        mMapper = (org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping) mBeanFactory.getBean("org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0");
+        mMapper = (org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping) mBeanFactory.getBean(org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.class);
         super.initStrategies(context);
         PlatformDispatcherServletFactory.addDispatchers(this.getServletName(), this);
         if(mBeanFactory.containsBeanDefinition("webSocketHandlerMapping")) {
             mSimpleUrlHandlerMapping = (SimpleUrlHandlerMapping) mBeanFactory.getBean("webSocketHandlerMapping");
+        }
+        else if(tgtools.web.platform.Platform.getBeanFactory().containsBeanDefinition("webSocketHandlerMapping"))
+        {
+            mSimpleUrlHandlerMapping = (SimpleUrlHandlerMapping) tgtools.web.platform.Platform.getBeanFactory().getBean("webSocketHandlerMapping");
         }
         sendMessage();
     }

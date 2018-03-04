@@ -6,7 +6,7 @@
 <!-- source https://github.com/tianjing/tgtools.web.git -->
     <groupId>tgtools</groupId>
     <artifactId>tgtools.web</artifactId>
-    <version>1.0.323</version>
+    <version>1.0.324</version>
 
 
     <properties>
