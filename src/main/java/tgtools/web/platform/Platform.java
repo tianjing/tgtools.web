@@ -270,8 +270,9 @@ public class Platform {
     }
 
     private static void setServerPath(ApplicationContext p_Context) {
-        if(!StringUtil.isNullOrEmpty(m_BasePath))
-        {return;}
+        if (!StringUtil.isNullOrEmpty(m_BasePath)) {
+            return;
+        }
         if (p_Context instanceof org.springframework.web.context.support.AbstractRefreshableWebApplicationContext) {
             m_BasePath = ((org.springframework.web.context.support.AbstractRefreshableWebApplicationContext) p_Context).getServletContext().getRealPath("/");
             m_ContextPath = ((org.springframework.web.context.support.AbstractRefreshableWebApplicationContext) p_Context).getServletContext().getContextPath();
@@ -282,19 +283,28 @@ public class Platform {
             LogHelper.info("", m_ContextPath, "m_ContextPath");
         } else if (p_Context instanceof GenericWebApplicationContext) {
             m_ContextPath = ((GenericWebApplicationContext) p_Context).getServletContext().getContextPath();
-            String path = Platform.class.getResource("").toString();
-
+            String path = null;
+            try {
+                path = org.springframework.util.ResourceUtils.getURL("classpath:").getPath();
+            } catch (Exception e) {
+                path = Platform.class.getResource("").toString();
+            }
             if (path.indexOf("file:/") >= 0) {
                 path = "/" + path.substring(path.indexOf("file:/") + 6);
-            } else {
-                path = path.substring(path.indexOf(":") + 1);
             }
-            if(path.indexOf("/WEB-INF")>0)
-            {
+//            else {
+//                path = path.substring(path.indexOf(":") + 1);
+//            }
+            if (path.indexOf("/WEB-INF") > 0) {
                 m_BasePath = path.substring(0, path.indexOf("/WEB-INF") + 1);
-            }
-            else if(path.indexOf("jar!")>0) {
+            } else if (path.indexOf("jar!") > 0) {
                 m_BasePath = path.substring(0, path.substring(0, path.indexOf("jar!")).lastIndexOf("/"));
+            }else if (path.indexOf("classes") > 0) {
+                if (path.indexOf("target") > 0) {
+                    m_BasePath = path.substring(0, path.substring(0, path.indexOf("target")).lastIndexOf("/"));
+                }else {
+                    m_BasePath = path.substring(0, path.substring(0, path.indexOf("classes")).lastIndexOf("/"));
+                }
             }
             if (!StringUtil.isNullOrEmpty(m_BasePath)) {
                 m_BasePath += "/";
