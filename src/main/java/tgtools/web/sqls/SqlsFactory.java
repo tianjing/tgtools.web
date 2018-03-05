@@ -47,10 +47,11 @@ public class SqlsFactory {
         PropertiesObject properties = new PropertiesObject();
 
         String defaultfile = "sql-base.xml";
-        String dbfile = "sql-" + p_DBType + ".xml";
         loadFile(properties, p_ResUrl + defaultfile);
-        loadFile(properties, p_ResUrl + dbfile);
-
+        if(!StringUtil.isNullOrEmpty(p_DBType)) {
+            String dbfile = "sql-" + p_DBType + ".xml";
+            loadFile(properties, p_ResUrl + dbfile);
+        }
         return properties;
     }
 
