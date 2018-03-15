@@ -10,6 +10,7 @@ import tgtools.db.IDataAccess;
 import tgtools.exceptions.APPErrorException;
 import tgtools.util.JsonParseHelper;
 import tgtools.util.LogHelper;
+import tgtools.util.ReflectionUtil;
 import tgtools.util.StringUtil;
 
 import javax.sql.DataSource;
@@ -71,7 +72,7 @@ public class TransactionDataAccess implements IDataAccess {
     public String getUrl() {
         if (null != m_DataSource) {
             try {
-                Method method = m_DataSource.getClass().getDeclaredMethod("getUrl", new Class[]{});
+                Method method = ReflectionUtil.findMethod(m_DataSource.getClass(),"getUrl", new Class[]{});
                 if (null == method) {
                     LogHelper.info("", "无法获取getUrl方法。", "DMDataAccess.getUrl");
                 }

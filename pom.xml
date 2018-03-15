@@ -6,7 +6,7 @@
 <!-- source https://github.com/tianjing/tgtools.web.git -->
     <groupId>tgtools</groupId>
     <artifactId>tgtools.web</artifactId>
-    <version>1.0.325</version>
+    <version>1.0.326</version>
 
 
     <properties>
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>tgtools</groupId>
             <artifactId>tgtools.core</artifactId>
-            <version>1.0.270</version>
+            <version>1.0.275</version>
         </dependency>
         <!-- spring-->
         <dependency>
@@ -131,7 +131,7 @@
         <repository>
             <id>nexus-binfo</id>
             <url>
-                http://192.168.1.241:8083/nexus/content/repositories/releases/
+                http://10.0.0.7:8083/nexus/content/repositories/releases/
             </url>
         </repository>
     </distributionManagement>

@@ -25,7 +25,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.40" level="application_server_libraries" />
-    <orderEntry type="library" name="Maven: tgtools:tgtools.core:1.0.270" level="project" />
+    <orderEntry type="library" name="Maven: tgtools:tgtools.core:1.0.275" level="project" />
     <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache:2.10.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.7" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.2.3" level="project" />
