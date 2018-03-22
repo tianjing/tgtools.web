@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>Temporary Properties</comment>
+    <entry key="Page_GetCountData_SQL"><![CDATA[select * from (select convert(count(*),int) as num from ( ${sql} ) )]]></entry>
+
+</properties>
