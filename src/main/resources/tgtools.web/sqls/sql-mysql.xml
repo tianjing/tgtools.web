@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-    <comment>Temporary Properties</comment>
-    <entry key="Page_GetPageData_SQL"><![CDATA[select * from (select * from( ${sql}  ) as u limit {currParge},{pargeSize} ) as z ]]></entry>
-    <entry key="Page_GetCountData_SQL"><![CDATA[select * from(select convert(count(*),SIGNED) as num from ( ${sql} ) T )TT]]></entry>
-
-</properties>

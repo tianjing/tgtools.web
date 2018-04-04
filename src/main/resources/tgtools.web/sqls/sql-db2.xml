@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-    <comment>Temporary Properties</comment>
-    <entry key="Page_GetPageData_SQL"><![CDATA[select * from( select rownum num, * from ( SELECT ROW_NUMBER() OVER()  AS rownum,* FROM( ${sql} )))where num >=({currParge}-1)*{pargeSize}+1 and num<={currParge}*{pargeSize} ]]></entry>
-    <entry key="Page_GetCountData_SQL"><![CDATA[select int(count(*)) as num from ( ${sql} ) ]]></entry>
-
-</properties>
