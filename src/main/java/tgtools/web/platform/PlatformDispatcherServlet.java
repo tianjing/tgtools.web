@@ -10,10 +10,12 @@ import org.springframework.web.servlet.handler.SimpleUrlHandlerMapping;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
 import org.springframework.web.socket.server.support.WebSocketHttpRequestHandler;
 import tgtools.exceptions.APPErrorException;
+import tgtools.interfaces.IDispose;
 import tgtools.json.JSONObject;
 import tgtools.message.Message;
 import tgtools.util.LogHelper;
 
+import java.io.Closeable;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -247,6 +249,17 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
             }
             field.setAccessible(true);
             Map<String, Object> map = (Map<String, Object>) field.get(mSimpleUrlHandlerMapping);
+            Object obj=map.get(pUrlMap);
+            if(obj instanceof Closeable)
+            {
+                try{((Closeable)obj).close();}
+                catch (Exception e){}
+            }
+            else if(obj instanceof IDispose)
+            {
+                ((IDispose)obj).Dispose();
+            }
+            obj=null;
             map.remove(pUrlMap);
         } catch (Exception e) {
             if (e instanceof APPErrorException) {
