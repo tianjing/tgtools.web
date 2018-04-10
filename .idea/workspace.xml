@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="tgtools.web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +36,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="198">
-                <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <first_editor relative-caret-position="330">
+                <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               </first_editor>
               <second_editor />
             </state>
@@ -1009,14 +1009,8 @@
       <workItem from="1523076245717" duration="1412000" />
       <workItem from="1523147196104" duration="597000" />
       <workItem from="1523338813970" duration="1645000" />
-      <workItem from="1523342268727" duration="228000" />
-    </task>
-    <task id="LOCAL-00056" summary="优化服务机制">
-      <created>1497853162441</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1497853162441</updated>
+      <workItem from="1523342268727" duration="250000" />
+      <workItem from="1523342533786" duration="14000" />
     </task>
     <task id="LOCAL-00057" summary="增加log4j启动器">
       <created>1499318494083</created>
@@ -1354,11 +1348,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523340477805</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="更新">
+      <created>1523342503709</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1523342503709</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="373898000" />
+    <option name="totallyTimeSpent" value="373934000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1376,20 +1377,21 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32946634" />
       <window_info id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50858366" side_tool="true" weight="0.29336438" />
-      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.26609442" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.17113733" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914163" weight="0.43640608" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49785408" weight="0.45867288" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32946634" />
       <window_info anchor="right" id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49941656" visible="true" weight="0.17650215" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49941656" visible="true" weight="0.17864807" />
       <window_info anchor="right" id="Database" order="5" weight="0.329582" />
       <window_info id="Structure" order="1" sideWeight="0.5005834" side_tool="true" weight="0.17435622" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.11856223" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32363212" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Jindent" order="7" />
@@ -1398,16 +1400,15 @@
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="10" />
       <window_info anchor="right" id="JSF" order="7" weight="0.329582" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49570817" weight="0.25261933" />
+      <window_info anchor="right" id="BPMNPalette" order="9" />
       <window_info anchor="right" x="92" y="92" width="1736" height="856" id="Documentation" order="8" type="FLOATING" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="BPMNPalette" order="9" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Nl-Palette" order="2" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.24330617" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49570817" weight="0.25261933" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Image Layers" order="2" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1841,8 +1842,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="198">
-            <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <first_editor relative-caret-position="330">
+            <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           </first_editor>
           <second_editor />
         </state>
