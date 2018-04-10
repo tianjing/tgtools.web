@@ -32,8 +32,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_1_1_3_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/tgtools_web_lib.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgtools.web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tgtools.web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="tgtools.web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlatformDispatcherServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServlet.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="310" selection-start-line="310" selection-end-line="310" />
+            <state relative-caret-position="154">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -192,8 +191,8 @@
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/platform/Platform.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/SqlsFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/db/TransactionDataAccess.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServlet.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -322,10 +321,6 @@
               <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
               <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -1053,14 +1048,7 @@
       <workItem from="1522805003731" duration="326000" />
       <workItem from="1523076245717" duration="1412000" />
       <workItem from="1523147196104" duration="597000" />
-      <workItem from="1523338813970" duration="684000" />
-    </task>
-    <task id="LOCAL-00053" summary="删除验证类">
-      <created>1496631823607</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1496631823607</updated>
+      <workItem from="1523338813970" duration="777000" />
     </task>
     <task id="LOCAL-00054" summary="增加db2分页支持">
       <created>1496714384428</created>
@@ -1398,11 +1386,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522805316905</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="移除 Websocke handler时 先释放对象">
+      <created>1523339565541</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1523339565542</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372709000" />
+    <option name="totallyTimeSpent" value="372802000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1424,11 +1419,11 @@
       <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.12607296" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49785408" weight="0.45867288" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4914163" visible="true" weight="0.43640608" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914163" visible="true" weight="0.43640608" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32946634" />
       <window_info anchor="right" id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49941656" visible="true" weight="0.17435622" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49941656" visible="true" weight="0.17435622" />
       <window_info anchor="right" id="Database" order="5" weight="0.329582" />
       <window_info id="Structure" order="1" sideWeight="0.5005834" side_tool="true" weight="0.17435622" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.11856223" />
@@ -1505,7 +1500,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="删除注解" />
     <MESSAGE value="添加url代理器" />
     <MESSAGE value="修复代理不支持GET参数问题" />
     <MESSAGE value="增加数据查询大字段方法" />
@@ -1530,7 +1524,8 @@
     <MESSAGE value="修改Platform获取地址的方式" />
     <MESSAGE value="修改PlatformDispatcherServlet 兼容 springboot方式" />
     <MESSAGE value="更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新" />
+    <MESSAGE value="移除 Websocke handler时 先释放对象" />
+    <option name="LAST_COMMIT_MESSAGE" value="移除 Websocke handler时 先释放对象" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1840,20 +1835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServletFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-369">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.2/repositories/org/springframework/spring-webmvc/4.1.5.RELEASE/spring-webmvc-4.1.5.RELEASE.jar!/org/springframework/web/servlet/handler/AbstractUrlHandlerMapping.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1884,8 +1865,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
+        <state relative-caret-position="1439">
           <caret line="310" selection-start-line="310" selection-end-line="310" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServletFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-369">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
         </state>
       </provider>
     </entry>
