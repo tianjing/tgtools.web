@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_14.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_2_10_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_simpleframework_simple_xml_2_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_4_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_1_1_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/tgtools_web_lib.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="tgtools.web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,20 +32,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PlatformDispatcherServletFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServletFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-369">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="198">
+                <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -142,7 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/NewUrlProxyFilter.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/db/TransactionDataAccess.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/platform/MyDispatcherServlet.java" />
         <option value="$PROJECT_DIR$/lib/tgtools.core.optimize.jar!/tgtools/json/JSONObject.class" />
@@ -191,8 +155,9 @@
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/platform/Platform.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/SqlsFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/db/TransactionDataAccess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServlet.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServlet.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -308,8 +273,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -317,15 +280,12 @@
               <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
               <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,15 +315,14 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools\web\sqls" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools.web\sqls" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web\sqls" />
+      <recent name="C:\Works\GitHub\tgtools.web\src" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="tgtools.web.sqls" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web\entity" />
-      <recent name="C:\Works\GitHub\tgtools.web\lib" />
-      <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web\sqls" />
-      <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web" />
-      <recent name="C:\Works\GitHub\tgtools.web" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tgtools.web.entity" />
@@ -372,11 +331,12 @@
       <recent name="tgtools.web.http.Filter" />
       <recent name="tgtools.web.platform" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools\web\sqls" />
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools.web\sqls" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Works\GitHub\tgtools.web" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web\entity" />
+      <recent name="C:\Works\GitHub\tgtools.web\lib" />
       <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web\sqls" />
-      <recent name="C:\Works\GitHub\tgtools.web\src" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1048,21 +1008,8 @@
       <workItem from="1522805003731" duration="326000" />
       <workItem from="1523076245717" duration="1412000" />
       <workItem from="1523147196104" duration="597000" />
-      <workItem from="1523338813970" duration="777000" />
-    </task>
-    <task id="LOCAL-00054" summary="增加db2分页支持">
-      <created>1496714384428</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1496714384428</updated>
-    </task>
-    <task id="LOCAL-00055" summary="增加db2分页支持">
-      <created>1496891518988</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1496891518988</updated>
+      <workItem from="1523338813970" duration="1645000" />
+      <workItem from="1523342268727" duration="228000" />
     </task>
     <task id="LOCAL-00056" summary="优化服务机制">
       <created>1497853162441</created>
@@ -1393,11 +1340,25 @@
       <option name="project" value="LOCAL" />
       <updated>1523339565542</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="更新pom">
+      <created>1523339624150</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1523339624150</updated>
+    </task>
+    <task id="LOCAL-00104" summary="更新">
+      <created>1523340477805</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1523340477805</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372802000" />
+    <option name="totallyTimeSpent" value="373898000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1413,24 +1374,22 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32946634" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49570817" weight="0.25261933" />
       <window_info id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50858366" side_tool="true" weight="0.29336438" />
-      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.12607296" />
+      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.26609442" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914163" weight="0.43640608" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49785408" weight="0.45867288" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914163" visible="true" weight="0.43640608" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32946634" />
       <window_info anchor="right" id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49941656" visible="true" weight="0.17435622" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49941656" visible="true" weight="0.17650215" />
       <window_info anchor="right" id="Database" order="5" weight="0.329582" />
       <window_info id="Structure" order="1" sideWeight="0.5005834" side_tool="true" weight="0.17435622" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.11856223" />
-      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32363212" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Jindent" order="7" />
@@ -1439,6 +1398,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="10" />
       <window_info anchor="right" id="JSF" order="7" weight="0.329582" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49570817" weight="0.25261933" />
       <window_info anchor="right" x="92" y="92" width="1736" height="856" id="Documentation" order="8" type="FLOATING" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="BPMNPalette" order="9" />
@@ -1447,6 +1407,7 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.24330617" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Image Layers" order="2" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1500,7 +1461,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加url代理器" />
     <MESSAGE value="修复代理不支持GET参数问题" />
     <MESSAGE value="增加数据查询大字段方法" />
     <MESSAGE value="增加动态添加 rest 的功能" />
@@ -1523,9 +1483,10 @@
     <MESSAGE value="修改pom" />
     <MESSAGE value="修改Platform获取地址的方式" />
     <MESSAGE value="修改PlatformDispatcherServlet 兼容 springboot方式" />
-    <MESSAGE value="更新" />
     <MESSAGE value="移除 Websocke handler时 先释放对象" />
-    <option name="LAST_COMMIT_MESSAGE" value="移除 Websocke handler时 先释放对象" />
+    <MESSAGE value="更新pom" />
+    <MESSAGE value="更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1551,13 +1512,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/http/Filter/UrlProxyFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="59" column="42" lean-forward="true" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml.bak">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2706">
@@ -1863,10 +1817,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServlet.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1439">
-          <caret line="310" selection-start-line="310" selection-end-line="310" />
+        <state relative-caret-position="154">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1877,10 +1831,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="-88">
+          <caret line="252" column="32" selection-start-line="252" selection-start-column="32" selection-end-line="252" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="198">
+            <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
