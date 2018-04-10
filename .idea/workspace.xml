@@ -31,13 +31,13 @@
     <favorites_list name="tgtools.web" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="330">
-                <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <first_editor relative-caret-position="22">
+                <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
               </first_editor>
               <second_editor />
             </state>
@@ -273,6 +273,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,7 +286,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1010,14 +1010,8 @@
       <workItem from="1523147196104" duration="597000" />
       <workItem from="1523338813970" duration="1645000" />
       <workItem from="1523342268727" duration="250000" />
-      <workItem from="1523342533786" duration="14000" />
-    </task>
-    <task id="LOCAL-00057" summary="增加log4j启动器">
-      <created>1499318494083</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1499318494084</updated>
+      <workItem from="1523342533786" duration="32000" />
+      <workItem from="1523342593816" duration="10000" />
     </task>
     <task id="LOCAL-00058" summary="更新">
       <created>1500858376992</created>
@@ -1355,11 +1349,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523342503709</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="更新">
+      <created>1523342552353</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1523342552353</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="373934000" />
+    <option name="totallyTimeSpent" value="373962000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1384,7 +1385,7 @@
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32946634" />
       <window_info anchor="right" id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49941656" visible="true" weight="0.17864807" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49941656" visible="true" weight="0.18133047" />
       <window_info anchor="right" id="Database" order="5" weight="0.329582" />
       <window_info id="Structure" order="1" sideWeight="0.5005834" side_tool="true" weight="0.17435622" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.11856223" />
@@ -1400,14 +1401,14 @@
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="10" />
       <window_info anchor="right" id="JSF" order="7" weight="0.329582" />
-      <window_info anchor="right" id="BPMNPalette" order="9" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49570817" weight="0.25261933" />
       <window_info anchor="right" x="92" y="92" width="1736" height="856" id="Documentation" order="8" type="FLOATING" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="BPMNPalette" order="9" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Nl-Palette" order="2" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.24330617" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49570817" weight="0.25261933" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
@@ -1842,8 +1843,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="330">
-            <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <first_editor relative-caret-position="22">
+            <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
           </first_editor>
           <second_editor />
         </state>

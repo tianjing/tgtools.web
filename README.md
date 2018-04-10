@@ -1,4 +1,4 @@
-# tgtools.notify.amqp
+# tgtools.web
 tgtools.web
 基于 tgtools.web 的 web 常用功能
 
