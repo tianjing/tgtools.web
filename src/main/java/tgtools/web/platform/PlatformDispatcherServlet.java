@@ -250,6 +250,7 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
             field.setAccessible(true);
             Map<String, Object> map = (Map<String, Object>) field.get(mSimpleUrlHandlerMapping);
             Object obj=map.get(pUrlMap);
+            map.remove(pUrlMap);
             if(obj instanceof Closeable)
             {
                 try{((Closeable)obj).close();}
@@ -260,7 +261,6 @@ public class PlatformDispatcherServlet extends DispatcherServlet {
                 ((IDispose)obj).Dispose();
             }
             obj=null;
-            map.remove(pUrlMap);
         } catch (Exception e) {
             if (e instanceof APPErrorException) {
                 throw (APPErrorException) e;
