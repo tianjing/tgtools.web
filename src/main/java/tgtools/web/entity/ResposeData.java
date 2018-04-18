@@ -1,5 +1,7 @@
 package tgtools.web.entity;
 
+import tgtools.exceptions.APPErrorException;
+
 import java.io.Serializable;
 
 /**
@@ -37,4 +39,5 @@ public class ResposeData implements Serializable {
     public void setError(String pError) {
         mError = pError;
     }
+
 }

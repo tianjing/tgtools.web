@@ -9,9 +9,23 @@ import tgtools.web.entity.BSGridDataEntity;
 import tgtools.web.sqls.BaseViewSqls;
 import tgtools.web.sqls.SqlsFactory;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+/**
+ * 分页工具类 支持 多数据库类型 通用,db2,dm7,dm6,h2,mysql
+ */
 public class PageSqlUtil {
 
+    private static Map<String,BaseViewSqls> mSqls=new ConcurrentHashMap<String, BaseViewSqls>();
 
+    public  static BaseViewSqls getPageSqls(String pType){
+        if(!mSqls.containsKey(pType))
+        {
+            mSqls.put(pType,SqlsFactory.getSQLs(pType,new BaseViewSqls()));
+        }
+        return mSqls.get(pType);
+    }
 
     /**
      * 根据数据sql 获取分页sql
@@ -32,7 +46,7 @@ public class PageSqlUtil {
      */
     public static String getPageDataSQL(IDataAccess p_DataAccess,String p_SQL, String p_CurrPage,
                                         String p_PageSize){
-        BaseViewSqls sqls=SqlsFactory.getSQLs(p_DataAccess,new BaseViewSqls());
+        BaseViewSqls sqls=getPageSqls(p_DataAccess.getDataBaseType());
         String sql= sqls.Page_GetPageData_SQL;
         sql =StringUtil.replace(sql,"${sql}",p_SQL);
 
@@ -120,7 +134,7 @@ public class PageSqlUtil {
      * @return
      */
     public static String getPageCountSQL(IDataAccess p_DataAccess,String p_SQL){
-        BaseViewSqls sqls=SqlsFactory.getSQLs(p_DataAccess,new BaseViewSqls());
+        BaseViewSqls sqls=getPageSqls(p_DataAccess.getDataBaseType());
         String sql= sqls.Page_GetCountData_SQL;
         sql =StringUtil.replace(sql,"${sql}",p_SQL);
         return sql;
