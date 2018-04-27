@@ -2,7 +2,7 @@ package tgtools.web.sqls;
 
 
 import tgtools.exceptions.APPErrorException;
-import tgtools.util.LogHelper;
+import tgtools.log.LoggerFactory;
 import tgtools.util.PropertiesObject;
 import tgtools.util.StringUtil;
 
@@ -27,7 +27,7 @@ public class SqlsFactory {
     public static <T> T getSQLs(T p_T) {
         String name = StringUtil.replace(p_T.getClass().getName(), ".", "/");
         name = StringUtil.replace(name, p_T.getClass().getSimpleName(), "");
-        LogHelper.info("", "name:" + name, "SqlsFactory.getSQLs");
+        LoggerFactory.getDefault().info( "name:" + name);
         return getSQLs(tgtools.db.DataBaseFactory.getDefault().getDataBaseType(), p_T, name);
     }
 
@@ -41,7 +41,7 @@ public class SqlsFactory {
     public static <T> T getSQLs(String p_DBType, T p_T) {
         String name = StringUtil.replace(p_T.getClass().getName(), ".", "/");
         name = StringUtil.replace(name, p_T.getClass().getSimpleName(), "");
-        LogHelper.info("", "name:" + name, "SqlsFactory.getSQLs");
+        LoggerFactory.getDefault().info( "name:" + name);
         return getSQLs(p_DBType, p_T, name);
     }
 
@@ -54,12 +54,12 @@ public class SqlsFactory {
      * @return
      */
     private static <T> T getSQLs(String p_DBType, T p_T, String p_ResUrl) {
-        LogHelper.info("", "dbtype:" + p_DBType, "SqlsFactory.getSQLs");
+        LoggerFactory.getDefault().info( "dbtype:" + p_DBType);
         try {
             PropertiesObject properties = loadSqlFile(p_DBType, p_ResUrl);
             return properties.convert(p_T);
         } catch (APPErrorException e) {
-            LogHelper.error("", "转换BaseViewSqls失败：" + e.getMessage(), "SqlsFactory.getSQLs", e);
+            LoggerFactory.getDefault().error( "转换BaseViewSqls失败：" + e.getMessage(), e);
             return null;
         }
 
@@ -96,9 +96,9 @@ public class SqlsFactory {
             if (null != defaultStream) {
                 properties.loadFromXML(defaultStream);
                 defaultStream.close();
-                LogHelper.info("", "读取sql文件成功：文件：" + p_File, "SqlsFactory.getSQLs");
+                LoggerFactory.getDefault().info( "读取sql文件成功：文件：" + p_File);
             } else {
-                LogHelper.info("", "读取sql文件失败：" + p_File, "SqlsFactory.getSQLs");
+                LoggerFactory.getDefault().info( "读取sql文件失败：" + p_File);
             }
 
         } catch (IOException e) {

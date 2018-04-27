@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.tianjing</groupId>
     <artifactId>tgtools.web</artifactId>
-    <version>1.0.331</version>
+    <version>1.1.0</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <url>https://github.com/tianjing/tgtools.web</url>
@@ -45,7 +45,7 @@
         <dependency>
             <groupId>com.github.tianjing</groupId>
             <artifactId>tgtools.core</artifactId>
-            <version>1.0.275</version>
+            <version>1.1.0</version>
         </dependency>
         <!-- spring-->
         <dependency>
@@ -89,7 +89,11 @@
             <artifactId>tomcat-embed-core</artifactId>
             <version>8.5.16</version>
         </dependency>
-
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.11</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

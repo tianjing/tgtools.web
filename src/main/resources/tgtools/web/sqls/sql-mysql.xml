@@ -4,5 +4,6 @@
     <comment>Temporary Properties</comment>
     <entry key="Page_GetPageData_SQL"><![CDATA[select * from (select * from( ${sql}  ) as u limit {currParge},{pargeSize} ) as z ]]></entry>
     <entry key="Page_GetCountData_SQL"><![CDATA[select * from(select convert(count(*),SIGNED) as num from ( ${sql} ) T )TT]]></entry>
+    <entry key="Page_GetLOGINFO_SQL"><![CDATA[SELECT * FROM LogInfo LIMIT 0,1 ]]></entry>
 
 </properties>

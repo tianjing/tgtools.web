@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "http://toolkit.alibaba-inc.com/dtd/log4j/log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="stdout"
+              class="org.apache.log4j.ConsoleAppender">
+        <!--控制台日志编码-->
+        <param name="Encoding" value="UTF-8" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ABSOLUTE} %5p %c{1}:%L - %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="fileout"
+              class="tgtools.web.log.MyDailyRollingFileAppender">
+        <param name="File"
+               value="WEB-INF/logs/log.log" />
+        <param name="Encoding" value="UTF-8" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-d{yyyy-MM-dd HH:mm:ss} [ %t:%r ] - [ %p ] %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="errorfileout"
+              class="tgtools.web.log.MyDailyRollingFileAppender">
+        <param name="File"
+               value="WEB-INF/logs/error.log" />
+        <param name="Encoding" value="UTF-8" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-d{yyyy-MM-dd HH:mm:ss} [ %t:%r ] - [ %p ] %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+        <param name="LevelMin" value="ERROR" />
+        <param name="LevelMax" value="ERROR" />
+        </filter>
+    </appender>
+
+    <appender name="jdbc"
+              class="tgtools.web.log.MyJDBCAppender">
+    </appender>
+
+    <appender name="asynclogfile" class="org.apache.log4j.AsyncAppender">
+        <param name="BufferSize" value="1024"/>
+        <appender-ref ref="fileout"/>
+    </appender>
+    <appender name="asyncerrorfile" class="org.apache.log4j.AsyncAppender">
+        <param name="BufferSize" value="1024"/>
+        <appender-ref ref="errorfileout"/>
+    </appender>
+
+    <appender name="asyncjdbc" class="org.apache.log4j.AsyncAppender">
+        <appender-ref ref="jdbc"/>
+    </appender>
+    <!--<logger name="org.activiti.engine.impl.db.DbSqlSession" >-->
+    <!--<level value="debug"/>-->
+    <!--<appender-ref ref="stdout" />-->
+    <!--</logger>-->
+
+    <!--<logger name="org.activiti.engine.impl.persistence.entity" >-->
+        <!--<level value="debug" />-->
+    <!--</logger>-->
+
+    <root>
+        <priority value="info" />
+        <!--开启控制台日志-->
+        <appender-ref ref="stdout"/>
+        <!--开启log.log日志-->
+        <appender-ref ref="asynclogfile"/>
+        <!--开启error.log日志-->
+        <appender-ref ref="asyncerrorfile"/>
+        <!--开启数据库日志-->
+        <appender-ref ref="jdbc"/>
+    </root>
+
+</log4j:configuration>

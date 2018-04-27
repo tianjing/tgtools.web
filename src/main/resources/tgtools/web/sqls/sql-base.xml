@@ -4,5 +4,7 @@
     <comment>Temporary Properties</comment>
     <entry key="Page_GetPageData_SQL"><![CDATA[select * from( select rownum num, * from ( ${sql} ))where num >=({currParge}-1)*{pargeSize}+1 and num<={currParge}*{pargeSize} ]]></entry>
     <entry key="Page_GetCountData_SQL"><![CDATA[select convert(int,count(*)) as num from ( ${sql} ) ]]></entry>
+    <entry key="Page_GetLOGINFO_SQL"><![CDATA[select top 1 * from LogInfo ]]></entry>
+    <entry key="DDL_LOGINFO_SQL"><![CDATA[CREATE TABLE LOGINFO ( ID_ VARCHAR(64) PRIMARY KEY,  REV_ NUMBER,  USERNAME VARCHAR(100),  LOGTIME TIMESTAMP(6) DEFAULT SYSDATE,  LOGTYPE VARCHAR(100),  BIZTYPE VARCHAR(500),  LOGCONTENT TEXT); ]]></entry>
 
 </properties>
