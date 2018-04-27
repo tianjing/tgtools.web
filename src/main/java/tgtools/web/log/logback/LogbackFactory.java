@@ -39,7 +39,7 @@ public class LogbackFactory {
     public static void start(URL pPath) {
         if (null!=pPath) {
             try {
-                load(new File(pPath.toURI()));
+                load(pPath);
             } catch (Exception e) {
                 System.out.println("日志启动失败；原因：" + e.getMessage());
             }
@@ -80,4 +80,22 @@ public class LogbackFactory {
         StatusPrinter.printInCaseOfErrorsOrWarnings(lc);
     }
 
+    /**
+     * 通过URL加载
+     * @param pURL
+     * @throws JoranException
+     */
+    private static void load(URL pURL) throws JoranException {
+        if(tgtools.log.LoggerFactory.getDefault() instanceof tgtools.log.Log4jLoger)
+        {
+            tgtools.log.LoggerFactory.getDefault().info("当前为log4j日志，加载logback配置可能无效请注意。");
+        }
+        LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
+
+        JoranConfigurator configurator = new JoranConfigurator();
+        configurator.setContext(lc);
+        lc.reset();
+        configurator.doConfigure(pURL);
+        StatusPrinter.printInCaseOfErrorsOrWarnings(lc);
+    }
 }

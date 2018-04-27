@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="优化 分页sql 工具取sql">
-      <change afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/clock/AbstractCacheDatabaseClock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/clock/AbstractClock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/clock/CacheDatabaseClockImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/clock/DatabaseClockImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/log/MyJDBCAppender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackJDBCAppender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackRollingFileAppender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tgtools/web/config/log4j_debug.xml.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tgtools/web/config/log4j_pro.xml.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tgtools/web/config/logback_debug.xml.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_14.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_7.xml" beforeDir="false" />
+    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tgtools/web/log/Log4jFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/log/Log4jFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/BaseViewSqls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/BaseViewSqls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/SqlsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/SqlsFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-base.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-base.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-mysql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-mysql.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgtools.web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tgtools.web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tgtools/web/platform/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/platform/Platform.java" afterDir="false" />
     </list>
     <ignored path="tgtools.web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,11 +34,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="LogbackFactory.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogbackFactory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="72" selection-end-column="9" />
+            <state relative-caret-position="49">
+              <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,11 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogbackJDBCAppender.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackJDBCAppender.java">
+      <file leaf-file-name="Log4jFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/Log4jFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="155" column="11" selection-start-line="155" selection-start-column="11" selection-end-line="155" selection-end-column="11" />
+            <state relative-caret-position="308">
+              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogbackRollingFileAppender.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackRollingFileAppender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,10 +88,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>LoggerFactory</find>
-      <find>add</find>
-      <find>mSimpleUrlHandlerMapping</find>
-      <find>get</find>
       <find>core</find>
       <find>&lt;name&gt;</find>
       <find>org.sonatype.plugins</find>
@@ -117,14 +114,18 @@
       <find>ab</find>
       <find>getDBDate</find>
       <find>getCacheDBDate</find>
+      <find>checkIsPlatForm</find>
+      <find>getrealp</find>
+      <find>getRealPath</find>
+      <find>日志</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Works\GitHub\tgtools.web\src</dir>
       <dir>C:\Works\GitHub\tgtools.web\src\tgtools\web</dir>
       <dir>C:\Works\GitHub\tgtools.web\src\main\java</dir>
       <dir>C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web</dir>
-      <dir>C:\Works\GitHub\tgtools.web\src\main</dir>
       <dir>C:\Works\GitHub\tgtools.web</dir>
+      <dir>C:\Works\GitHub\tgtools.web\src\main</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -167,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/entity/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/util/TreeNodeParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/rests/map/MapTiles.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tgtools/web/platform/Platform.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/db/TransactionDataAccess.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServlet.java" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -181,10 +181,8 @@
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/BaseViewSqls.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/MyDailyRollingFileAppender.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/SqlsFactory.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/clock/DatabaseClockImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/clock/AbstractClock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/clock/CacheDatabaseClockImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/clock/AbstractCacheDatabaseClock.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackRollingFileAppender.java" />
@@ -193,6 +191,9 @@
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/LogDatabaseHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/MyJDBCAppender.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackJDBCAppender.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tgtools/web/platform/Platform.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackFactory.java" />
       </list>
     </option>
   </component>
@@ -241,8 +242,8 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
+    <option name="x" value="2440" />
+    <option name="y" value="42" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -303,6 +304,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,7 +346,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="clock" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
@@ -353,37 +356,12 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="logback" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -449,9 +427,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ResposeData">
+  <component name="RunManager" selected="Application.Platform">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration name="Platform" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tgtools.web.platform.Platform" />
+      <module name="tgtools.web" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tgtools.web.platform.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration name="PlatformDispatcherServlet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
@@ -484,17 +473,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tgtools.web.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="SqlStrUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tgtools.web.util.SqlStrUtil" />
-      <module name="tgtools.web" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tgtools.web.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -742,19 +720,19 @@
     <list>
       <item itemvalue="Maven.clean package" />
       <item itemvalue="Maven.deploy release" />
-      <item itemvalue="Application.SqlStrUtil" />
       <item itemvalue="Application.PlatformDispatcherServletFactory" />
       <item itemvalue="Application.UrlProxyStreamFilter" />
       <item itemvalue="Application.PlatformDispatcherServlet" />
       <item itemvalue="Application.ResposeData" />
+      <item itemvalue="Application.Platform" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Platform" />
         <item itemvalue="Application.ResposeData" />
         <item itemvalue="Application.PlatformDispatcherServlet" />
         <item itemvalue="Application.UrlProxyStreamFilter" />
         <item itemvalue="Application.PlatformDispatcherServletFactory" />
-        <item itemvalue="Application.SqlStrUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -1115,14 +1093,8 @@
       <workItem from="1524723240850" duration="17000" />
       <workItem from="1524729722119" duration="12438000" />
       <workItem from="1524788615348" duration="534000" />
-      <workItem from="1524789154583" duration="4736000" />
-    </task>
-    <task id="LOCAL-00060" summary="修复服务运行 定时参数失效的问题">
-      <created>1501645214951</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1501645214951</updated>
+      <workItem from="1524789154583" duration="5142000" />
+      <workItem from="1524807187929" duration="2917000" />
     </task>
     <task id="LOCAL-00061" summary="删除注解">
       <created>1501722643653</created>
@@ -1460,11 +1432,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524038153626</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="调整日志：增加 对 logback支持&#10;增加数据库时间对象">
+      <created>1524794382530</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1524794382530</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="393702000" />
+    <option name="totallyTimeSpent" value="397025000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1480,40 +1459,40 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32946634" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49570817" weight="0.25261933" />
       <window_info id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50912017" side_tool="true" weight="0.43640608" />
-      <window_info anchor="right" id="Maven Projects" order="6" visible="true" weight="0.24785408" />
+      <window_info active="true" anchor="right" id="Maven Projects" order="6" visible="true" weight="0.24785408" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49087983" visible="true" weight="0.32088682" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49087983" visible="true" weight="0.37339556" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49785408" weight="0.45867288" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32946634" />
       <window_info anchor="right" id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67211205" visible="true" weight="0.17435622" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.67211205" visible="true" weight="0.17328326" />
       <window_info anchor="right" id="Database" order="5" weight="0.329582" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.24330617" />
       <window_info id="Structure" order="1" sideWeight="0.32788798" side_tool="true" weight="0.24195279" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.11856223" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32363212" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32322055" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Jindent" order="7" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="right" id="Properties" order="4" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="10" />
-      <window_info anchor="right" id="JSF" order="7" weight="0.329582" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49570817" weight="0.25261933" />
-      <window_info anchor="right" x="92" y="92" width="1736" height="856" id="Documentation" order="8" type="FLOATING" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="BPMNPalette" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info id="Nl-Palette" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.24330617" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="JSF" order="7" weight="0.329582" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" x="92" y="92" width="1736" height="856" id="Documentation" order="8" type="FLOATING" />
+      <window_info anchor="bottom" id="Jindent" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="right" id="Properties" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Nl-Palette" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="BPMNPalette" order="9" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1567,7 +1546,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="增加数据查询大字段方法" />
     <MESSAGE value="增加动态添加 rest 的功能" />
     <MESSAGE value="调整url 代理" />
     <MESSAGE value="修复添加rest时验证是否已存在" />
@@ -1592,11 +1570,12 @@
     <MESSAGE value="更新pom" />
     <MESSAGE value="更新" />
     <MESSAGE value="优化 分页sql 工具取sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化 分页sql 工具取sql" />
+    <MESSAGE value="调整日志：增加 对 logback支持&#10;增加数据库时间对象" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整日志：增加 对 logback支持&#10;增加数据库时间对象" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1860,9 +1839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1870,45 +1846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1254">
           <caret line="52" column="29" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="46" column="36" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/tgtools/web/config/log4j_debug.xml.bak">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/MyDailyRollingFileAppender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/clock/AbstractClock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1277#1278#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/clock/DatabaseClockImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1926,55 +1863,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackRollingFileAppender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/clock/AbstractCacheDatabaseClock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/clock/CacheDatabaseClockImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-            <element signature="e#854#855#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/Log4jFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/LogDatabaseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/LogDatabaseHelper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/MyJDBCAppender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -1985,20 +1874,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackJDBCAppender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="72" selection-end-column="9" />
+        <state relative-caret-position="491">
+          <caret line="79" column="46" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackJDBCAppender.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/clock/DatabaseClockImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="155" column="11" selection-start-line="155" selection-start-column="11" selection-end-line="155" selection-end-column="11" />
+        <state relative-caret-position="130">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/clock/CacheDatabaseClockImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/clock/AbstractClock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/clock/AbstractCacheDatabaseClock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/MyDailyRollingFileAppender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackRollingFileAppender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/platform/Platform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="281" column="53" selection-start-line="281" selection-start-column="53" selection-end-line="281" selection-end-column="53" />
+          <folding>
+            <element signature="method#startup#1;class#Platform#0" />
+            <element signature="method#getBeanFactory#0;class#Platform#0" />
+            <element signature="method#getBean#0;class#Platform#0" />
+            <element signature="method#addBean#0;class#Platform#0" />
+            <element signature="method#addBean#1;class#Platform#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/Log4jFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

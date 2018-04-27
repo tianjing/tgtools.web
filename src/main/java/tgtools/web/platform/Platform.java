@@ -279,8 +279,15 @@ public class Platform {
             if (!StringUtil.isNullOrEmpty(m_BasePath)) {
                 m_BasePath += "/";
             }
+            System.out.println("运行路径path："+m_BasePath);
+            if (m_BasePath.indexOf("jar!") > 0) {
+                m_BasePath = m_BasePath.substring(0, m_BasePath.substring(0, m_BasePath.indexOf("jar!")).lastIndexOf("/"));
+            } else if (m_BasePath.indexOf("war!") > 0) {
+                m_BasePath = m_BasePath.substring(0, m_BasePath.substring(0, m_BasePath.indexOf("war!")).lastIndexOf("/"));
+            }
             LogHelper.info("", m_BasePath, "getRealPath");
             LogHelper.info("", m_ContextPath, "m_ContextPath");
+
         } else if (p_Context instanceof GenericWebApplicationContext) {
             m_ContextPath = ((GenericWebApplicationContext) p_Context).getServletContext().getContextPath();
             String path = null;
@@ -289,28 +296,32 @@ public class Platform {
             } catch (Exception e) {
                 path = Platform.class.getResource("").toString();
             }
+
+            System.out.println("运行路径path："+path);
             if (path.indexOf("file:/") >= 0) {
                 path = "/" + path.substring(path.indexOf("file:/") + 6);
             }
-//            else {
-//                path = path.substring(path.indexOf(":") + 1);
-//            }
-            if (path.indexOf("/WEB-INF") > 0) {
-                m_BasePath = path.substring(0, path.indexOf("/WEB-INF") + 1);
-            } else if (path.indexOf("jar!") > 0) {
+
+            if (path.indexOf("jar!") > 0) {
                 m_BasePath = path.substring(0, path.substring(0, path.indexOf("jar!")).lastIndexOf("/"));
-            }else if (path.indexOf("classes") > 0) {
+            } else if (path.indexOf("war!") > 0) {
+                m_BasePath = path.substring(0, path.substring(0, path.indexOf("war!")).lastIndexOf("/"));
+            }
+            else if (path.indexOf("/WEB-INF") > 0) {
+                m_BasePath = path.substring(0, path.indexOf("/WEB-INF") + 1);
+            }  else if (path.indexOf("classes") > 0) {
                 if (path.indexOf("target") > 0) {
                     m_BasePath = path.substring(0, path.substring(0, path.indexOf("target")).lastIndexOf("/"));
-                }else {
+                } else {
                     m_BasePath = path.substring(0, path.substring(0, path.indexOf("classes")).lastIndexOf("/"));
                 }
             }
             if (!StringUtil.isNullOrEmpty(m_BasePath)) {
                 m_BasePath += "/";
             }
-            LogHelper.info("", m_BasePath, "getRealPath");
-            LogHelper.info("", m_ContextPath, "m_ContextPath");
+
+            LogHelper.info("", m_BasePath, "getRealPath end");
+            LogHelper.info("", m_ContextPath, "m_ContextPath end");
         } else {
             String path = Platform.class.getResource("").toString();
 
@@ -323,7 +334,12 @@ public class Platform {
             LogHelper.info("", m_BasePath, "Platform.getServerPath");
         }
     }
-
+    public static void main(String[] args)
+    {
+        String path="file:/C:/Works/DQ/jsecjgwork/wcpt/DevWeb/webapp/target/webapp-1.0.0.war!/WEB-INF/classes!/";
+        String res = path.substring(0, path.substring(0, path.indexOf("war!")).lastIndexOf("/"));
+        System.out.println(res);
+    }
     /**
      * 获取项目名称 如 /EmptyProject
      *
