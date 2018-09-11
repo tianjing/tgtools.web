@@ -3,6 +3,7 @@ package tgtools.web.clock;
 
 import org.springframework.cache.Cache;
 import tgtools.util.DateUtil;
+import tgtools.util.GUID;
 
 import java.util.Date;
 
@@ -14,13 +15,18 @@ import java.util.Date;
  */
 public abstract class AbstractCacheDatabaseClock extends AbstractClock {
     protected static final String CACHE_KEY="ClockDBDate";
-
+    protected String cacheKey=CACHE_KEY+ GUID.newGUID();
     /**
      * 获取缓存
      * @return
      */
     public abstract Cache getCache();
-
+    public String getCacheKey(){
+        return cacheKey;
+    }
+    public void setCacheKey(String pCacheKey){
+        cacheKey=pCacheKey;
+    }
 
     protected Date getCacheDBDate()
     {
@@ -28,19 +34,19 @@ public abstract class AbstractCacheDatabaseClock extends AbstractClock {
         {
             return getDBDate();
         }
-        Date cacheDate=getCache().get(CACHE_KEY,Date.class);
+        Date cacheDate=getCache().get(getCacheKey(),Date.class);
         if(null==cacheDate)
         {
             try {
                 Date date = getDBDate();
-                getCache().put(CACHE_KEY, date);
+                getCache().put(getCacheKey(), date);
                 calculateDvalue(date);
             }catch (Exception ex)
             {
                 return null;
             }
         }
-        return getCache().get(CACHE_KEY,Date.class);
+        return getCache().get(getCacheKey(),Date.class);
     }
     /**
      * 计算时间差
