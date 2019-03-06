@@ -15,10 +15,7 @@ import tgtools.util.StringUtil;
 
 import javax.sql.DataSource;
 import java.lang.reflect.Method;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * 名  称：
@@ -175,6 +172,11 @@ public class TransactionDataAccess implements IDataAccess {
     @Override
     public int executeUpdate(String p_Sql, Object[] objects) throws APPErrorException {
         return m_JdbcTemplate.update(p_Sql,objects);
+    }
+
+    @Override
+    public int executeUpdate(String sql, Object[] p_Params, boolean pUseSetInputStream) throws APPErrorException {
+        return executeUpdate(sql,p_Params);
     }
 
     @Override
