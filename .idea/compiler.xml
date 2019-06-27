@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="tgtools.web" options="-verbose -bootclasspath D:/public/java/zulu8.33.0.1-jdk8.0.192-win_x64/jre/lib/rt.jar;D:/public/java/zulu8.33.0.1-jdk8.0.192-win_x64/jre/lib/jce.jar" />
+      <module name="tgtools.web" options="-verbose -bootclasspath D:/public/java/zulu8.38.0.13-ca-jdk8.0.212-win_x64/jre/lib/rt.jar;D:/public/java/zulu8.38.0.13-ca-jdk8.0.212-win_x64/jre/lib/jce.jar" />
     </option>
   </component>
 </project>

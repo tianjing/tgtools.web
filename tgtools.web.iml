@@ -24,7 +24,7 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="jdk" jdkName="zulu1.8" jdkType="JavaSDK" />
-    <orderEntry type="library" name="Maven: com.github.tianjing:tgtools.core:1.1.7" level="project" />
+    <orderEntry type="library" name="Maven: com.github.tianjing:tgtools.core:1.1.8" level="project" />
     <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache:2.10.1" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.2.3" level="project" />
@@ -55,5 +55,7 @@
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.1.11" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.1.11" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.22" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
   </component>
 </module>

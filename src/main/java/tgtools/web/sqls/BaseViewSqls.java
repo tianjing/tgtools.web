@@ -13,4 +13,7 @@ public class BaseViewSqls {
     public String Page_GetCountData_SQL="";
     public String Page_GetLOGINFO_SQL="";
     public String DDL_LOGINFO_SQL="";
+    public String Page_GetPageData_Limit_SQL="";
+
+
 }

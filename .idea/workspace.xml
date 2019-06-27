@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="1.1.3 更新core 版本 同时实现接口">
+    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="1.1.4 方法名调整">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tgtools/web/util/PageSqlUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tgtools/web/db/TransactionDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/db/TransactionDataAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/BaseViewSqls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/BaseViewSqls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tgtools/web/util/PageSqlUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/util/PageSqlUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-base.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-base.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-dm6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-dm6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tgtools.web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tgtools.web.iml" afterDir="false" />
     </list>
     <ignored path="tgtools.web.iws" />
@@ -43,29 +48,19 @@
     <favorites_list name="tgtools.web" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>top</find>
       <find>select top 1 * from LogInfo</find>
       <find>日志表模式</find>
       <find>tgtools.core</find>
@@ -95,6 +90,7 @@
       <find>m_JdbcTemplate</find>
       <find>1111</find>
       <find>Stream</find>
+      <find>Page_GetPageData_Limit_SQL</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Works\GitHub\tgtools.web\src</dir>
@@ -103,6 +99,7 @@
       <dir>C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web</dir>
       <dir>C:\Works\GitHub\tgtools.web</dir>
       <dir>C:\Works\GitHub\tgtools.web\src\main</dir>
+      <dir>C:\tianjing\github\tgtools.web</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -115,8 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tgtools/web/util/PageSqlUtil.java" />
-        <option value="$PROJECT_DIR$/src/tgtools/web/platform/PlatformDispatcherServletFactory.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/log/MyDailyRollingFileAppender.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/ProxyFilter.java" />
         <option value="$PROJECT_DIR$/src/tgtools/web/http/Filter/UrlProxyFilter.java" />
@@ -143,13 +138,10 @@
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/platform/PlatformDispatcherServlet.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/entity/ResposeData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tgtools/web/util/PageSqlUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/LogbackFactory.java" />
         <option value="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-mysql.xml" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/MyJDBCAppender.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/TableHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-base.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/BaseViewSqls.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/MyDailyRollingFileAppender.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/SqlsFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/clock/DatabaseClockImpl.java" />
@@ -165,7 +157,12 @@
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/clock/AbstractCacheDatabaseClock.java" />
         <option value="$PROJECT_DIR$/src/main/java/tgtools/web/db/TransactionDataAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tgtools/web/sqls/BaseViewSqls.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/tgtools/web/util/PageSqlUtilTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-base.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-dm6.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tgtools/web/util/PageSqlUtil.java" />
       </list>
     </option>
   </component>
@@ -207,10 +204,10 @@
     <option name="jreName" value="zulu1.8" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="318" />
-    <option name="y" value="21" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="70" />
+    <option name="y" value="41" />
+    <option name="width" value="1704" />
+    <option name="height" value="892" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -269,7 +266,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,11 +273,45 @@
               <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
               <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tgtools.web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tgtools.web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,21 +336,30 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551865533713" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tgtools.web.develop" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools\web\sqls" />
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools.web\sqls" />
-      <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web\sqls" />
-      <recent name="C:\Works\GitHub\tgtools.web\src" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="tgtools.web.util" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="tgtools.web.sqls" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools\web\config" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web\clock" />
+      <recent name="C:\Works\GitHub\tgtools.web" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web\entity" />
+      <recent name="C:\Works\GitHub\tgtools.web\lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tgtools.web.clock" />
@@ -329,12 +368,11 @@
       <recent name="tgtools.web.entity" />
       <recent name="tgtools.web.util" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools\web\config" />
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web\clock" />
-      <recent name="C:\Works\GitHub\tgtools.web" />
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web\entity" />
-      <recent name="C:\Works\GitHub\tgtools.web\lib" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools\web\sqls" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools.web\sqls" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web\sqls" />
+      <recent name="C:\Works\GitHub\tgtools.web\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -349,7 +387,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Platform">
+  <component name="RunManager" selected="JUnit.PageSqlUtilTest.getPageDataLimitSQL">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -358,36 +405,6 @@
     </configuration>
     <configuration name="Platform" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tgtools.web.platform.Platform" />
-      <module name="tgtools.web" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tgtools.web.platform.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlatformDispatcherServlet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="tgtools.web.platform.PlatformDispatcherServlet" />
-      <module name="tgtools.web" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tgtools.web.platform.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlatformDispatcherServletFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tgtools.web.platform.PlatformDispatcherServletFactory" />
       <module name="tgtools.web" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -414,22 +431,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UrlProxyStreamFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tgtools.web.http.Filter.UrlProxyStreamFilter" />
-      <module name="tgtools.web" />
+    <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tgtools.web.http.Filter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="PageSqlUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tgtools.web" />
+      <option name="PACKAGE_NAME" value="tgtools.web.util" />
+      <option name="MAIN_CLASS_NAME" value="tgtools.web.util.PageSqlUtilTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PageSqlUtilTest.getPageDataLimitSQL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tgtools.web" />
+      <option name="PACKAGE_NAME" value="tgtools.web.util" />
+      <option name="MAIN_CLASS_NAME" value="tgtools.web.util.PageSqlUtilTest" />
+      <option name="METHOD_NAME" value="getPageDataLimitSQL" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PageSqlUtilTest.getPageDataSQL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tgtools.web" />
+      <option name="PACKAGE_NAME" value="tgtools.web.util" />
+      <option name="MAIN_CLASS_NAME" value="tgtools.web.util.PageSqlUtilTest" />
+      <option name="METHOD_NAME" value="getPageDataSQL" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -531,15 +566,6 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -550,21 +576,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.PlatformDispatcherServletFactory" />
-      <item itemvalue="Application.UrlProxyStreamFilter" />
-      <item itemvalue="Application.PlatformDispatcherServlet" />
       <item itemvalue="Application.ResposeData" />
       <item itemvalue="Application.Platform" />
       <item itemvalue="Maven.clean package" />
       <item itemvalue="Maven.deploy release" />
+      <item itemvalue="JUnit.PageSqlUtilTest.getPageDataLimitSQL" />
+      <item itemvalue="JUnit.PageSqlUtilTest" />
+      <item itemvalue="JUnit.PageSqlUtilTest.getPageDataSQL" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PageSqlUtilTest.getPageDataLimitSQL" />
+        <item itemvalue="JUnit.PageSqlUtilTest.getPageDataSQL" />
+        <item itemvalue="JUnit.PageSqlUtilTest" />
         <item itemvalue="Application.Platform" />
         <item itemvalue="Application.ResposeData" />
-        <item itemvalue="Application.PlatformDispatcherServlet" />
-        <item itemvalue="Application.UrlProxyStreamFilter" />
-        <item itemvalue="Application.PlatformDispatcherServletFactory" />
       </list>
     </recent_temporary>
   </component>
@@ -943,21 +969,8 @@
       <workItem from="1536655304461" duration="2743000" />
       <workItem from="1544594308903" duration="29000" />
       <workItem from="1551856009404" duration="2882000" />
-      <workItem from="1557318042234" duration="834000" />
-    </task>
-    <task id="LOCAL-00063" summary="修复代理不支持GET参数问题">
-      <created>1505895571595</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1505895571595</updated>
-    </task>
-    <task id="LOCAL-00064" summary="增加数据查询大字段方法">
-      <created>1505902327796</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1505902327796</updated>
+      <workItem from="1557318042234" duration="1173000" />
+      <workItem from="1557323390793" duration="7000" />
     </task>
     <task id="LOCAL-00065" summary="增加动态添加 rest 的功能">
       <created>1506318638597</created>
@@ -1288,11 +1301,45 @@
       <option name="project" value="LOCAL" />
       <updated>1551859869311</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="1.1.4 方法名调整">
+      <created>1557318951886</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1557318951886</updated>
+    </task>
+    <task id="LOCAL-00113" summary="1.1.4 方法名调整">
+      <created>1557318983637</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1557318983637</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="PageSqlUtilTest_getPageDataLimitSQL - 2019.06.27 at 10h 37m 12s.xml">
+      <configuration name="PageSqlUtilTest.getPageDataLimitSQL" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PageSqlUtilTest - 2019.06.27 at 10h 37m 29s.xml">
+      <configuration name="PageSqlUtilTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PageSqlUtilTest_getPageDataLimitSQL - 2019.06.27 at 10h 40m 18s.xml">
+      <configuration name="PageSqlUtilTest.getPageDataLimitSQL" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PageSqlUtilTest_getPageDataLimitSQL - 2019.06.27 at 10h 47m 45s.xml">
+      <configuration name="PageSqlUtilTest.getPageDataLimitSQL" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PageSqlUtilTest_getPageDataSQL - 2019.06.27 at 10h 49m 22s.xml">
+      <configuration name="PageSqlUtilTest.getPageDataSQL" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PageSqlUtilTest_getPageDataLimitSQL - 2019.06.27 at 10h 51m 20s.xml">
+      <configuration name="PageSqlUtilTest.getPageDataLimitSQL" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="408314000" />
+    <option name="totallyTimeSpent" value="408660000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1305,9 +1352,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67211205" visible="true" weight="0.20257235" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.67211205" visible="true" weight="0.20064378" />
       <window_info id="Structure" order="1" sideWeight="0.32788798" side_tool="true" weight="0.24195279" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -1317,7 +1363,7 @@
       <window_info id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.24330617" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49087983" weight="0.3834673" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49087983" visible="true" weight="0.38117108" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32322055" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1326,7 +1372,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50912017" side_tool="true" weight="0.43640608" />
       <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49570817" visible="true" weight="0.04357798" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49570817" weight="0.043628015" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32946634" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49785408" weight="0.45867288" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
@@ -1343,7 +1389,7 @@
       <window_info anchor="right" x="92" y="92" width="1736" height="856" id="Documentation" order="10" type="FLOATING" />
       <window_info anchor="right" id="BPMNPalette" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="12" />
-      <window_info anchor="right" id="Maven" order="13" visible="true" weight="0.3017149" />
+      <window_info anchor="right" id="Maven" order="13" visible="true" weight="0.1335837" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1410,7 +1456,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="修复添加rest时验证是否已存在" />
     <MESSAGE value="清理不需要的引用" />
     <MESSAGE value="增加自定义spring 容器" />
     <MESSAGE value="增加 spring websocket" />
@@ -1435,7 +1480,8 @@
     <MESSAGE value="调整日志：增加 对 logback支持&#10;增加数据库时间对象" />
     <MESSAGE value="修复 路径识别问题 &#10;logback jar运行时 配置文件获取不到的问题" />
     <MESSAGE value="1.1.3 更新core 版本 同时实现接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.1.3 更新core 版本 同时实现接口" />
+    <MESSAGE value="1.1.4 方法名调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.1.4 方法名调整" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1456,11 +1502,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://F:/Java/jdk1.6.0_43/src.zip!/java/net/URL.java" />
-    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.2/repositories/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.jar!/ch/qos/logback/classic/LoggerContext.class" />
-    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.2/repositories/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.jar!/ch/qos/logback/core/rolling/RollingFileAppender.class" />
-    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.2/repositories/log4j/log4j/1.2.14/log4j-1.2.14.jar!/org/apache/log4j/AppenderSkeleton.class" />
-    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.2/repositories/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.jar!/ch/qos/logback/core/UnsynchronizedAppenderBase.class" />
     <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.2/repositories/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.jar!/ch/qos/logback/core/spi/ContextAwareBase.class" />
     <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.2/repositories/log4j/log4j/1.2.14/log4j-1.2.14.jar!/org/apache/log4j/Logger.class" />
     <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.2/repositories/log4j/log4j/1.2.14/log4j-1.2.14.jar!/org/apache/log4j/Category.class" />
@@ -1486,13 +1527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-base.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/TableHelper.java" />
     <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.2/repositories/com/github/tianjing/tgtools.core/1.1.0/tgtools.core-1.1.0.jar!/META-INF/maven/com.github.tianjing/tgtools.core/pom.xml" />
     <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.2/repositories/org/springframework/spring-core/4.1.5.RELEASE/spring-core-4.1.5.RELEASE.jar!/org/springframework/util/Log4jConfigurer.class" />
@@ -1508,13 +1542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackJDBCAppender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="79" column="46" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1546,13 +1573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://F:/eclipse/Tomcat7/lib/servlet-api.jar!/javax/servlet/Filter.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/sqls/SqlsFactory.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1565,13 +1585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/sqls/BaseViewSqls.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1676,10 +1689,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.jar!/ch/qos/logback/core/UnsynchronizedAppenderBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="method#doAppend#0;class#UnsynchronizedAppenderBase#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/log/logback/LogbackJDBCAppender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/sqls/BaseViewSqls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-dm.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        <state relative-caret-position="266">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-dm6.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="96" selection-start-line="4" selection-start-column="96" selection-end-line="4" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tgtools/web/sqls/sql-base.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="84" lean-forward="true" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tgtools/web/util/PageSqlUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="59" lean-forward="true" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tgtools/web/util/PageSqlUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="65" column="119" lean-forward="true" selection-start-line="65" selection-start-column="119" selection-end-line="65" selection-end-column="119" />
         </state>
       </provider>
     </entry>
