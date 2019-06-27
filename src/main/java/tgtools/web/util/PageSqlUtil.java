@@ -61,9 +61,15 @@ public class PageSqlUtil {
         BaseViewSqls sqls = getPageSqls(pType);
         String sql = sqls.Page_GetPageData_Limit_SQL;
         sql = StringUtil.replace(sql, "${sql}", p_SQL);
-        int pageIndex = Integer.valueOf(p_CurrPage);
 
-        sql = StringUtil.replace(sql, "{currParge}", "0" == p_CurrPage ? p_CurrPage : String.valueOf((pageIndex - 1)));
+        int pageIndex = Integer.valueOf(p_CurrPage);
+        int pageSize = Integer.valueOf(p_PageSize);
+        if (pageIndex < 1) {
+            pageIndex = 1;
+        }
+        pageIndex = (pageIndex - 1) * pageSize;
+
+        sql = StringUtil.replace(sql, "{currParge}", String.valueOf(pageIndex));
         sql = StringUtil.replace(sql, "{pargeSize}", p_PageSize);
         return sql;
     }
