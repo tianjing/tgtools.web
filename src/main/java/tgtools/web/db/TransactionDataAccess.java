@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.ConnectionCallback;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import tgtools.data.DataTable;
+import tgtools.db.AbstractDataAccess;
 import tgtools.db.IDataAccess;
 import tgtools.exceptions.APPErrorException;
 import tgtools.util.JsonParseHelper;
@@ -26,10 +27,8 @@ import java.sql.Statement;
  * 功  能：
  * 时  间：13:36
  */
-public class TransactionDataAccess implements IDataAccess {
-    private String m_DataBaseType = "";
+public class TransactionDataAccess extends AbstractDataAccess {
     private JdbcTemplate m_JdbcTemplate;
-    private DataSource m_DataSource;
 
     public TransactionDataAccess(DataSource p_DataSource) {
         LogHelper.info("", "初始化数据源:" + p_DataSource, "TransactionDataAccess");
@@ -44,49 +43,8 @@ public class TransactionDataAccess implements IDataAccess {
         this(null);
     }
 
-    @Override
-    public String getDataBaseType() {
-        if (!StringUtil.isNullOrEmpty(m_DataBaseType)) {
-            return m_DataBaseType;
-        }
-        String url = getUrl();
-        if (!StringUtil.isNullOrEmpty(url)) {
-            m_DataBaseType = url.substring(url.indexOf("jdbc:") + 5, url.indexOf(":", url.indexOf("jdbc:") + 5));
-        }
-        return m_DataBaseType;
-    }
 
-    @Override
-    public void setDataBaseType(String p_DataBaseType) {
 
-        m_DataBaseType = p_DataBaseType;
-    }
-
-    @Override
-    public String getUrl() {
-        if (null != m_DataSource) {
-            try {
-                Method method = ReflectionUtil.findMethod(m_DataSource.getClass(), "getUrl", new Class[]{});
-                if (null == method) {
-                    LogHelper.info("", "无法获取getUrl方法。", "DMDataAccess.getUrl");
-                }
-                Object obj = method.invoke(m_DataSource, new Object[]{});
-                return null == obj ? StringUtil.EMPTY_STRING : obj.toString();
-            } catch (Exception e) {
-                LogHelper.error("", "获取数据库连接出错。", "DMDataAccess.getUrl", e);
-            }
-        }
-        return StringUtil.EMPTY_STRING;
-    }
-
-    @Override
-    public DataSource getDataSource() {
-        return null;
-    }
-
-    public void setDataSource(DataSource p_DataSource) {
-        m_DataSource = p_DataSource;
-    }
 
     @Override
     public ResultSet executeQuery(String p_Sql) throws APPErrorException {

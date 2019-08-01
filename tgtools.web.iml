@@ -24,7 +24,7 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="jdk" jdkName="zulu1.8" jdkType="JavaSDK" />
-    <orderEntry type="library" name="Maven: com.github.tianjing:tgtools.core:1.1.8" level="project" />
+    <orderEntry type="library" name="Maven: com.github.tianjing:tgtools.core:1.1.9" level="project" />
     <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache:2.10.1" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.2.3" level="project" />
