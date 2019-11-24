@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.6">
-      <module name="tgtools.web" target="1.6" />
+      <module name="tgtools.web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
