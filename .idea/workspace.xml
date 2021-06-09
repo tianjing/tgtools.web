@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="version 1.2.1&#10;1、依赖调整 所有依赖都为可选项  &#10;2、编译版本为java 8">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_2_10_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_2_10_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_7_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_simpleframework_simple_xml_2_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_simpleframework_simple_xml_2_7_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_1_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_1_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_1_1_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_1_1_3_3.xml" afterDir="false" />
+    <list default="true" id="dac7e86c-c68e-42dc-8834-05fa2d9d79fc" name="Default" comment="删除不需要的">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgtools.web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tgtools.web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tgtools/web/db/TransactionDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tgtools/web/db/TransactionDataAccess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +35,6 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="tgtools.web" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -74,14 +59,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:/Work/apache-maven-3.6.0" />
+        <option name="mavenHome" value="C:\Work\apache-maven-3.6.0" />
         <option name="userSettingsFile" value="C:\Work\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenRunner">
@@ -142,7 +122,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -162,6 +141,8 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="206" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="209" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1224" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="uncheck&#9;PSI&#9;JAVA://com.sun.tools.javac.util.Warner#unchecked&#10;setIsDegug&#9;PSI&#9;JAVA://tgtools.util.LogHelper#setIsDegug" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -182,15 +163,14 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools\web\sqls" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools.web\sqls" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web\sqls" />
+      <recent name="C:\Works\GitHub\tgtools.web\src" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="tgtools.web.sqls" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools\web\config" />
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web\clock" />
-      <recent name="C:\Works\GitHub\tgtools.web" />
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web\entity" />
-      <recent name="C:\Works\GitHub\tgtools.web\lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tgtools.web.clock" />
@@ -199,11 +179,12 @@
       <recent name="tgtools.web.entity" />
       <recent name="tgtools.web.util" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools\web\sqls" />
-      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools.web\sqls" />
-      <recent name="C:\Works\GitHub\tgtools.web\src\tgtools\web\sqls" />
-      <recent name="C:\Works\GitHub\tgtools.web\src" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\tianjing\github\tgtools.web\src\main\resources\tgtools\web\sqls" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\resources\tgtools\web\config" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web\clock" />
+      <recent name="C:\Works\GitHub\tgtools.web" />
+      <recent name="C:\Works\GitHub\tgtools.web\src\main\java\tgtools\web\entity" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.clean install">
@@ -304,36 +285,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -413,18 +366,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>C:\Users\tian_\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>true</myIsUseDefaultProxy>
@@ -1200,9 +1142,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -1221,6 +1161,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1233,8 +1174,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="修复分页sql 不能判断数据源的问题" />
-    <MESSAGE value="修复 log 路径问题" />
     <MESSAGE value="增加 url代理 stream 方式" />
     <MESSAGE value="增加 map rest" />
     <MESSAGE value="修复表服务没有表时的报错" />
@@ -1258,25 +1197,9 @@
     <MESSAGE value="1.1.6 修复limit分页方法" />
     <MESSAGE value="更新 getUrl 支持 从 getJdbcUrl获取" />
     <MESSAGE value="version 1.2.1&#10;1、依赖调整 所有依赖都为可选项  &#10;2、编译版本为java 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 1.2.1&#10;1、依赖调整 所有依赖都为可选项  &#10;2、编译版本为java 8" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1867" height="259" key="GridCell.Tab.0.bottom" timestamp="1578012437775">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1867" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578012437775" />
-    <state width="1867" height="259" key="GridCell.Tab.0.center" timestamp="1578012437775">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1867" height="259" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578012437775" />
-    <state width="1867" height="259" key="GridCell.Tab.0.left" timestamp="1578012437775">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1867" height="259" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578012437775" />
-    <state width="1867" height="259" key="GridCell.Tab.0.right" timestamp="1578012437775">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1867" height="259" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578012437775" />
+    <MESSAGE value="1、依赖调整" />
+    <MESSAGE value="1.2.2&#10;增加数据库postgresql兼容" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.2.2&#10;增加数据库postgresql兼容" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

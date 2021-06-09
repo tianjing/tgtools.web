@@ -7,19 +7,14 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import tgtools.data.DataTable;
 import tgtools.db.AbstractDataAccess;
-import tgtools.db.IDataAccess;
 import tgtools.exceptions.APPErrorException;
 import tgtools.util.JsonParseHelper;
 import tgtools.util.LogHelper;
-import tgtools.util.ReflectionUtil;
 import tgtools.util.StringUtil;
 
 import javax.sql.DataSource;
-import java.lang.reflect.Method;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.InputStream;
+import java.sql.*;
 
 /**
  * 名  称：
@@ -39,11 +34,10 @@ public class TransactionDataAccess extends AbstractDataAccess {
             LogHelper.error("", "初始化失败", "TransactionDataAccess", e);
         }
     }
+
     public TransactionDataAccess() {
         this(null);
     }
-
-
 
 
     @Override
@@ -104,7 +98,22 @@ public class TransactionDataAccess extends AbstractDataAccess {
 
     @Override
     public int executeUpdate(String sql, Object[] p_Params, boolean pUseSetInputStream) throws APPErrorException {
-        return executeUpdate(sql, p_Params);
+        Connection conn = null;
+
+        try {
+            conn = createConnection();
+            if (conn != null) {
+                PreparedStatement statement = conn.prepareStatement(sql);
+                setParams(statement, p_Params, pUseSetInputStream);
+                return statement.executeUpdate();
+            }
+
+        } catch (SQLException e) {
+            throw new APPErrorException("sql执行失败：" + sql, e);
+        } finally {
+            close(conn);
+        }
+        return -1;
     }
 
     @Override
@@ -219,5 +228,31 @@ public class TransactionDataAccess extends AbstractDataAccess {
     @Override
     public <T> T query(String sql, Class<T> p_Class) throws APPErrorException {
         return (T) JsonParseHelper.parseToObject(query(sql), p_Class, true);
+    }
+
+    protected void setParams(PreparedStatement p_Statement, Object[] p_Params, boolean pUseSetInputStream)
+            throws SQLException {
+        if (null != p_Params) {
+            for (int i = 0; i < p_Params.length; i++) {
+                if (pUseSetInputStream && (p_Params[i] instanceof InputStream)) {
+                    try {
+                        p_Statement.setBinaryStream(i + 1, (InputStream) p_Params[i], ((InputStream) p_Params[i]).available());
+                    } catch (Exception ex) {
+                        throw new SQLException("文件流设置错误；原因：" + ex.toString(), ex);
+                    }
+                } else {
+                    p_Statement.setObject(i + 1, p_Params[i]);
+                }
+            }
+        }
+    }
+    private void close(Connection p_Conn) {
+        try {
+            if (null != p_Conn) {
+                p_Conn.close();
+            }
+        } catch (Exception e) {
+        }
+        p_Conn = null;
     }
 }
