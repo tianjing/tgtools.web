@@ -95,7 +95,7 @@ public class TableServiceTask extends BaseService implements IDispose {
     @Override
     public void run(TaskContext p_Context) {
         try {
-            if (this.m_IsStop) {
+            if (this.isStop) {
                 doStop();
                 return;
             }
@@ -103,25 +103,25 @@ public class TableServiceTask extends BaseService implements IDispose {
                 wait1();
                 return;
             }
-            if (this.m_IsStop) {
+            if (this.isStop) {
                 doStop();
                 return;
             }
            // if (m_Service.canRun() && (m_Service.isConcurrency() || ServicesBll.lockService(m_Info.getID_()))) {
-                m_Service.setisBusy(true);
+                m_Service.setsBusy(true);
                 if (null == p_Context) {
                     p_Context = new TaskContext();
                 }
                 p_Context.put("info", m_Info);
                 ServicesBll.updateStartTime(m_Info.getID_());
                 m_Service.run(p_Context);
-                m_Service.setisBusy(false);
+                m_Service.setsBusy(false);
                 ServicesBll.unlockService(m_Info.getID_());
                 m_Service.setLastTime(DateUtil.getCurrentDate());
                 ServicesBll.updateRunTime(m_Info.getID_());
                 wait1();
           //  }
-            if (this.m_IsStop) {
+            if (this.isStop) {
                 doStop();
                 return;
             }

@@ -29,7 +29,7 @@ public class TransactionDataAccess extends AbstractDataAccess {
         LogHelper.info("", "初始化数据源:" + p_DataSource, "TransactionDataAccess");
         setDataSource(p_DataSource);
         try {
-            init(m_DataSource);
+            init(dataSource);
         } catch (APPErrorException e) {
             LogHelper.error("", "初始化失败", "TransactionDataAccess", e);
         }
@@ -65,7 +65,7 @@ public class TransactionDataAccess extends AbstractDataAccess {
 
     @Override
     public boolean init(Object... objects) throws APPErrorException {
-        if (null != m_JdbcTemplate && null != m_DataSource) {
+        if (null != m_JdbcTemplate && null != dataSource) {
             return true;
         }
 
@@ -78,14 +78,14 @@ public class TransactionDataAccess extends AbstractDataAccess {
 
     @Override
     public void close() {
-        m_DataSource = null;
+        dataSource = null;
         m_JdbcTemplate = null;
     }
 
     @Override
     public Connection createConnection() throws APPErrorException {
         try {
-            return m_DataSource.getConnection();
+            return dataSource.getConnection();
         } catch (SQLException e) {
             throw new APPErrorException("获取数据库连接失败", e);
         }
